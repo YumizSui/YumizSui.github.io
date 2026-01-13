@@ -1,5 +1,29 @@
 [
   {
+    "authors": "Furui K, Ohue M.",
+    "title": "Active Learning-Driven Antibody Optimization Using Fine-tuned Protein Language Models",
+    "conference": "ORG004: Bio-Active Molecular Design Interwoven By AI Technology, Chemical Biology And Organic Synthesis, PacifiChem2025",
+    "year": "2025",
+    "type": "Oral",
+    "showInEnglish": true
+  },
+  {
+    "authors": "Masunaga S, Furui K, Kengkanna A, Ohue M.",
+    "title": "Predicting Bioactivity Differences of Molecular Pairs Using Graph Neural Networks",
+    "conference": "ORG004: Bio-Active Molecular Design Interwoven By AI Technology, Chemical Biology And Organic Synthesis, PacifiChem2025",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": true
+  },
+  {
+    "authors": "Sakano K, Furui K, Ohue M.",
+    "title": "Stereochemistry-Aware Molecular Generation Method Based on Chemical Language Models",
+    "conference": "ORG004: Bio-Active Molecular Design Interwoven By AI Technology, Chemical Biology And Organic Synthesis, PacifiChem2025",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": true
+  },
+  {
     "authors": "古井海里, 大上雅史.",
     "title": "Boltzina: Boltz-2とドッキングによる効率的かつ高精度なスクリーニング",
     "conference": "学術変革領域研究（A）天然物が織り成す化合物潜在空間が拓く生物活性分子デザイン 第2回リトリート",

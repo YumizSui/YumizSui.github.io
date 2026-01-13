@@ -1,0 +1,19 @@
+---
+import { formatAuthors } from '../utils/formatAuthors';
+
+interface Props {
+  authors: string;
+}
+
+const { authors } = Astro.props;
+const segments = formatAuthors(authors);
+---
+
+{segments.map((segment) =>
+  segment.shouldFormat ? (
+    <span class="font-semibold underline">{segment.text}</span>
+  ) : (
+    segment.text
+  )
+)}
+

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getEntry } from 'astro:content';
+import FormattedAuthors from '../../components/FormattedAuthors.astro';
 
 const title = 'Publications';
 const description = 'Publications';
@@ -29,7 +30,7 @@ const nonPeerReviewed = nonPeerReviewedData.data.filter(pub => pub.showInEnglish
         <ol class="list-decimal list-outside ml-6 space-y-4">
           {internationalJournals.map((pub) => (
             <li class="text-gray-700 dark:text-gray-300">
-              {pub.authors} "{pub.title}" <em>{pub.journal}</em> {pub.details}
+              <FormattedAuthors authors={pub.authors} /> "{pub.title}" <em>{pub.journal}</em> {pub.details}
               {pub.doi && (
                 <span>
                   {' '}doi: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="hover:underline">{pub.doi}</a>
@@ -47,7 +48,7 @@ const nonPeerReviewed = nonPeerReviewedData.data.filter(pub => pub.showInEnglish
         <ol class="list-decimal list-outside ml-6 space-y-4">
           {internationalConferences.map((pub) => (
             <li class="text-gray-700 dark:text-gray-300">
-              {pub.authors} "{pub.title}" <em>{pub.conference}</em>, {pub.year}.
+              <FormattedAuthors authors={pub.authors} /> "{pub.title}" <em>{pub.conference}</em>, {pub.year}.
               {pub.note && <span> ({pub.note})</span>}
               {pub.doi && (
                 <span>
@@ -66,7 +67,7 @@ const nonPeerReviewed = nonPeerReviewedData.data.filter(pub => pub.showInEnglish
         <ol class="list-decimal list-outside ml-6 space-y-4">
           {preprints.map((pub) => (
             <li class="text-gray-700 dark:text-gray-300">
-              {pub.authors} "{pub.title}" Available at <em>{pub.venue}</em>.
+              <FormattedAuthors authors={pub.authors} /> "{pub.title}" Available at <em>{pub.venue}</em>.
               {pub.doi && (
                 <span>
                   {' '}doi: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="hover:underline">{pub.doi}</a>
@@ -84,7 +85,7 @@ const nonPeerReviewed = nonPeerReviewedData.data.filter(pub => pub.showInEnglish
         <ol class="list-decimal list-outside ml-6 space-y-4">
           {nonPeerReviewed.map((pub) => (
             <li class="text-gray-700 dark:text-gray-300">
-              {pub.authors} "{pub.title}" <em>{pub.conference}</em>, {pub.year}. ({pub.type})
+              <FormattedAuthors authors={pub.authors} /> "{pub.title}" <em>{pub.conference}</em>, {pub.year}. ({pub.type})
             </li>
           ))}
         </ol>
