@@ -5,7 +5,7 @@ const posts = await getCollection('blog', ({ data }) => {
   return data.lang === 'en';
 });
 
-// Popular tags (sorted by post count, max 5)
+// Tags (sorted by post count, max 5)
 const tagCounts = new Map<string, number>();
 posts.forEach((post) => {
   if (post.data.tags) {
@@ -50,10 +50,10 @@ const monthNames = [
 ---
 
 <aside class="space-y-8">
-  <!-- Popular Tags -->
+  <!-- Tags -->
   {topTags.length > 0 && (
     <div>
-      <h3 class="text-lg font-bold mb-4">Popular Tags</h3>
+      <h3 class="text-lg font-bold mb-4">Tags</h3>
       <div class="flex flex-wrap gap-2">
         {topTags.map(([tag, count]) => (
           <a

@@ -5,7 +5,7 @@ const posts = await getCollection('blog', ({ data }) => {
   return data.lang === 'ja';
 });
 
-// 人気タグ一覧（記事数の多い順、最大5件）
+// タグ一覧（記事数の多い順、最大5件）
 const tagCounts = new Map<string, number>();
 posts.forEach((post) => {
   if (post.data.tags) {
@@ -45,10 +45,10 @@ const topArchives = Array.from(monthlyArchives.values())
 ---
 
 <aside class="space-y-8">
-  <!-- 人気タグ -->
+  <!-- タグ一覧 -->
   {topTags.length > 0 && (
     <div>
-      <h3 class="text-lg font-bold mb-4">人気タグ</h3>
+      <h3 class="text-lg font-bold mb-4">タグ</h3>
       <div class="flex flex-wrap gap-2">
         {topTags.map(([tag, count]) => (
           <a
