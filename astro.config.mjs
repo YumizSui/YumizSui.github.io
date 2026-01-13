@@ -8,6 +8,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://yumizsui.com',
+  output: 'static',
 
   i18n: {
     defaultLocale: 'ja',

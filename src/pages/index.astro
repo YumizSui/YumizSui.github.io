@@ -1,18 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Detect browser language and redirect to /en/ if English, otherwise show Japanese content at root
-export const prerender = false;
-
-const acceptLanguage = Astro.request.headers.get('accept-language');
-const preferredLang = acceptLanguage?.startsWith('ja') ? 'ja' : 'en';
-
-// Redirect to /en/ if English is preferred
-if (preferredLang === 'en') {
-  return Astro.redirect('/en/');
-}
-
-// Otherwise, show Japanese content at root
 const title = 'Home';
 const description = 'Home';
 ---
