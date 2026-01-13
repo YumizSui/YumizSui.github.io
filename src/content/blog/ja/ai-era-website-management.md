@@ -21,7 +21,9 @@ tags: ["tech", "blog"]
 
 結果として半日でベース作れたのでついでにブログにしてみた。
 
-## 技術選定
+## 技術詳細
+
+できたもの: [YumizSui/YumizSui.github.io](https://github.com/YumizSui/YumizSui.github.io)
 
 Geminiに相談した結果、Astro + Tailwind CSSという構成に落ち着いた。
 選定理由としては、情報が豊富（AIに書かせやすい）、Markdownで書ける、多言語対応が容易、なら何でも良かったため。

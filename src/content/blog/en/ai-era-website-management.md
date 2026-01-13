@@ -24,7 +24,9 @@ I thought that with AI coding tools available locally now, maintaining a custom 
 
 The result? I built the base in half a day, so I decided to add a blog while I was at it.
 
-## Technology Selection
+## Details
+
+Source code: [YumizSui/YumizSui.github.io](https://github.com/YumizSui/YumizSui.github.io)
 
 After consulting with Gemini, I settled on Astro + Tailwind CSS.
 The selection criteria were: rich documentation (easy for AI to work with), Markdown support, and easy multilingual support. Anything meeting these requirements would have been fine.
