@@ -21,6 +21,9 @@ const siteTitle = title ? `${title} | Kairi Furui` : 'Kairi Furui';
 const siteUrl = 'https://yumizsui.com';
 const currentUrl = new URL(Astro.url.pathname, siteUrl).href;
 const ogImage = new URL(image, siteUrl).href;
+
+// Google Analytics measurement ID
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 ---
 
 <!doctype html>
@@ -50,6 +53,20 @@ const ogImage = new URL(image, siteUrl).href;
     <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    <!-- Google Analytics -->
+    {GA_MEASUREMENT_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+        <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', GA_MEASUREMENT_ID);
+        </script>
+      </>
+    )}
+
     <!-- Dark mode initialization script - runs immediately to prevent flash -->
     <script is:inline>
       // Check for saved theme preference or default to system preference
