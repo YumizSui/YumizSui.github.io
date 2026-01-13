@@ -9,4 +9,39 @@
   a:not(.no-style):hover {
     color: #5A6D79;
   }
+
+  /* Blog post content spacing */
+  .prose {
+    line-height: 1.8;
+  }
+
+  .prose p {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .prose h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .prose h3 {
+    margin-top: 1.75em;
+    margin-bottom: 0.75em;
+  }
+
+  .prose ul, .prose ol {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+  }
+
+  .prose li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose pre {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
 }

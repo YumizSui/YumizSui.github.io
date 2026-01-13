@@ -18,9 +18,28 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
+
+// Extract excerpt from post body if description is not provided
+function getExcerpt(post: any): string {
+  if (post.data.description) {
+    return post.data.description;
+  }
+  const plainText = post.body
+    .replace(/^---[\s\S]*?---/, '')
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1')
+    .replace(/#+\s/g, '')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/\n+/g, ' ')
+    .trim();
+  return plainText.substring(0, 150) + (plainText.length > 150 ? '...' : '');
+}
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description} lang="ja">
+<BaseLayout title={post.data.title} description={getExcerpt(post)} lang="ja">
   <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="max-w-3xl mx-auto">
       <header class="mb-8">

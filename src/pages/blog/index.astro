@@ -8,6 +8,26 @@ const posts = await getCollection('blog', ({ data }) => {
 
 const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+// Extract excerpt from post body if description is not provided
+function getExcerpt(post: any): string {
+  if (post.data.description) {
+    return post.data.description;
+  }
+  // Remove markdown syntax and get first 150 characters
+  const plainText = post.body
+    .replace(/^---[\s\S]*?---/, '') // Remove frontmatter
+    .replace(/!\[.*?\]\(.*?\)/g, '') // Remove images
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Remove links, keep text
+    .replace(/#+\s/g, '') // Remove headers
+    .replace(/\*\*([^*]+)\*\*/g, '$1') // Remove bold
+    .replace(/\*([^*]+)\*/g, '$1') // Remove italic
+    .replace(/`([^`]+)`/g, '$1') // Remove inline code
+    .replace(/```[\s\S]*?```/g, '') // Remove code blocks
+    .replace(/\n+/g, ' ') // Replace newlines with spaces
+    .trim();
+  return plainText.substring(0, 150) + (plainText.length > 150 ? '...' : '');
+}
+
 const title = 'Blog';
 const description = 'Blog';
 ---
@@ -34,7 +54,7 @@ const description = 'Blog';
                 })}
               </p>
               <p class="text-gray-700 dark:text-gray-300">
-                {post.data.description}
+                {getExcerpt(post)}
               </p>
               {post.data.tags && post.data.tags.length > 0 && (
                 <div class="flex gap-2 mt-4">
