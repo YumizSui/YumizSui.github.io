@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => {
+  return data.lang === 'en';
+});
+
+// Popular tags (sorted by post count, max 5)
+const tagCounts = new Map<string, number>();
+posts.forEach((post) => {
+  if (post.data.tags) {
+    post.data.tags.forEach((tag) => {
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    });
+  }
+});
+const topTags = Array.from(tagCounts.entries())
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5);
+
+// Recent posts (max 5)
+const recentPosts = posts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 5);
+
+// Monthly archives (max 5, newest first)
+const monthlyArchives = new Map<string, { year: number; month: number; count: number }>();
+posts.forEach((post) => {
+  const year = post.data.pubDate.getFullYear();
+  const month = post.data.pubDate.getMonth() + 1;
+  const key = `${year}-${month}`;
+  const existing = monthlyArchives.get(key);
+  if (existing) {
+    existing.count++;
+  } else {
+    monthlyArchives.set(key, { year, month, count: 1 });
+  }
+});
+const topArchives = Array.from(monthlyArchives.values())
+  .sort((a, b) => {
+    if (a.year !== b.year) return b.year - a.year;
+    return b.month - a.month;
+  })
+  .slice(0, 5);
+
+const monthNames = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+---
+
+<aside class="space-y-8">
+  <!-- Popular Tags -->
+  {topTags.length > 0 && (
+    <div>
+      <h3 class="text-lg font-bold mb-4">Popular Tags</h3>
+      <div class="flex flex-wrap gap-2">
+        {topTags.map(([tag, count]) => (
+          <a
+            href={`/en/blog/tags/${tag}`}
+            class="inline-block px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition"
+          >
+            {tag}
+            <span class="ml-1 text-xs text-gray-600 dark:text-gray-400">({count})</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Recent Posts -->
+  {recentPosts.length > 0 && (
+    <div>
+      <h3 class="text-lg font-bold mb-4">Recent Posts</h3>
+      <ul class="space-y-3">
+        {recentPosts.map((post) => {
+          const slug = post.slug.startsWith('en/') ? post.slug.replace('en/', '') : post.slug;
+          return (
+            <li>
+              <a href={`/en/blog/${slug}`} class="text-sm hover:text-[#527784] dark:hover:text-[#8FA4A8] transition">
+                {post.data.title}
+              </a>
+              <div class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                {new Date(post.data.pubDate).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  )}
+
+  <!-- Monthly Archives -->
+  {topArchives.length > 0 && (
+    <div>
+      <h3 class="text-lg font-bold mb-4">Archives</h3>
+      <ul class="space-y-2">
+        {topArchives.map((archive) => (
+          <li>
+            <a
+              href={`/en/blog/archive/${archive.year}/${archive.month}`}
+              class="text-sm hover:text-[#527784] dark:hover:text-[#8FA4A8] transition flex justify-between"
+            >
+              <span>{monthNames[archive.month - 1]} {archive.year}</span>
+              <span class="text-gray-600 dark:text-gray-400">({archive.count})</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href="/en/blog/archive" class="inline-block mt-3 text-sm text-blue-600 dark:text-blue-400 hover:underline">
+        All archives →
+      </a>
+    </div>
+  )}
+</aside>

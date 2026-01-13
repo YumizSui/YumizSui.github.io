@@ -1,17 +1,33 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogSidebarEn from '../../../components/BlogSidebarEn.astro';
+import Pagination from '../../../components/Pagination.astro';
 import { getCollection } from 'astro:content';
+import type { Page, GetStaticPaths } from 'astro';
 
-const posts = await getCollection('blog', ({ data }) => {
-  return data.lang === 'en';
-});
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.lang === 'en';
+  });
 
-const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  return paginate(sortedPosts, { pageSize: 20 });
+};
+
+type Props = {
+  page: Page<any>;
+};
+
+const { page } = Astro.props;
 
 // Extract excerpt from post body if description is not provided
 function getExcerpt(post: any): string {
   if (post.data.description) {
     return post.data.description;
+  }
+  if (!post.body) {
+    return '';
   }
   // Remove markdown syntax and get first 150 characters
   const plainText = post.body
@@ -34,11 +50,13 @@ const description = 'Blog';
 
 <BaseLayout title={title} description={description} lang="en">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl font-bold mb-8">Blog</h1>
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Main Content -->
+      <div class="flex-1 lg:w-3/4">
+        <h1 class="text-4xl font-bold mb-8">Blog</h1>
 
-      <div class="space-y-6">
-        {sortedPosts.map((post) => {
+        <div class="space-y-6">
+        {page.data.map((post) => {
           const slug = post.slug.startsWith('en/') ? post.slug.replace('en/', '') : post.slug;
           return (
           <article class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg transition">
@@ -59,9 +77,9 @@ const description = 'Blog';
               {post.data.tags && post.data.tags.length > 0 && (
                 <div class="flex gap-2 mt-4">
                   {post.data.tags.map((tag) => (
-                    <span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 rounded">
+                    <a href={`/en/blog/tags/${tag}`} class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition">
                       {tag}
-                    </span>
+                    </a>
                   ))}
                 </div>
               )}
@@ -71,9 +89,21 @@ const description = 'Blog';
         })}
       </div>
 
-      {sortedPosts.length === 0 && (
-        <p class="text-gray-600 dark:text-gray-400">No posts yet.</p>
-      )}
+        {page.data.length === 0 && (
+          <p class="text-gray-600 dark:text-gray-400">No posts yet.</p>
+        )}
+
+        <Pagination
+          currentPage={page.currentPage}
+          totalPages={page.lastPage}
+          baseUrl="/en/blog"
+        />
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:w-1/4">
+        <BlogSidebarEn />
+      </div>
     </div>
   </div>
 </BaseLayout>

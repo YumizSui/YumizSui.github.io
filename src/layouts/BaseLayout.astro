@@ -54,6 +54,9 @@ const GA_MEASUREMENT_ID = 'G-0ETCN3P9ZD';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title={lang === 'ja' ? 'Kairi Furui - ブログ' : 'Kairi Furui - Blog'} href={lang === 'ja' ? '/rss.xml' : '/en/rss.xml'} />
+
     <!-- Google Analytics -->
     {GA_MEASUREMENT_ID && (
       <>

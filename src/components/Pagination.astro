@@ -1,0 +1,94 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const { currentPage, totalPages, baseUrl } = Astro.props;
+
+// ページ番号の配列を生成（最大7ページ分表示）
+function getPageNumbers(): (number | string)[] {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
+  }
+
+  const pages: (number | string)[] = [1];
+
+  if (currentPage > 3) {
+    pages.push('...');
+  }
+
+  const start = Math.max(2, currentPage - 1);
+  const end = Math.min(totalPages - 1, currentPage + 1);
+
+  for (let i = start; i <= end; i++) {
+    pages.push(i);
+  }
+
+  if (currentPage < totalPages - 2) {
+    pages.push('...');
+  }
+
+  pages.push(totalPages);
+
+  return pages;
+}
+
+const pageNumbers = getPageNumbers();
+
+function getPageUrl(page: number): string {
+  if (page === 1) {
+    return baseUrl;
+  }
+  return `${baseUrl}/${page}`;
+}
+---
+
+{totalPages > 1 && (
+  <nav class="flex justify-center items-center gap-2 mt-8" aria-label="Pagination">
+    {currentPage > 1 && (
+      <a
+        href={getPageUrl(currentPage - 1)}
+        class="px-3 py-2 border border-gray-200 dark:border-gray-800 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+        aria-label="Previous page"
+      >
+        ←
+      </a>
+    )}
+
+    {pageNumbers.map((page) => {
+      if (page === '...') {
+        return <span class="px-3 py-2">...</span>;
+      }
+
+      const pageNum = page as number;
+      const isActive = pageNum === currentPage;
+
+      return (
+        <a
+          href={getPageUrl(pageNum)}
+          class={`px-3 py-2 border rounded transition ${
+            isActive
+              ? 'bg-[#527784] dark:bg-[#8FA4A8] text-white border-[#527784] dark:border-[#8FA4A8]'
+              : 'border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800'
+          }`}
+          aria-label={`Page ${pageNum}`}
+          aria-current={isActive ? 'page' : undefined}
+        >
+          {pageNum}
+        </a>
+      );
+    })}
+
+    {currentPage < totalPages && (
+      <a
+        href={getPageUrl(currentPage + 1)}
+        class="px-3 py-2 border border-gray-200 dark:border-gray-800 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+        aria-label="Next page"
+      >
+        →
+      </a>
+    )}
+  </nav>
+)}

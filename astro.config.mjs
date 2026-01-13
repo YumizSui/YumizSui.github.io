@@ -7,6 +7,7 @@ import mdx from '@astrojs/mdx';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import expressiveCode from 'astro-expressive-code';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -56,6 +57,7 @@ export default defineConfig({
     mdx({
       remarkPlugins: [remarkMath],
       rehypePlugins: [rehypeKatex],
-    })
+    }),
+    sitemap()
   ]
 });

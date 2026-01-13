@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogSidebar from '../../../components/BlogSidebar.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => {
+  return data.lang === 'ja';
+});
+
+// 年ごとの記事数を集計
+const yearCounts = new Map<number, number>();
+posts.forEach((post) => {
+  const year = post.data.pubDate.getFullYear();
+  yearCounts.set(year, (yearCounts.get(year) || 0) + 1);
+});
+
+// 年を新しい順にソート
+const sortedYears = Array.from(yearCounts.entries())
+  .sort((a, b) => b[0] - a[0]);
+
+const title = 'アーカイブ';
+const description = 'ブログ記事のアーカイブ';
+---
+
+<BaseLayout title={title} description={description} lang="ja">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Main Content -->
+      <div class="flex-1 lg:w-3/4">
+        <h1 class="text-4xl font-bold mb-8">アーカイブ</h1>
+
+      {sortedYears.length > 0 ? (
+        <div class="space-y-2">
+          {sortedYears.map(([year, count]) => (
+            <a
+              href={`/blog/archive/${year}`}
+              class="block px-4 py-3 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition"
+            >
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-semibold">{year}年</span>
+                <span class="text-gray-600 dark:text-gray-400">{count}件</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <p class="text-gray-600 dark:text-gray-400">記事がありません。</p>
+      )}
+
+        <div class="mt-12">
+          <a href="/blog" class="text-gray-700 dark:text-gray-300 hover:text-[#527784] dark:hover:text-[#8FA4A8] hover:underline transition">
+            ← ブログ一覧に戻る
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:w-1/4">
+        <BlogSidebar />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

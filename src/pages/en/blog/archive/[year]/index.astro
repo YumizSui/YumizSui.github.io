@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import BlogSidebarEn from '../../../../../components/BlogSidebarEn.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.lang === 'en';
+  });
+
+  const years = new Set<number>();
+  posts.forEach((post) => {
+    years.add(post.data.pubDate.getFullYear());
+  });
+
+  return Array.from(years).map((year) => {
+    const yearPosts = posts.filter((post) =>
+      post.data.pubDate.getFullYear() === year
+    );
+    return {
+      params: { year: year.toString() },
+      props: { posts: yearPosts, year },
+    };
+  });
+}
+
+const { posts, year } = Astro.props;
+
+// Count posts per month
+const monthCounts = new Map<number, number>();
+posts.forEach((post) => {
+  const month = post.data.pubDate.getMonth() + 1;
+  monthCounts.set(month, (monthCounts.get(month) || 0) + 1);
+});
+
+// Sort months in descending order
+const sortedMonths = Array.from(monthCounts.entries())
+  .sort((a, b) => b[0] - a[0]);
+
+const monthNames = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+const title = `${year} Archive`;
+const description = `Blog posts from ${year}`;
+---
+
+<BaseLayout title={title} description={description} lang="en">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Main Content -->
+      <div class="flex-1 lg:w-3/4">
+        <h1 class="text-4xl font-bold mb-2">{year}</h1>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">{posts.length} post{posts.length !== 1 ? 's' : ''}</p>
+
+      <div class="space-y-2">
+        {sortedMonths.map(([month, count]) => (
+          <a
+            href={`/en/blog/archive/${year}/${month}`}
+            class="block px-4 py-3 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition"
+          >
+            <div class="flex justify-between items-center">
+              <span class="text-lg font-semibold">{monthNames[month - 1]}</span>
+              <span class="text-gray-600 dark:text-gray-400">{count} post{count !== 1 ? 's' : ''}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+        <div class="mt-12">
+          <a href="/en/blog/archive" class="text-gray-700 dark:text-gray-300 hover:text-[#527784] dark:hover:text-[#8FA4A8] hover:underline mr-4 transition">
+            ← Back to archive
+          </a>
+          <a href="/en/blog" class="text-gray-700 dark:text-gray-300 hover:text-[#527784] dark:hover:text-[#8FA4A8] hover:underline transition">
+            All posts
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:w-1/4">
+        <BlogSidebarEn />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import BlogSidebar from '../../components/BlogSidebar.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -7,22 +9,30 @@ export async function getStaticPaths() {
     return data.lang === 'ja';
   });
 
-  return posts.map((post) => {
+  const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  return sortedPosts.map((post, index) => {
     const slug = post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug;
+    const prevPost = index < sortedPosts.length - 1 ? sortedPosts[index + 1] : null;
+    const nextPost = index > 0 ? sortedPosts[index - 1] : null;
+
     return {
       params: { slug },
-      props: { post },
+      props: { post, prevPost, nextPost },
     };
   });
 }
 
-const { post } = Astro.props;
+const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await post.render();
 
 // Extract excerpt from post body if description is not provided
 function getExcerpt(post: any): string {
   if (post.data.description) {
     return post.data.description;
+  }
+  if (!post.body) {
+    return '';
   }
   const plainText = post.body
     .replace(/^---[\s\S]*?---/, '')
@@ -40,8 +50,10 @@ function getExcerpt(post: any): string {
 ---
 
 <BaseLayout title={post.data.title} description={getExcerpt(post)} lang="ja" image={post.data.image}>
-  <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="max-w-3xl mx-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Main Content -->
+      <article class="flex-1 lg:w-3/4">
       <header class="mb-8">
         <h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
         <div class="flex items-center gap-4 text-gray-600 dark:text-gray-400">
@@ -55,9 +67,9 @@ function getExcerpt(post: any): string {
           {post.data.tags && post.data.tags.length > 0 && (
             <div class="flex gap-2">
               {post.data.tags.map((tag) => (
-                <span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 rounded">
+                <a href={`/blog/tags/${tag}`} class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition">
                   {tag}
-                </span>
+                </a>
               ))}
             </div>
           )}
@@ -68,12 +80,46 @@ function getExcerpt(post: any): string {
         <Content />
       </div>
 
-      <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-        <a href="/blog" class="text-blue-600 dark:text-blue-400 hover:underline">
+      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <ShareButtons
+          url={`https://yumizsui.com/blog/${post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug}`}
+          title={post.data.title}
+          lang="ja"
+        />
+      </div>
+
+      <footer class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          {prevPost && (
+            <a
+              href={`/blog/${prevPost.slug.startsWith('ja/') ? prevPost.slug.replace('ja/', '') : prevPost.slug}`}
+              class="p-4 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+            >
+              <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">← 前の記事</div>
+              <div class="font-semibold">{prevPost.data.title}</div>
+            </a>
+          )}
+          {nextPost && (
+            <a
+              href={`/blog/${nextPost.slug.startsWith('ja/') ? nextPost.slug.replace('ja/', '') : nextPost.slug}`}
+              class="p-4 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition md:text-right"
+            >
+              <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">次の記事 →</div>
+              <div class="font-semibold">{nextPost.data.title}</div>
+            </a>
+          )}
+        </div>
+        <a href="/blog" class="text-gray-700 dark:text-gray-300 hover:text-[#527784] dark:hover:text-[#8FA4A8] hover:underline transition">
           ← ブログ一覧に戻る
         </a>
       </footer>
+      </article>
+
+      <!-- Sidebar -->
+      <div class="lg:w-1/4">
+        <BlogSidebar />
+      </div>
     </div>
-  </article>
+  </div>
 </BaseLayout>
 

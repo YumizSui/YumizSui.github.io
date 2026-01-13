@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogSidebar from '../../../components/BlogSidebar.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.lang === 'ja';
+  });
+
+  const tags = new Set<string>();
+  posts.forEach((post) => {
+    if (post.data.tags) {
+      post.data.tags.forEach((tag) => tags.add(tag));
+    }
+  });
+
+  return Array.from(tags).map((tag) => {
+    const filteredPosts = posts.filter((post) =>
+      post.data.tags && post.data.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts, tag },
+    };
+  });
+}
+
+const { posts, tag } = Astro.props;
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Extract excerpt from post body if description is not provided
+function getExcerpt(post: any): string {
+  if (post.data.description) {
+    return post.data.description;
+  }
+  if (!post.body) {
+    return '';
+  }
+  const plainText = post.body
+    .replace(/^---[\s\S]*?---/, '')
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1')
+    .replace(/#+\s/g, '')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/\n+/g, ' ')
+    .trim();
+  return plainText.substring(0, 150) + (plainText.length > 150 ? '...' : '');
+}
+
+const title = `タグ: ${tag}`;
+const description = `${tag}タグの記事一覧`;
+---
+
+<BaseLayout title={title} description={description} lang="ja">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Main Content -->
+      <div class="flex-1 lg:w-3/4">
+        <h1 class="text-4xl font-bold mb-2">タグ: {tag}</h1>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">{sortedPosts.length}件の記事</p>
+
+        <div class="space-y-6">
+        {sortedPosts.map((post) => {
+          const slug = post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug;
+          return (
+          <article class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg transition">
+            <a href={`/blog/${slug}`} class="no-style">
+              <h2 class="text-2xl font-bold mb-2 transition-colors hover:text-[#527784] dark:hover:text-[#8FA4A8]">
+                {post.data.title}
+              </h2>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                {new Date(post.data.pubDate).toLocaleDateString('ja-JP', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </p>
+              <p class="text-gray-700 dark:text-gray-300">
+                {getExcerpt(post)}
+              </p>
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="flex gap-2 mt-4">
+                  {post.data.tags.map((t) => (
+                    <span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 rounded">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </a>
+          </article>
+          );
+        })}
+      </div>
+
+        <div class="mt-12">
+          <a href="/blog/tags" class="text-gray-700 dark:text-gray-300 hover:text-[#527784] dark:hover:text-[#8FA4A8] hover:underline mr-4 transition">
+            ← タグ一覧に戻る
+          </a>
+          <a href="/blog" class="text-gray-700 dark:text-gray-300 hover:text-[#527784] dark:hover:text-[#8FA4A8] hover:underline transition">
+            ブログ一覧
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:w-1/4">
+        <BlogSidebar />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
