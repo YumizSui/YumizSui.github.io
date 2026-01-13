@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '404 - Page Not Found';
+const description = 'The page you are looking for could not be found';
+---
+
+<BaseLayout title={title} description={description} lang="en">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="mb-8">
+        <h1 class="text-9xl font-bold text-primary-dark dark:text-primary-light mb-4">404</h1>
+        <h2 class="text-3xl font-bold mb-4">Page Not Found</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-8">
+          The page you are looking for does not exist, or may have been moved or deleted.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <a
+          href="/en"
+          class="inline-block px-6 py-3 bg-primary-dark dark:bg-primary-light text-white dark:text-gray-900 rounded-lg hover:bg-primary hover:dark:bg-primary transition-colors duration-200"
+        >
+          Go to Home
+        </a>
+
+        <div class="pt-8">
+          <p class="text-sm text-gray-600 dark:text-gray-400">Frequently accessed pages:</p>
+          <div class="flex flex-wrap justify-center gap-4 mt-4">
+            <a href="/en/cv" class="text-link hover:text-link-hover transition-colors">CV</a>
+            <a href="/en/publications" class="text-link hover:text-link-hover transition-colors">Publications</a>
+            <a href="/en/blog" class="text-link hover:text-link-hover transition-colors">Blog</a>
+            <a href="/en/other" class="text-link hover:text-link-hover transition-colors">Other</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
