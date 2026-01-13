@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+const cvData = await getEntry('cv', 'cv');
+const cv = cvData.data;
+const title = 'CV';
+const description = 'Kairi Furui - 経歴・実績';
+---
+
+<BaseLayout title={title} description={description} lang="ja">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-8">CV</h1>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">Awards / Contests</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          {cv.awards.map((award) => (
+            <li class="text-gray-700 dark:text-gray-300">
+              <span class="font-semibold">{award.name}</span> ({award.year})
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">Scholarships and Grants</h2>
+        <div class="space-y-6">
+          {cv.grants.map((grant) => (
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-gray-100">{grant.period}</p>
+              <p class="text-gray-700 dark:text-gray-300">
+                {grant.name}
+                {grant.grantNumber && <span class="text-sm"> [{grant.grantNumber}]</span>}
+              </p>
+              {grant.name.includes('DC1') && (
+                <p class="text-xs text-gray-600 dark:text-gray-400">独立行政法人日本学術振興会（JSPS）</p>
+              )}
+              {grant.name.includes('ACT-X') && (
+                <p class="text-xs text-gray-600 dark:text-gray-400">国立研究開発法人科学技術振興機構（JST）</p>
+              )}
+              {grant.name.includes('JASSO') && (
+                <p class="text-xs text-gray-600 dark:text-gray-400">独立行政法人日本学生支援機構（JASSO）</p>
+              )}
+              {grant.project && (
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  {grant.url ? (
+                    <a href={grant.url} target="_blank" rel="noopener noreferrer" class="hover:underline">
+                      {grant.project}
+                    </a>
+                  ) : (
+                    grant.project
+                  )}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">Internship</h2>
+        <div class="space-y-4">
+          {cv.internships.map((internship) => (
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-gray-100">{internship.period}</p>
+              <p class="text-gray-700 dark:text-gray-300">{internship.company} {internship.position}</p>
+              {internship.url && (
+                <p class="text-sm">
+                  <a href={internship.url} target="_blank" rel="noopener noreferrer" class="hover:underline">
+                    Tech Blog: {internship.urlTitle}
+                  </a>
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">Teaching</h2>
+        <ul class="space-y-3">
+          {cv.teaching.map((item) => (
+            <li class="text-gray-700 dark:text-gray-300">
+              <span class="font-semibold">{item.year}</span> {item.title}
+              {item.url && (
+                <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:underline ml-2">
+                  [Link]
+                </a>
+              )}
+              {item.videoUrl && (
+                <a href={item.videoUrl} target="_blank" rel="noopener noreferrer" class="hover:underline ml-2">
+                  [Video]
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">Products</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          {cv.products.map((product) => (
+            <li class="text-gray-700 dark:text-gray-300">
+              <a href={product.url} target="_blank" rel="noopener noreferrer" class="hover:underline font-semibold">
+                {product.name}
+              </a>
+              {' '}{product.year}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">Talks</h2>
+        <div class="space-y-4">
+          {cv.talks.map((talk) => (
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-gray-100">
+                {talk.year} - {talk.event}
+              </p>
+              {talk.url ? (
+                <p class="text-gray-700 dark:text-gray-300">
+                  <a href={talk.url} target="_blank" rel="noopener noreferrer" class="hover:underline">
+                    {talk.title}
+                  </a>
+                </p>
+              ) : (
+                <p class="text-gray-700 dark:text-gray-300">{talk.title}</p>
+              )}
+              {talk.note && <p class="text-sm text-gray-600 dark:text-gray-400 italic">{talk.note}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">Organization of Meetings</h2>
+        <ul class="space-y-3">
+          {cv.organization.map((item) => (
+            <li class="text-gray-700 dark:text-gray-300">
+              <span class="font-semibold">{item.year}</span> - {item.event}
+              {item.location && <span> ({item.location})</span>}
+              {item.date && <span> {item.date}</span>}
+              {item.url && (
+                <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:underline ml-2">
+                  [Link]
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+

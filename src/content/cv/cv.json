@@ -1,0 +1,227 @@
+{
+  "awards": [
+    {
+      "year": "2025",
+      "name": "AHeDD2025 Wiley Best Poster Award (2nd Class)",
+      "showInEnglish": true
+    },
+    {
+      "year": "2023",
+      "name": "2023年度 バイオ情報学研究会 SIGBIO学生奨励賞",
+      "nameEn": "SIGBIO Student Encouragement Award 2023",
+      "showInEnglish": true
+    },
+    {
+      "year": "2023",
+      "name": "第74回研究会 バイオ情報学研究会 SIGBIO優秀プレゼンテーション賞",
+      "nameEn": "SIGBIO Best Presentation Award, 74th Meeting",
+      "showInEnglish": true
+    },
+    {
+      "year": "2023",
+      "name": "#LLM創薬チャレンジ ２位🥈",
+      "nameEn": "#LLM Drug Discovery Challenge - 2nd Place",
+      "showInEnglish": false
+    },
+    {
+      "year": "2022",
+      "name": "第70回バイオ情報学研究会 SIGBIO優秀プレゼンテーション賞",
+      "nameEn": "SIGBIO Best Presentation Award, 70th Meeting",
+      "showInEnglish": true
+    },
+    {
+      "year": "2022",
+      "name": "情報処理学会第84回全国大会 学生奨励賞",
+      "nameEn": "IPSJ Student Encouragement Award, 84th National Convention",
+      "showInEnglish": true
+    },
+    {
+      "year": "2020",
+      "name": "東京工業大学 教養卒論（2020年度）優秀賞",
+      "nameEn": "Tokyo Institute of Technology Outstanding Liberal Arts Thesis Award 2020",
+      "showInEnglish": false
+    },
+    {
+      "year": "2019",
+      "name": "ネットワークソフトウェア研究会 若手研究奨励賞",
+      "nameEn": "Network Software Research Group Young Researcher Award",
+      "showInEnglish": true
+    },
+    {
+      "year": "2019",
+      "name": "情報処理学会第82回全国大会 学生奨励賞",
+      "nameEn": "IPSJ Student Encouragement Award, 82nd National Convention",
+      "showInEnglish": true
+    }
+  ],
+  "grants": [
+    {
+      "period": "2025/10-2028/3",
+      "name": "ACT-X 「生命と情報」",
+      "nameEn": "ACT-X [Life and Information]",
+      "grantNumber": "JPMJAX25LB",
+      "project": "研究課題「多点変異体タンパク質の高精度な結合自由エネルギー予測技術の開発」",
+      "projectEn": "Highly Accurate Free Energy Prediction for Multi-Point Mutation",
+      "url": "https://www.jst.go.jp/kisoken/act-x/project/111F009/111F009_2025.html",
+      "showInEnglish": true
+    },
+    {
+      "period": "2024/4-2027/3",
+      "name": "日本学術振興会特別研究員 DC1",
+      "nameEn": "JSPS Research Fellow DC1",
+      "grantNumber": "24KJ1091",
+      "project": "研究課題「深層学習と自由エネルギー摂動法計算を組合せた創薬リード最適化手法の開発」",
+      "projectEn": "Development of Drug Discovery Lead Optimization Methods Combining Deep Learning and Free Energy Perturbation Calculations",
+      "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1091/",
+      "showInEnglish": true
+    },
+    {
+      "period": "2022/4-2024/3",
+      "name": "JASSO 第一種貸与奨学金 業績優秀者免除（全額免除）",
+      "nameEn": "JASSO Type 1 Scholarship Full Exemption for Outstanding Achievement",
+      "showInEnglish": true
+    }
+  ],
+  "internships": [
+    {
+      "period": "2023/8-2023/9",
+      "company": "DeNA",
+      "position": "サマーインターンシップ 2023 AIスペシャリストコース",
+      "positionEn": "Summer Internship 2023 AI Specialist Course",
+      "url": "https://engineering.dena.com/blog/2023/11/intern_pococha_topic/",
+      "urlTitle": "「Pococha」における配信の話題抽出・カテゴライズの検証",
+      "showInEnglish": true
+    },
+    {
+      "period": "2022/8-2022/9",
+      "company": "Preferred Networks",
+      "position": "Summer Internship 2022",
+      "url": "https://tech.preferred.jp/ja/blog/drug_mlsf_eval/",
+      "urlTitle": "構造ベースのバーチャルスクリーニングのための機械学習スコアリング関数の汎化性評価",
+      "showInEnglish": true
+    }
+  ],
+  "teaching": [
+    {
+      "year": "2025",
+      "title": "AJACS「AlphaFold 等のタンパク質立体構造予測ツールを知って・学んで・使う」",
+      "titleEn": "AJACS: Learning and Using AlphaFold and Other Protein Structure Prediction Tools",
+      "url": "https://biosciencedbc.jp/event/ajacs/ajacs2025-05-22-structure-prediction.html",
+      "videoUrl": "https://togotv.dbcls.jp/20250613.html",
+      "videoTitle": "タンパク質立体構造予測の実践と応用",
+      "showInEnglish": true
+    },
+    {
+      "year": "2024",
+      "title": "「AIと有機合成化学」研究部会 第14回勉強会 ケモインフォマティクス・ハンズオン講習会 講師サポート",
+      "titleEn": "AI and Organic Synthetic Chemistry Study Group 14th Meeting - Cheminformatics Hands-on Workshop Instructor Support",
+      "url": "https://www.ssocj.jp/event/20241017_aib/",
+      "showInEnglish": true
+    },
+    {
+      "year": "2024",
+      "title": "東京大学工学系研究科生命科学工学専攻 化学系データサイエンス講義",
+      "titleEn": "University of Tokyo, Graduate School of Engineering, Chemical Data Science Lecture",
+      "showInEnglish": true
+    },
+    {
+      "year": "2021-2024",
+      "title": "東京工業大学情報理工学院情報工学系 手続き型プログラミング基礎TA",
+      "titleEn": "Tokyo Institute of Technology, School of Computing - Procedural Programming Fundamentals TA",
+      "showInEnglish": true
+    },
+    {
+      "year": "2021-2024",
+      "title": "東京工業大学情報理工学院情報工学系 手続き型プログラミング発展TA",
+      "titleEn": "Tokyo Institute of Technology, School of Computing - Advanced Procedural Programming TA",
+      "showInEnglish": true
+    }
+  ],
+  "products": [
+    {
+      "name": "Boltzina",
+      "url": "https://github.com/ohuelab/boltzina",
+      "year": "(2025)",
+      "showInEnglish": true
+    },
+    {
+      "name": "ALLM-Ab",
+      "url": "https://github.com/ohuelab/ALLM-Ab",
+      "year": "(2025)",
+      "showInEnglish": true
+    },
+    {
+      "name": "Anchored Docking Workflow",
+      "url": "https://github.com/YumizSui/anchored_docking_workflow",
+      "year": "(2024)",
+      "showInEnglish": true
+    },
+    {
+      "name": "PairMap",
+      "url": "https://github.com/ohuelab/PairMap",
+      "year": "(2024)",
+      "showInEnglish": true
+    },
+    {
+      "name": "FastLomap",
+      "url": "https://github.com/ohuelab/FastLomap",
+      "year": "(2023)",
+      "showInEnglish": true
+    },
+    {
+      "name": "PBPredictor",
+      "url": "https://pbpredictor.net/",
+      "year": "(2021)",
+      "showInEnglish": true
+    }
+  ],
+  "talks": [
+    {
+      "year": "2025",
+      "event": "FIT2025 トップコンファレンスセッション バイオ情報学／福祉情報工学／コンピュータビジョンとイメージメディア",
+      "eventEn": "FIT2025 Top Conference Session: Bioinformatics / Welfare Informatics / Computer Vision and Image Media",
+      "title": "エネルギーベースの抗体最適化と能動学習による抗体スクリーニング",
+      "titleEn": "Energy-Based Antibody Optimization and Active Learning for Antibody Screening",
+      "url": "https://www.ipsj.or.jp/event/fit/fit2025/abstract/data/html/event/TCS7-3.html",
+      "showInEnglish": true
+    },
+    {
+      "year": "2025",
+      "event": "第15回　CBI若手の会講演会 ～若手の視点と先駆者の知見が交差する、創薬研究の今と未来～",
+      "eventEn": "15th CBI Young Researchers Meeting - Present and Future of Drug Discovery Research",
+      "title": "効率的な抗体最適化のためのタンパク質言語モデルを用いた多目的能動学習",
+      "titleEn": "Multi-Objective Active Learning Using Protein Language Models for Efficient Antibody Optimization",
+      "url": "https://wakate.cbi-society.info/wakate/2025/07/11/第15回　cbi若手の会講演会-～若手の視点と先駆者の/",
+      "showInEnglish": true
+    },
+    {
+      "year": "2023",
+      "event": "構造活性フォーラム2023",
+      "eventEn": "Structure-Activity Forum 2023",
+      "title": "#LLM創薬チャレンジ 開催報告 ～創薬における大規模言語モデル活用のフィージビリティスタディとして～",
+      "titleEn": "#LLM Drug Discovery Challenge Report - A Feasibility Study on LLM Utilization in Drug Discovery",
+      "url": "https://www.qsarj.org/forum2023",
+      "note": "#LLM創薬チャレンジ上位入賞者として講演",
+      "noteEn": "Presented as a top winner of the #LLM Drug Discovery Challenge",
+      "showInEnglish": false
+    }
+  ],
+  "organization": [
+    {
+      "year": "2024",
+      "event": "生命情報科学若手の会 第16回年会 スタッフ",
+      "eventEn": "16th Annual Meeting of Young Researchers in Life Science Informatics - Staff",
+      "url": "https://www.bioinfowakate.org/activities/meetings/第16回-年会/第16回-スタッフリスト",
+      "showInEnglish": true
+    },
+    {
+      "year": "2022",
+      "event": "The 6th Tokyo Bioinformatics Meeting",
+      "location": "慶應義塾大学 矢上キャンパス",
+      "locationEn": "Keio University Yagami Campus",
+      "date": "2022.10.15",
+      "url": "https://sites.google.com/site/tokyobioinformaticsmeeting/第6回研究会",
+      "showInEnglish": true
+    }
+  ]
+}

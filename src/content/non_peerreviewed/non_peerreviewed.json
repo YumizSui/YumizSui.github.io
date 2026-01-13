@@ -1,0 +1,353 @@
+[
+  {
+    "authors": "古井海里, 大上雅史.",
+    "title": "Boltzina: Boltz-2とドッキングによる効率的かつ高精度なスクリーニング",
+    "conference": "学術変革領域研究（A）天然物が織り成す化合物潜在空間が拓く生物活性分子デザイン 第2回リトリート",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "坂野晃、古井海里、大上雅史.",
+    "title": "化学言語モデルに基づく天然物らしさ予測",
+    "conference": "学術変革領域研究（A）天然物が織り成す化合物潜在空間が拓く生物活性分子デザイン 第2回リトリート",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "増永翔、古井海里、Apakorn Kengkanna、大上雅史.",
+    "title": "グラフニューラルネットワークを用いた生物学的等価体予測",
+    "conference": "学術変革領域研究（A）天然物が織り成す化合物潜在空間が拓く生物活性分子デザイン 第2回リトリート",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里.",
+    "title": "自由エネルギー計算とAlphaFold3-like手法による構造ベースの活性予測",
+    "conference": "潜在空間分子設計 第２回若手の会",
+    "year": "2025",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史.",
+    "title": "Boltz-2とドッキングによる効率的かつ高精度なスクリーニング",
+    "conference": "潜在空間分子設計 第２回若手の会",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "坂野 晃, 古井海里, 大上 雅史.",
+    "title": "化学言語モデルに基づく天然物らしさ予測",
+    "conference": "潜在空間分子設計 第２回若手の会",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "常井 歩希, 古井海里, 大上雅史.",
+    "title": "ファージディスプレイから得られた結合可能性のある抗体配列の構造予測と親和性推定",
+    "conference": "潜在空間分子設計 第２回若手の会",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K, Ohue M.",
+    "title": "ALLM-Ab: Active Learning-Driven Antibody Optimization Using Fine-tuned Protein Language Models.",
+    "conference": "Asia Hub for e-Drug Discovery 2025 (AHeDD2025)",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": true
+  },
+  {
+    "authors": "古井海里, 大上雅史.",
+    "title": "ALLM-Ab： 効率的な微調整によるタンパク質言語モデルを用いた能動学習駆動抗体最適化",
+    "conference": "生命情報科学若手の会 第17回研究会",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里",
+    "title": "効率的な抗体最適化のためのタンパク質言語モデルを用いた多目的能動学習",
+    "conference": "第15回CBI若手の会講演会",
+    "year": "2025",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "増永 翔, 古井海里, Apakorn Kengkanna, 大上雅史.",
+    "title": "グラフニューラルネットワークを用いた分子活性の等価性予測",
+    "conference": "研究報告バイオ情報学（BIO）2025-BIO-82",
+    "year": "2025",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "坂野 晃, 古井海里, 大上雅史.",
+    "title": "化学言語モデルによる立体化学情報を含む化合物の生成",
+    "conference": "研究報告バイオ情報学（BIO）2025-BIO-82",
+    "year": "2025",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "内河慶輔, 古井海里, 大上雅史.",
+    "title": "AlphaFold2のパラメータ探索による低分子ドッキングスクリーニングのためのタンパク質立体構造予測手法",
+    "conference": "研究報告バイオ情報学（BIO）2025-BIO-81",
+    "year": "2025",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K and Ohue M",
+    "title": "PairMap: An Intermediate Insertion Approach to Improve Accuracy in Relative Free Energy Perturbation Calculations of Distant Compound Transformations",
+    "conference": "CBI学会2024年大会, Poster session",
+    "year": "2024",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Uchikawa K, Furui K and Ohue M",
+    "title": "Optimizing of AlphaFold2 protein structure models for improved structure-based virtual screening",
+    "conference": "CBI学会2024年大会, Poster session",
+    "year": "2024",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Sakano K, Furui K and Ohue M",
+    "title": "Natural product-like compound generation with chemical language models",
+    "conference": "CBI学会2024年大会, Poster session",
+    "year": "2024",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K and Ohue M",
+    "title": "Active learning for energy-based antibody optimization and enhanced screening.",
+    "conference": "第8回 Tokyo Bioinformatics Meeting",
+    "year": "2024",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "内河慶輔, 古井海里, 大上雅史.",
+    "title": "構造ベーススクリーニングに適したAlphaFoldタンパク質構造生成の最適化",
+    "conference": "研究報告バイオ情報学（BIO）2024-BIO-78(16),1-7",
+    "year": "2024",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "坂野晃, 古井海里, 大上雅史.",
+    "title": "化学言語モデルに基づく天然物様化合物生成",
+    "conference": "研究報告バイオ情報学（BIO）2024-BIO-78(14),1-8",
+    "year": "2024",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史.",
+    "title": "中間化合物を導入した相対FEP計算によるリガンド結合能予測",
+    "conference": "学術変革領域研究(A)「潜在空間分子設計」第２回公開シンポジウム",
+    "year": "2024",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K and Ohue M",
+    "title": "Study of efficient perturbation map construction for large-scale free energy perturbation calculations",
+    "conference": "第61回日本生物物理学会年会",
+    "year": "2023",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Uchikawa K, Furui K and Ohue M",
+    "title": "Identifying suitable AlphaFold2 protein structure models for improved Structure-based virtual screening",
+    "conference": "第61回日本生物物理学会年会",
+    "year": "2023",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "坂野晃, 古井海里, 大上雅史.",
+    "title": "天然物様化合物を生成する化学言語モデルの開発",
+    "conference": "情報処理学会第86回全国大会, 5ZJ-01",
+    "year": "2024",
+    "type": "Oral",
+    "note": "Conference Encouragement Award / 大会奨励賞 受賞",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K and Ohue M",
+    "title": "Design of scalable perturbation maps for relative free energy calculations",
+    "conference": "CBI学会2023年大会, Poster session",
+    "year": "2023",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Uchikawa K, Furui K and Ohue M",
+    "title": "Identifying suitable AlphaFold2 protein structure models for improved structure-based virtual screening",
+    "conference": "CBI学会2023年大会, Poster session",
+    "year": "2023",
+    "type": "Poster",
+    "note": "Excellent Poster Award",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K and Ohue M",
+    "title": "FastLomap: Faster Lead Optimization Mapper Algorithm for Large-Scale Relative Free Energy Perturbation",
+    "conference": "第7回Tokyo Bioinformatics Meeting",
+    "year": "2023",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史.",
+    "title": "FastLomap：大規模自由エネルギー摂動法計算のための摂動マップ構築アルゴリズムの高速化",
+    "conference": "研究報告数理モデル化と問題解決（MPS）,2023-MPS-144(1),1-4",
+    "year": "2023",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史.",
+    "title": "大規模自由エネルギー摂動法計算のための摂動マップ構築アルゴリズムの高速化",
+    "conference": "研究報告バイオ情報学（BIO）2023-BIO-74(39),1-7",
+    "year": "2023",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "内河慶輔, 古井海里, 大上雅史.",
+    "title": "バーチャルスクリーニングに適したAlphaFold2タンパク質立体構造モデルの選択",
+    "conference": "研究報告バイオ情報学（BIO）2023-BIO-74(39),1-7",
+    "year": "2023",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史.",
+    "title": "2種類の言語モデルを用いたタンパク質-化合物相互作用予測手法の開発",
+    "conference": "研究報告バイオ情報学（BIO）2023-BIO-73(19):1-3",
+    "year": "2023",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "内河慶輔, 古井海里, 大上雅史.",
+    "title": "バーチャルスクリーニングに適したAlphaFoldタンパク質立体構造モデルの選択",
+    "conference": "情報処理学会第85回全国大会, 7ZG-02",
+    "year": "2023",
+    "type": "Oral",
+    "note": "Student Award / 学生奨励賞 受賞",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K and Ohue M",
+    "title": "Lead optimization through active learning using free energy perturbation",
+    "conference": "CBI学会2022年大会, Poster session",
+    "year": "2022",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史",
+    "title": "Compound virtual screening by learning-to-rank with gradient boosting decision tree and enrichment-based cumulative gain",
+    "conference": "第6回Tokyo Bioinformatics Meeting",
+    "year": "2022",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K and Ohue M",
+    "title": "Improvement of Evaluation of Compound Virtual Screening Performance Using Learning-to-Rank in Diverse Experimental Scenarios",
+    "conference": "IIBMP2022, Poster session",
+    "year": "2022",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史.",
+    "title": "多様な実験設定におけるランク学習を用いた化合物スクリーニングの性能評価.",
+    "conference": "研究報告バイオ情報学 (BIO) 2022.49 (2022): 1-6",
+    "year": "2022",
+    "type": "Oral",
+    "note": "Presentation Award / プレゼンテーション賞 受賞",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史",
+    "title": "ランク学習を用いた化合物スクリーニングにおける多様なアッセイデータの統合戦略",
+    "conference": "情報処理学会第84回全国大会, 学生セッション",
+    "year": "2022",
+    "type": "Oral",
+    "note": "Student Award / 学生奨励賞 受賞",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 大上雅史",
+    "title": "Improvement of Learning-to-Rank for Ligand-Based Virtual Screening Using Gradient Boosting Technique with Relevance Refinement",
+    "conference": "第5回Tokyo Bioinformatics Meeting",
+    "year": "2021",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K and Ohue M",
+    "title": "Improvement of learning-to-rank for ligand-based virtual screening using gradient boosting technique with relevance refinement",
+    "conference": "IIBMP2021, Poster session",
+    "year": "2021",
+    "type": "Poster",
+    "showInEnglish": false
+  },
+  {
+    "authors": "大上雅史, 古井海里",
+    "title": "GBDTによる化合物の血液胎盤関門透過性予測",
+    "conference": "研究報告バイオ情報学 (BIO), 2021-BIO-65(8):1-3",
+    "year": "2021",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "Furui K, Hoshikawa N, Hirata K, Shiraki A, ShimobabaT, Ito T.",
+    "title": "Statistical Analysis of Features in Identification of Digital Equipment by Clock Fingerprint.",
+    "conference": "サービスコンピューティング研究会",
+    "year": "2020",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 干川尚人, 白木厚司, 下馬場朋禄, 伊藤智義.",
+    "title": "ディジタル機器のマイクロプロセッサ高負荷時における時刻ドリフトの研究.",
+    "conference": "情報処理学会第82回全国大会",
+    "year": "2020",
+    "type": "Oral",
+    "note": "Student Award / 学生奨励賞 受賞",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 干川尚人, 白木厚司, 下馬場朋禄, 伊藤智義.",
+    "title": "誤差分散の区間推定に基づくクロックフィンガープリント識別手法.",
+    "conference": "電子情報通信学会 NWS 研究会",
+    "year": "2020",
+    "type": "Oral",
+    "showInEnglish": false
+  },
+  {
+    "authors": "古井海里, 干川尚人, 下馬場朋禄, 伊藤智義.",
+    "title": "ディジタル機器の時刻ドリフトとマイクロプロセッサのコア温度間の特徴量に基づく個体識別技術.",
+    "conference": "電子情報通信学会 NWS 研究会",
+    "year": "2019",
+    "type": "Oral",
+    "note": "Young Researcher Award / 若手研究奨励賞 受賞",
+    "showInEnglish": false
+  }
+]

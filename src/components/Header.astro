@@ -1,0 +1,80 @@
+---
+interface Props {
+  lang: 'ja' | 'en';
+}
+
+const { lang } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const nav = {
+  ja: [
+    { name: 'Home', href: '/' },
+    { name: 'CV', href: '/cv' },
+    { name: 'Publications', href: '/publications' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Other', href: '/other' },
+  ],
+  en: [
+    { name: 'Home', href: '/en' },
+    { name: 'CV', href: '/en/cv' },
+    { name: 'Publications', href: '/en/publications' },
+    { name: 'Blog', href: '/en/blog' },
+    { name: 'Other', href: '/en/other' },
+  ]
+};
+
+// Handle language switching: root (/) should switch to /en/, and vice versa
+const getLangSwitchHref = () => {
+  if (lang === 'ja') {
+    // From Japanese: if at root, go to /en/, otherwise add /en prefix
+    if (currentPath === '/') {
+      return '/en/';
+    }
+    return `/en${currentPath}`;
+  } else {
+    // From English: remove /en prefix to get Japanese route
+    if (currentPath === '/en' || currentPath === '/en/') {
+      return '/';
+    }
+    return currentPath.replace('/en', '') || '/';
+  }
+};
+
+const langSwitch = {
+  ja: { name: 'EN', href: getLangSwitchHref() },
+  en: { name: 'JA', href: getLangSwitchHref() }
+};
+---
+
+<header class="border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center space-x-8">
+        <a href={lang === 'ja' ? '/' : `/${lang}`} class="text-xl font-bold">
+          Kairi Furui
+        </a>
+        <div class="hidden md:flex space-x-3">
+          {nav[lang].map(item => (
+            <a
+              href={item.href}
+              class:list={[
+                "px-3 py-2 rounded-md text-sm font-medium",
+                currentPath === item.href || currentPath.startsWith(item.href + '/')
+                  ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+              ]}
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+      </div>
+      <a
+        href={langSwitch[lang].href}
+        class="px-2 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
+      >
+        {langSwitch[lang].name}
+      </a>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+const title = 'Publications';
+const description = 'Publications';
+
+const publicationsData = await getEntry('publications', 'publications');
+const pubs = publicationsData.data;
+
+// Filter out domestic journals for English version
+const internationalJournals = pubs.internationalJournals.filter(pub => pub.showInEnglish);
+const internationalConferences = pubs.internationalConferences.filter(pub => pub.showInEnglish);
+const preprints = pubs.preprints.filter(pub => pub.showInEnglish);
+
+const nonPeerReviewedData = await getEntry('non_peerreviewed', 'non_peerreviewed');
+const nonPeerReviewed = nonPeerReviewedData.data.filter(pub => pub.showInEnglish);
+---
+
+<BaseLayout title={title} description={description} lang="en">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-8">Publications</h1>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">
+          International Journal (Peer-reviewed)
+        </h2>
+        <ol class="list-decimal list-outside ml-6 space-y-4">
+          {internationalJournals.map((pub) => (
+            <li class="text-gray-700 dark:text-gray-300">
+              {pub.authors} "{pub.title}" <em>{pub.journal}</em> {pub.details}
+              {pub.doi && (
+                <span>
+                  {' '}doi: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="hover:underline">{pub.doi}</a>
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">
+          International Conference (Peer-reviewed)
+        </h2>
+        <ol class="list-decimal list-outside ml-6 space-y-4">
+          {internationalConferences.map((pub) => (
+            <li class="text-gray-700 dark:text-gray-300">
+              {pub.authors} "{pub.title}" <em>{pub.conference}</em>, {pub.year}.
+              {pub.note && <span> ({pub.note})</span>}
+              {pub.doi && (
+                <span>
+                  {' '}doi: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="hover:underline">{pub.doi}</a>
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">
+          Preprints
+        </h2>
+        <ol class="list-decimal list-outside ml-6 space-y-4">
+          {preprints.map((pub) => (
+            <li class="text-gray-700 dark:text-gray-300">
+              {pub.authors} "{pub.title}" Available at <em>{pub.venue}</em>.
+              {pub.doi && (
+                <span>
+                  {' '}doi: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="hover:underline">{pub.doi}</a>
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">
+          International Conference (Non-Peer-reviewed)
+        </h2>
+        <ol class="list-decimal list-outside ml-6 space-y-4">
+          {nonPeerReviewed.map((pub) => (
+            <li class="text-gray-700 dark:text-gray-300">
+              {pub.authors} "{pub.title}" <em>{pub.conference}</em>, {pub.year}. ({pub.type})
+            </li>
+          ))}
+        </ol>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

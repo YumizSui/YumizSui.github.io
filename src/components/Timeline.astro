@@ -1,0 +1,96 @@
+---
+interface TimelineItem {
+  id: string;
+  date: string;
+  title: {
+    ja: string;
+    en: string;
+  };
+  description?: {
+    ja?: string;
+    en?: string;
+  };
+  highlight?: boolean;
+  showInEnglish?: boolean;
+  url?: string;
+  category?: string;
+}
+
+interface Props {
+  items: TimelineItem[];
+  lang: 'ja' | 'en';
+}
+
+const { items, lang } = Astro.props;
+
+// Filter items based on language
+const filteredItems = lang === 'en'
+  ? items.filter(item => item.showInEnglish !== false)
+  : items;
+
+// Sort by date descending
+const sortedItems = [...filteredItems].sort((a, b) => {
+  const dateA = new Date(a.date);
+  const dateB = new Date(b.date);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const categoryLabels = {
+  ja: {
+    award: '受賞',
+    grant: '研究費',
+    publication: '論文',
+    internship: 'インターン',
+    teaching: '教育',
+  },
+  en: {
+    award: 'Award',
+    grant: 'Grant',
+    publication: 'Publication',
+    internship: 'Internship',
+    teaching: 'Teaching',
+  }
+};
+---
+
+<div class="space-y-8">
+  {sortedItems.map((item) => (
+    <div class:list={[
+      "relative pl-8 border-l-2",
+      item.highlight ? "border-blue-500" : "border-gray-300 dark:border-gray-700"
+    ]}>
+      <div class:list={[
+        "absolute -left-2 top-0 w-4 h-4 rounded-full",
+        item.highlight ? "bg-blue-500" : "bg-gray-300 dark:bg-gray-700"
+      ]}></div>
+
+      <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+        {item.date}
+        {item.category && (
+          <span class="ml-2 px-2 py-0.5 text-xs bg-gray-100 dark:bg-gray-800 rounded">
+            {categoryLabels[lang][item.category as keyof typeof categoryLabels.ja] || item.category}
+          </span>
+        )}
+      </div>
+
+      <div class:list={[
+        "font-semibold mb-2",
+        item.highlight ? "text-blue-600 dark:text-blue-400" : "text-gray-900 dark:text-white"
+      ]}>
+        {item.url ? (
+          <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:underline">
+            {item.title[lang]}
+          </a>
+        ) : (
+          item.title[lang]
+        )}
+      </div>
+
+      {item.description && item.description[lang] && (
+        <p class="text-gray-700 dark:text-gray-300">
+          {item.description[lang]}
+        </p>
+      )}
+    </div>
+  ))}
+</div>

@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Other';
+const description = 'Other';
+---
+
+<BaseLayout title={title} description={description} lang="ja">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-8">その他</h1>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">執筆記事</h2>
+
+        <div class="space-y-6">
+          <div class="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-2">
+              <a href="https://www.jsbi.org/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                日本バイオインフォマティクス学会ニュースレター 第45号発行のお知らせ
+              </a>
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              日本のバイオインフォマティクス研究室というコーナーにて大上研究室についての記事を執筆しました。
+            </p>
+          </div>
+
+          <div class="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-2">
+              <a href="https://zenn.dev/tonets/articles/dd8c3855eadb2b" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                AlphaFold3の中身の日本語解説
+              </a>
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              AlphaFold3の技術詳細について日本語で解説した記事です。
+            </p>
+          </div>
+
+          <div class="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-2">
+              <a href="https://engineering.dena.com/blog/2023/11/intern_pococha_topic/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                「Pococha」における配信の話題抽出・カテゴライズの検証
+              </a>
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              DeNA サマーインターンシップ 2023でのプロジェクトについてのテックブログ記事です。
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+              DeNA Engineering Blog
+            </p>
+          </div>
+
+          <div class="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-2">
+              <a href="https://tech.preferred.jp/ja/blog/drug_mlsf_eval/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                構造ベースのバーチャルスクリーニングのための機械学習スコアリング関数の汎化性評価
+              </a>
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              PFN Summer Internship 2022でのプロジェクトについてのテックブログ記事です。
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+              Preferred Networks Research & Development
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+

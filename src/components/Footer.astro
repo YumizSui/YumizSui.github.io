@@ -1,0 +1,27 @@
+---
+interface Props {
+  lang: 'ja' | 'en';
+}
+
+const { lang } = Astro.props;
+const currentYear = new Date().getFullYear();
+
+const text = {
+  ja: {
+    rights: 'All rights reserved',
+  },
+  en: {
+    rights: 'All rights reserved',
+  }
+};
+---
+
+<footer class="border-t border-gray-200 dark:border-gray-800 mt-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        © {currentYear} Kairi Furui {text[lang].rights}.
+      </p>
+    </div>
+  </div>
+</footer>

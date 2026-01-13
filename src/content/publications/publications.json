@@ -1,0 +1,146 @@
+{
+  "internationalJournals": [
+    {
+      "authors": "Furui K, and Ohue M.",
+      "title": "ALLM-Ab: Active Learning-driven antibody optimization using fine-tuned protein Language Models.",
+      "journal": "J. Chem. Inf. Model.",
+      "details": "65.21, 11543-11557, 2025.",
+      "doi": "10.1021/acs.jcim.5c01577",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Furui K, Sakano K, Ohue M.",
+      "title": "Predictive and therapeutic applications of protein language models.",
+      "journal": "Allergol. Int.",
+      "details": "74.4, 534-548, 2025.",
+      "doi": "10.1016/j.alit.2025.08.004",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Uchikawa K, Furui K, and Ohue M.",
+      "title": "Leveraging AlphaFold2 Structural Space Exploration for Generating Drug Target Structures in Structure-Based Virtual Screening",
+      "journal": "Biochem. Biophy. Rep.",
+      "details": "43, 102110, 2025.",
+      "doi": "10.1016/j.bbrep.2025.102110",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Furui K, and Ohue M.",
+      "title": "Benchmarking HelixFold3-Predicted Holo Structures for Relative Free Energy Perturbation Calculations",
+      "journal": "ACS Omega.",
+      "details": "10.11, 11411-11420, 2025.",
+      "doi": "10.1021/acsomega.4c11413",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Furui K, Shimizu T, Akiyama Y, Kimura S R, Terada Y, and Ohue M.",
+      "title": "PairMap: An Intermediate Insertion Approach for Improving the Accuracy of Relative Free Energy Perturbation Calculations for Distant Compound Transformations",
+      "journal": "J. Chem. Inf. Model.",
+      "details": "65.2, 705–721, 2025.",
+      "doi": "10.1021/acs.jcim.4c01634",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Sakano K, Furui K, Ohue M.",
+      "title": "NPGPT: natural product-like compound generation with GPT-based chemical language models",
+      "journal": "J. Supercomput.",
+      "details": "81.1, 1-16, 2025.",
+      "doi": "10.1007/s11227-024-06860-w",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Furui K, Ohue M.",
+      "title": "Fastlomap: faster lead optimization mapper algorithm for large-scale relative free energy perturbation",
+      "journal": "J. Supercomput.",
+      "details": "2024.",
+      "doi": "10.1007/s11227-024-06006-y",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Ochiai T, Inukai T, Akiyama M, Furui K, Ohue M, Matsumori N, Inuki S, Uesugi M, Sunazuka T, Kikuchi K, Kakeya H & Sakakibara Y.",
+      "title": "Variational autoencoder-based chemical latent space for large molecular structures with 3D complexity.",
+      "journal": "Commun. Chem.",
+      "details": "6, 249, 2023.",
+      "doi": "10.1038/s42004-023-01054-6",
+      "showInEnglish": true
+    }
+  ],
+  "internationalConferences": [
+    {
+      "authors": "Furui K, and Ohue M.",
+      "title": "Boltzina: Efficient and Accurate Virtual Screening via Docking-Guided Binding Prediction with Boltz-2.",
+      "conference": "AI for Accelerated Materials Design Workshop at the 39th Conference on Neural Information Processing Systems (AI4Mat workshop on NeurIPS2025)",
+      "year": "2025",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Masunaga S†, Furui K†, Kengkanna A, Ohue M.",
+      "title": "GraphBioisostere: General Bioisostere Prediction Model with Deep Graph Neural Network.",
+      "conference": "In Proc PDPTA'25, IEEE CPS",
+      "year": "2025",
+      "note": "†: equally contributed",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Ohue M, Furui K.",
+      "title": "GBDT-based Model and Web Tool for Prediction of Blood-Placental Barrier Permeability of Small Molecules.",
+      "conference": "In Proc PDPTA'25, IEEE CPS",
+      "year": "2025",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Furui K, and Ohue M.",
+      "title": "Active learning for energy-based antibody optimization and enhanced screening.",
+      "conference": "Machine Learning in Structural Biology Workshop at the 38th Conference on Neural Information Processing Systems (MLSB workshop on NeurIPS2024)",
+      "year": "2024",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Sakano K, Furui K, Ohue M.",
+      "title": "Natural Product-like Compound Generation with Chemical Language Models.",
+      "conference": "In Proc PDPTA'24, IEEE CPS",
+      "year": "2024",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Murakumo K, Yoshikawa N, Kentaro R, Nakamura S, Furui K, Suzuki T Yamasaki H, Nishigaya Y, Takagi Y & Ohue M.",
+      "title": "LLM Drug Discovery Challenge: A Contest as a Feasibility Study on the Utilization of Large Language Models in Medicinal Chemistry.",
+      "conference": "AI for Accelerated Materials Design-NeurIPS 2023 Workshop",
+      "year": "2023",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Furui K, and Ohue M.",
+      "title": "Faster Lead Optimization Mapper Algorithm for Large-Scale Relative Free Energy Perturbation.",
+      "conference": "In Proc PDPTA'23, IEEE CPS",
+      "year": "2023",
+      "showInEnglish": true
+    },
+    {
+      "authors": "Furui K, and Ohue M",
+      "title": "Compound Virtual Screening by Learning-to-Rank with Gradient Boosting Decision Tree and Enrichment-based Cumulative Gain.",
+      "conference": "2022 IEEE Conference on Computational Intelligence in Bioinformatics and Computational Biology (CIBCB)",
+      "year": "2022",
+      "doi": "10.1109/CIBCB55180.2022.9863032",
+      "showInEnglish": true
+    }
+  ],
+  "domesticJournals": [
+    {
+      "authors": "干川尚人, 古井海里, 白木厚司, 伊藤智義, 干川尚人.",
+      "title": "時刻ドリフトの平均 2 乗誤差分析によるオンライン機器の識別技術.",
+      "journal": "電子情報通信学会論文誌 B",
+      "details": "104.10 (2021): 761-771.",
+      "showInEnglish": false
+    }
+  ],
+  "preprints": [
+    {
+      "authors": "Arai M, Makita Y, Saito S, Suzuki S, Narushima Y, Izawa N, Tanaka Y, Furui K, Ohue M, Ishibashi M.",
+      "title": "The Indole Rocaglamide Induces S and G2/M Phase Cell Cycle Arrest in Small Cell Lung Cancer Cells Through ASCL1 Translation Inhibition.",
+      "venue": "SSRN preprint 4493242",
+      "doi": "10.2139/ssrn.4493242",
+      "showInEnglish": true
+    }
+  ]
+}

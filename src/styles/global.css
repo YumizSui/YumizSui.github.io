@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer base {
+  a:not(.no-style) {
+    color: #527784;
+    transition: color 0.2s;
+  }
+
+  a:not(.no-style):hover {
+    color: #5A6D79;
+  }
+}

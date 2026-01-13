@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.lang === 'ja';
+  });
+
+  return posts.map((post) => {
+    const slug = post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug;
+    return {
+      params: { slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} lang="ja">
+  <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-3xl mx-auto">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
+        <div class="flex items-center gap-4 text-gray-600 dark:text-gray-400">
+          <time datetime={post.data.pubDate.toISOString()}>
+            {new Date(post.data.pubDate).toLocaleDateString('ja-JP', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="flex gap-2">
+              {post.data.tags.map((tag) => (
+                <span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </header>
+
+      <div class="prose dark:prose-invert max-w-none">
+        <Content />
+      </div>
+
+      <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <a href="/blog" class="text-blue-600 dark:text-blue-400 hover:underline">
+          ← ブログ一覧に戻る
+        </a>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+

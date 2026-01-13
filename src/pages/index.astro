@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Detect browser language and redirect to /en/ if English, otherwise show Japanese content at root
+export const prerender = false;
+
+const acceptLanguage = Astro.request.headers.get('accept-language');
+const preferredLang = acceptLanguage?.startsWith('ja') ? 'ja' : 'en';
+
+// Redirect to /en/ if English is preferred
+if (preferredLang === 'en') {
+  return Astro.redirect('/en/');
+}
+
+// Otherwise, show Japanese content at root
+const title = 'Home';
+const description = 'Home';
+---
+
+<BaseLayout title={title} description={description} lang="ja">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col md:flex-row gap-8 mb-12">
+        <div class="md:w-1/3">
+          <img src="/profile.png" alt="Kairi Furui" class="w-full rounded-lg shadow-lg" />
+        </div>
+        <div class="md:w-2/3">
+          <h1 class="text-4xl font-bold mb-2">
+            <a href="https://orcid.org/0000-0003-1097-0003" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">
+              Kairi Furui
+            </a>
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-400 mb-4">古井 海里</p>
+
+          <div class="space-y-2 mb-6">
+            <p class="text-gray-700 dark:text-gray-300">東京科学大学</p>
+            <p class="text-gray-700 dark:text-gray-300">情報理工学院 情報工学系 博士後期課程</p>
+            <p class="text-gray-700 dark:text-gray-300">
+              <a href="https://www.li.comp.isct.ac.jp/" target="_blank" rel="noopener noreferrer">
+                大上研究室
+              </a>
+            </p>
+            <p class="text-gray-700 dark:text-gray-300">日本学術振興会 特別研究員 DC1</p>
+            <p class="text-xs text-gray-600 dark:text-gray-400">独立行政法人日本学術振興会（JSPS）</p>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-lg font-semibold mb-2">研究分野</h2>
+            <p class="text-gray-700 dark:text-gray-300">
+              Bioinformatics, Cheminformatics, Computational Chemistry, Machine Learning, Free Energy Perturbation, Antibody Design
+            </p>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-lg font-semibold mb-2">リンク</h2>
+            <div class="flex flex-col gap-2 text-sm">
+              <div class="flex flex-wrap gap-2">
+                <a href="https://drive.google.com/file/d/1EulBOFDLDQD5JU58_v8PrAIamewqgkt-/view" target="_blank" rel="noopener noreferrer" class="hover:underline">Curriculum Vitae</a>
+                <span>|</span>
+                <a href="https://researchmap.jp/furuik" target="_blank" rel="noopener noreferrer" class="hover:underline">Researchmap</a>
+                <span>|</span>
+                <a href="https://orcid.org/0000-0003-1097-0003" target="_blank" rel="noopener noreferrer" class="hover:underline">ORCiD</a>
+                <span>|</span>
+                <a href="https://scholar.google.co.jp/citations?user=1kxPfT4AAAAJ" target="_blank" rel="noopener noreferrer" class="hover:underline">Google Scholar</a>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://x.com/yumizsui" target="_blank" rel="noopener noreferrer" class="hover:underline">𝕏</a>
+                <span>|</span>
+                <a href="https://github.com/YumizSui" target="_blank" rel="noopener noreferrer" class="hover:underline">Github</a>
+                <span>|</span>
+                <a href="https://scrapbox.io/yumiz/" target="_blank" rel="noopener noreferrer" class="hover:underline">Scrapbox</a>
+                <span>|</span>
+                <a href="https://bsky.app/profile/yumizsui.com" target="_blank" rel="noopener noreferrer" class="hover:underline">Bluesky</a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Email: furui[at]li.comp.[ISCT]<br />
+              * please replace [ISCT] with isct.ac.jp for real address.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">略歴</h2>
+        <div class="space-y-4">
+          <div>
+            <p class="font-semibold">2024 - 現在</p>
+            <p class="text-gray-700 dark:text-gray-300">
+              東京科学大学 情報理工学院 情報工学系 博士後期課程
+            </p>
+            <p class="text-gray-700 dark:text-gray-300">日本学術振興会 特別研究員 DC1</p>
+            <p class="text-xs text-gray-600 dark:text-gray-400">独立行政法人日本学術振興会（JSPS）</p>
+          </div>
+          <div>
+            <p class="font-semibold">2022 - 2024</p>
+            <p class="text-gray-700 dark:text-gray-300">
+              東京工業大学 情報理工学院 情報工学系 修士課程
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold">2020 - 2022</p>
+            <p class="text-gray-700 dark:text-gray-300">
+              東京工業大学 情報理工学院 情報工学系 学士課程
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold">2015 - 2020</p>
+            <p class="text-gray-700 dark:text-gray-300">
+              小山工業高等専門学校 電気電子創造工学科
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
