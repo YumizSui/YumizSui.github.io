@@ -42,8 +42,8 @@ const description = 'Blog';
           const slug = post.slug.startsWith('en/') ? post.slug.replace('en/', '') : post.slug;
           return (
           <article class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg transition">
-            <a href={`/en/blog/${slug}`}>
-              <h2 class="text-2xl font-bold mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+            <a href={`/en/blog/${slug}`} class="no-style">
+              <h2 class="text-2xl font-bold mb-2 transition-colors hover:text-[#527784] dark:hover:text-[#8FA4A8]">
                 {post.data.title}
               </h2>
               <p class="text-gray-600 dark:text-gray-400 mb-4">
