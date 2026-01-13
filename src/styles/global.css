@@ -171,4 +171,19 @@
   .dark .prose hr {
     background-color: #3d444d;
   }
+
+  /* Link Preview Cards */
+  .prose astro-static-link-preview {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    display: block;
+  }
+
+  /* Dark mode support for link preview cards */
+  .dark .prose astro-static-link-preview {
+    /* Override CSS custom properties for dark mode */
+    --lp-bg: #1f2937;
+    --lp-border: 1px solid #374151;
+    color: #e5e7eb;
+  }
 }

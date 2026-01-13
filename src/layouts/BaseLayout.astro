@@ -7,15 +7,20 @@ interface Props {
   title?: string;
   description?: string;
   lang?: 'ja' | 'en';
+  image?: string;
 }
 
 const {
   title = 'Kairi Furui',
   description = 'Kairi Furui',
-  lang = 'ja'
+  lang = 'ja',
+  image = '/profile.png'
 } = Astro.props;
 
 const siteTitle = title ? `${title} | Kairi Furui` : 'Kairi Furui';
+const siteUrl = 'https://yumizsui.com';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = new URL(image, siteUrl).href;
 ---
 
 <!doctype html>
@@ -28,6 +33,23 @@ const siteTitle = title ? `${title} | Kairi Furui` : 'Kairi Furui';
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
     <title>{siteTitle}</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Kairi Furui" />
+    <meta property="og:locale" content={lang === 'ja' ? 'ja_JP' : 'en_US'} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yumizsui" />
+    <meta name="twitter:creator" content="@yumizsui" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <!-- Dark mode initialization script - runs immediately to prevent flash -->
     <script is:inline>
       // Check for saved theme preference or default to system preference
