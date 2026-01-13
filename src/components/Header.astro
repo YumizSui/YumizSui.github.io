@@ -53,6 +53,7 @@ const langSwitch = {
         <a href={lang === 'ja' ? '/' : `/${lang}`} class="text-xl font-bold">
           Kairi Furui
         </a>
+        <!-- Desktop navigation -->
         <div class="hidden md:flex space-x-3">
           {nav[lang].map(item => (
             <a
@@ -69,12 +70,120 @@ const langSwitch = {
           ))}
         </div>
       </div>
-      <a
-        href={langSwitch[lang].href}
-        class="px-2 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
-      >
-        {langSwitch[lang].name}
-      </a>
+
+      <!-- Right side controls -->
+      <div class="flex items-center space-x-2">
+        <!-- Dark mode toggle -->
+        <button
+          id="theme-toggle"
+          type="button"
+          class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+          aria-label="Toggle dark mode"
+        >
+          <!-- Sun icon (shown in dark mode) -->
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+        </button>
+
+        <!-- Language switcher -->
+        <a
+          href={langSwitch[lang].href}
+          class="px-2 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
+        >
+          {langSwitch[lang].name}
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="md:hidden p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+          aria-label="Toggle menu"
+        >
+          <!-- Hamburger icon -->
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <!-- Close icon -->
+          <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      {nav[lang].map(item => (
+        <a
+          href={item.href}
+          class:list={[
+            "block px-3 py-2 rounded-md text-base font-medium",
+            currentPath === item.href || currentPath.startsWith(item.href + '/')
+              ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+              : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+          ]}
+        >
+          {item.name}
+        </a>
+      ))}
     </div>
   </nav>
 </header>
+
+<script>
+  // Dark mode toggle
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+  const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+  // Show the correct icon based on current theme
+  const updateThemeIcon = () => {
+    if (document.documentElement.classList.contains('dark')) {
+      themeToggleLightIcon?.classList.add('hidden');
+      themeToggleDarkIcon?.classList.remove('hidden');
+    } else {
+      themeToggleDarkIcon?.classList.add('hidden');
+      themeToggleLightIcon?.classList.remove('hidden');
+    }
+  };
+
+  updateThemeIcon();
+
+  themeToggleBtn?.addEventListener('click', () => {
+    // Toggle dark mode
+    document.documentElement.classList.toggle('dark');
+
+    // Save preference
+    const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+
+    // Update icon
+    updateThemeIcon();
+  });
+
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    const isHidden = mobileMenu?.classList.contains('hidden');
+
+    if (isHidden) {
+      mobileMenu?.classList.remove('hidden');
+      hamburgerIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+    } else {
+      mobileMenu?.classList.add('hidden');
+      hamburgerIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    }
+  });
+</script>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (.dark &);
+
 @layer base {
   a:not(.no-style) {
     color: #527784;
@@ -8,6 +10,14 @@
 
   a:not(.no-style):hover {
     color: #5A6D79;
+  }
+
+  .dark a:not(.no-style) {
+    color: #7DD3FC;
+  }
+
+  .dark a:not(.no-style):hover {
+    color: #A5F3FC;
   }
 
   /* GitHub-style prose - Base typography */

@@ -39,10 +39,18 @@ export default defineConfig({
       styleOverrides: {
         borderRadius: '6px',
         frames: {
-          editorBackground: '#f6f8fa',
+          editorBackground: ({ theme }) => theme.name === 'github-dark' ? '#1f2428' : '#f6f8fa',
         },
       },
-      themeCssSelector: (theme) => `[data-theme="${theme.name}"]`,
+      useDarkModeMediaQuery: false,
+      themeCssSelector: (theme, { styleVariants }) => {
+        // If there are multiple themes, generate class-based selectors
+        if (styleVariants.length >= 2) {
+          const baseSelector = styleVariants[0]?.theme === theme ? '' : '.dark';
+          return baseSelector;
+        }
+        return ':where(html)';
+      },
     }),
     react(),
     mdx({
