@@ -7,10 +7,17 @@ tags: ["tech", "blog"]
 
 *Disclaimer: This article was translated from the original Japanese version using LLM.*
 
+## TL;DR
+
+To survive in academia, it's important to increase the visibility of research activities, so I've been maintaining a website. I migrated from Google Sites to GitHub Pages.
+
+## Background
 
 I had been using Google Sites for my website because I didn't need anything fancy (most researchers in my generation seem to do the same).
 
 ![Example of the previous website](/blog/ai-era-website-management/google-sites-example.png)
+
+*Figure 1: Website created with Google Sites before migration*
 
 However, manually updating publication lists and conference presentations every time became increasingly tedious.
 I thought that with AI coding tools available locally now, maintaining a custom website could be less work than managing Google Sites. So I migrated.

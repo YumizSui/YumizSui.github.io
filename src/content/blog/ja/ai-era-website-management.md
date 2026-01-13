@@ -5,7 +5,12 @@ lang: "ja"
 tags: ["tech", "blog"]
 ---
 
-もともと別に凝ったものが作りたかったわけではないのでずっとGoogle Sitesを使ってた（同年代の研究者を眺めてても大体そうしてそう）。
+## TL;DR
+アカデミアでこの先生きのこるには研究活動のvisibilityを高めることが大切ということで、一丁前にwebサイトを運用していたわけですが、Google SitesからGitHub Pagesに移行しました。
+
+## 背景
+
+もともと別にこだわりはなかったのでずっとGoogle Sitesで使ってました（同年代の研究者を眺めてても大体そうしてそう）。
 
 ![移行前のウェブサイトの例](/blog/ai-era-website-management/google-sites-example.png)
 
