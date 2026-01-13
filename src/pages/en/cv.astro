@@ -43,14 +43,8 @@ const organization = cv.organization.filter(item => item.showInEnglish);
                 {grant.nameEn || grant.name}
                 {grant.grantNumber && <span class="text-sm"> [{grant.grantNumber}]</span>}
               </p>
-              {(grant.nameEn || grant.name).includes('DC1') && (
-                <p class="text-xs text-gray-600 dark:text-gray-400">Japan Society for the Promotion of Science (JSPS)</p>
-              )}
-              {(grant.nameEn || grant.name).includes('ACT-X') && (
-                <p class="text-xs text-gray-600 dark:text-gray-400">Japan Science and Technology Agency (JST)</p>
-              )}
-              {(grant.nameEn || grant.name).includes('JASSO') && (
-                <p class="text-xs text-gray-600 dark:text-gray-400">Japan Student Services Organization (JASSO)</p>
+              {grant.organizationEn && (
+                <p class="text-xs text-gray-600 dark:text-gray-400">{grant.organizationEn}</p>
               )}
               {grant.projectEn && (
                 <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">

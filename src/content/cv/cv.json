@@ -60,6 +60,8 @@
       "name": "ACT-X 「生命と情報」",
       "nameEn": "ACT-X [Life and Information]",
       "grantNumber": "JPMJAX25LB",
+      "organization": "国立研究開発法人科学技術振興機構（JST）",
+      "organizationEn": "Japan Science and Technology Agency (JST)",
       "project": "研究課題「多点変異体タンパク質の高精度な結合自由エネルギー予測技術の開発」",
       "projectEn": "Highly Accurate Free Energy Prediction for Multi-Point Mutation",
       "url": "https://www.jst.go.jp/kisoken/act-x/project/111F009/111F009_2025.html",
@@ -70,6 +72,8 @@
       "name": "日本学術振興会特別研究員 DC1",
       "nameEn": "JSPS Research Fellow DC1",
       "grantNumber": "24KJ1091",
+      "organization": "独立行政法人日本学術振興会（JSPS）",
+      "organizationEn": "Japan Society for the Promotion of Science (JSPS)",
       "project": "研究課題「深層学習と自由エネルギー摂動法計算を組合せた創薬リード最適化手法の開発」",
       "projectEn": "Development of Drug Discovery Lead Optimization Methods Combining Deep Learning and Free Energy Perturbation Calculations",
       "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1091/",
@@ -79,6 +83,8 @@
       "period": "2022/4-2024/3",
       "name": "JASSO 第一種貸与奨学金 業績優秀者免除（全額免除）",
       "nameEn": "JASSO Type 1 Scholarship Full Exemption for Outstanding Achievement",
+      "organization": "独立行政法人日本学生支援機構（JASSO）",
+      "organizationEn": "Japan Student Services Organization (JASSO)",
       "showInEnglish": true
     }
   ],
@@ -210,7 +216,7 @@
     {
       "year": "2024",
       "event": "生命情報科学若手の会 第16回年会 スタッフ",
-      "eventEn": "16th Annual Meeting of Young Researchers in Life Science Informatics - Staff",
+      "eventEn": "16th Annual Meeting of Young Researchers in Bioinformatics - Staff",
       "url": "https://www.bioinfowakate.org/activities/meetings/第16回-年会/第16回-スタッフリスト",
       "showInEnglish": true
     },
