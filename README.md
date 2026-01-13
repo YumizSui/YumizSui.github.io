@@ -6,7 +6,6 @@ This is YumizSui's website.
 
 - [Astro](https://astro.build/) - Static site generator
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
-- Bilingual support (Japanese/English)
 
 ## Development
 

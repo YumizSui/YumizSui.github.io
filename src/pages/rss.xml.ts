@@ -10,8 +10,8 @@ export async function GET(context: APIContext) {
   const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
   return rss({
-    title: 'Kairi Furui - ブログ',
-    description: 'Kairi Furuiのブログ',
+    title: '@YumizSui',
+    description: '@YumizSui',
     site: context.site || 'https://yumizsui.com',
     items: sortedPosts.map((post) => {
       const slug = post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug;

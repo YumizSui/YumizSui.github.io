@@ -13,7 +13,7 @@ To survive in academia, it's important to increase the visibility of research ac
 
 ## Background
 
-I had been using Google Sites for my website because I didn't need anything fancy (most researchers in my generation seem to do the same).
+I had been using [Google Sites](https://sites.google.com/view/yumizsui) for my website because I didn't need anything fancy (most researchers in my generation seem to do the same).
 
 ![Example of the previous website](/blog/ai-era-website-management/google-sites-example.png)
 

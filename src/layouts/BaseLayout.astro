@@ -11,13 +11,13 @@ interface Props {
 }
 
 const {
-  title = 'Kairi Furui',
-  description = 'Kairi Furui',
+  title = '@YumizSui',
+  description = '@YumizSui',
   lang = 'ja',
   image = '/profile.png'
 } = Astro.props;
 
-const siteTitle = title ? `${title} | Kairi Furui` : 'Kairi Furui';
+const siteTitle = title ? `${title} | @YumizSui` : '@YumizSui';
 const siteUrl = 'https://yumizsui.com';
 const currentUrl = new URL(Astro.url.pathname, siteUrl).href;
 const ogImage = new URL(image, siteUrl).href;
@@ -43,7 +43,7 @@ const GA_MEASUREMENT_ID = 'G-0ETCN3P9ZD';
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:site_name" content="Kairi Furui" />
+    <meta property="og:site_name" content="@YumizSui" />
     <meta property="og:locale" content={lang === 'ja' ? 'ja_JP' : 'en_US'} />
 
     <!-- Twitter -->
@@ -55,7 +55,7 @@ const GA_MEASUREMENT_ID = 'G-0ETCN3P9ZD';
     <meta name="twitter:image" content={ogImage} />
 
     <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title={lang === 'ja' ? 'Kairi Furui - ブログ' : 'Kairi Furui - Blog'} href={lang === 'ja' ? '/rss.xml' : '/en/rss.xml'} />
+    <link rel="alternate" type="application/rss+xml" title={lang === 'ja' ? '@YumizSui - ブログ' : '@YumizSui - Blog'} href={lang === 'ja' ? '/rss.xml' : '/en/rss.xml'} />
 
     <!-- Google Analytics -->
     {GA_MEASUREMENT_ID && (

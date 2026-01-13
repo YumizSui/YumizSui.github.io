@@ -10,7 +10,7 @@ tags: ["tech", "blog"]
 
 ## 背景
 
-もともと別にこだわりはなかったのでずっとGoogle Sitesで使ってました（同年代の研究者を眺めてても大体そうしてそう）。
+もともと別にこだわりはなかったのでずっと[Google Sites](https://sites.google.com/view/yumizsui)で使ってました（同年代の研究者を眺めてても大体そうしてそう）。
 
 ![移行前のウェブサイトの例](/blog/ai-era-website-management/google-sites-example.png)
 
