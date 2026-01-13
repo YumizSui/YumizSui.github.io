@@ -1,5 +1,5 @@
 ---
-title: "AI時代の持続的な研究者HP運用"
+title: "AI時代の持続可能な研究者webサイトの運用を考える"
 pubDate: "2026-01-13"
 lang: "ja"
 tags: ["tech", "blog"]

@@ -72,5 +72,5 @@ Taking the same approach, the Curriculum Vitae is managed similarly, and I've se
 
 ## Conclusion
 
-Once you create a data structure, you can reuse it elsewhere, so you can build a LaTeX-based Curriculum Vitae in the same way. It's great.
+Once I create a data structure, I can reuse it elsewhere, so I can build a LaTeX-based Curriculum Vitae in the same way. It's great.
 Let's delegate the tedious work to AI and improve our sustainability.
