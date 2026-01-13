@@ -5,6 +5,27 @@ const title = 'Home';
 const description = 'Home';
 ---
 
+<script is:inline>
+  // Auto-redirect to English page based on browser language (first visit only)
+  (function() {
+    const REDIRECT_KEY = 'lang-redirect-done';
+
+    // Skip if already redirected before
+    if (sessionStorage.getItem(REDIRECT_KEY)) {
+      return;
+    }
+
+    // Check browser language
+    const userLang = navigator.language || navigator.languages?.[0] || 'ja';
+
+    // If not Japanese, redirect to English page
+    if (!userLang.startsWith('ja')) {
+      sessionStorage.setItem(REDIRECT_KEY, 'true');
+      window.location.href = '/en/';
+    }
+  })();
+</script>
+
 <BaseLayout title={title} description={description} lang="ja">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="max-w-4xl mx-auto">
