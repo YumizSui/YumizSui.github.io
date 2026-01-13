@@ -55,6 +55,11 @@ const nonPeerReviewed = nonPeerReviewedData.data.filter(pub => pub.showInEnglish
                   {' '}doi: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="hover:underline">{pub.doi}</a>
                 </span>
               )}
+              {!pub.doi && pub.url && (
+                <span>
+                  {' '}[<a href={pub.url} target="_blank" rel="noopener noreferrer" class="hover:underline">link</a>]
+                </span>
+              )}
             </li>
           ))}
         </ol>
@@ -73,6 +78,11 @@ const nonPeerReviewed = nonPeerReviewedData.data.filter(pub => pub.showInEnglish
                   {' '}doi: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="hover:underline">{pub.doi}</a>
                 </span>
               )}
+              {!pub.doi && pub.url && (
+                <span>
+                  {' '}[<a href={pub.url} target="_blank" rel="noopener noreferrer" class="hover:underline">link</a>]
+                </span>
+              )}
             </li>
           ))}
         </ol>
@@ -86,6 +96,17 @@ const nonPeerReviewed = nonPeerReviewedData.data.filter(pub => pub.showInEnglish
           {nonPeerReviewed.map((pub) => (
             <li class="text-gray-700 dark:text-gray-300">
               <FormattedAuthors authors={pub.authors} /> "{pub.title}" <em>{pub.conference}</em>, {pub.year}. ({pub.type})
+              {pub.note && <span> ({pub.note})</span>}
+              {pub.doi && (
+                <span>
+                  {' '}doi: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="hover:underline">{pub.doi}</a>
+                </span>
+              )}
+              {!pub.doi && pub.url && (
+                <span>
+                  {' '}[<a href={pub.url} target="_blank" rel="noopener noreferrer" class="hover:underline">link</a>]
+                </span>
+              )}
             </li>
           ))}
         </ol>

@@ -21,6 +21,7 @@ const publicationSchema = z.object({
   details: z.string().optional(),
   year: z.string().optional(),
   doi: z.string().optional(),
+  url: z.string().optional(),
   note: z.string().optional(),
   showInEnglish: z.boolean(),
 });
@@ -41,6 +42,9 @@ const nonPeerReviewedSchema = z.object({
   conference: z.string(),
   year: z.string(),
   type: z.string(),
+  doi: z.string().optional(),
+  url: z.string().optional(),
+  note: z.string().optional(),
   showInEnglish: z.boolean(),
 });
 

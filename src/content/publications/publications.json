@@ -71,6 +71,7 @@
       "title": "Boltzina: Efficient and Accurate Virtual Screening via Docking-Guided Binding Prediction with Boltz-2.",
       "conference": "AI for Accelerated Materials Design Workshop at the 39th Conference on Neural Information Processing Systems (AI4Mat workshop on NeurIPS2025)",
       "year": "2025",
+      "url": "https://openreview.net/forum?id=OwtEQsd2hN",
       "showInEnglish": true
     },
     {
@@ -93,6 +94,7 @@
       "title": "Active learning for energy-based antibody optimization and enhanced screening.",
       "conference": "Machine Learning in Structural Biology Workshop at the 38th Conference on Neural Information Processing Systems (MLSB workshop on NeurIPS2024)",
       "year": "2024",
+      "url": "https://www.mlsb.io/papers_2024/Active_Learning_for_Energy-Based_Antibody_Optimization_and_Enhanced_Screening.pdf",
       "showInEnglish": true
     },
     {
@@ -107,6 +109,7 @@
       "title": "LLM Drug Discovery Challenge: A Contest as a Feasibility Study on the Utilization of Large Language Models in Medicinal Chemistry.",
       "conference": "AI for Accelerated Materials Design-NeurIPS 2023 Workshop",
       "year": "2023",
+      "url": "https://openreview.net/forum?id=kjUylvko18",
       "showInEnglish": true
     },
     {
@@ -131,6 +134,7 @@
       "title": "時刻ドリフトの平均 2 乗誤差分析によるオンライン機器の識別技術.",
       "journal": "電子情報通信学会論文誌 B",
       "details": "104.10 (2021): 761-771.",
+      "doi": "10.14923/transcomj.2020NSP0001",
       "showInEnglish": false
     }
   ],
