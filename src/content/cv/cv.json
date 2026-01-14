@@ -148,37 +148,43 @@
       "name": "Boltzina",
       "url": "https://github.com/ohuelab/boltzina",
       "year": "(2025)",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "showInTools": true
     },
     {
       "name": "ALLM-Ab",
       "url": "https://github.com/ohuelab/ALLM-Ab",
       "year": "(2025)",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "showInTools": true
     },
     {
       "name": "Anchored Docking Workflow",
       "url": "https://github.com/YumizSui/anchored_docking_workflow",
       "year": "(2024)",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "showInTools": true
     },
     {
       "name": "PairMap",
       "url": "https://github.com/ohuelab/PairMap",
       "year": "(2024)",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "showInTools": true
     },
     {
       "name": "FastLomap",
       "url": "https://github.com/ohuelab/FastLomap",
       "year": "(2023)",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "showInTools": true
     },
     {
       "name": "PBPredictor",
       "url": "https://pbpredictor.net/",
       "year": "(2021)",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "showInTools": true
     }
   ],
   "talks": [

@@ -1,4 +1,6 @@
 ---
+import { getEntry } from 'astro:content';
+
 interface Props {
   lang: 'ja' | 'en';
 }
@@ -6,19 +8,27 @@ interface Props {
 const { lang } = Astro.props;
 const currentPath = Astro.url.pathname;
 
+// Load products data for Tools dropdown
+const cvData = await getEntry('cv', 'cv');
+const tools = cvData.data.products
+  .filter(product => product.showInTools)
+  .map(product => ({ name: product.name, href: product.url }));
+
 const nav = {
   ja: [
     { name: 'Home', href: '/' },
-    { name: 'CV', href: '/cv' },
     { name: 'Publications', href: '/publications' },
+    { name: 'Activities', href: '/activities' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Tools', href: '#', hasDropdown: true },
     { name: 'Other', href: '/other' },
   ],
   en: [
     { name: 'Home', href: '/en' },
-    { name: 'CV', href: '/en/cv' },
     { name: 'Publications', href: '/en/publications' },
+    { name: 'Activities', href: '/en/activities' },
     { name: 'Blog', href: '/en/blog' },
+    { name: 'Tools', href: '#', hasDropdown: true },
     { name: 'Other', href: '/en/other' },
   ]
 };
@@ -57,17 +67,42 @@ const langSwitch = {
         <!-- Desktop navigation -->
         <div class="hidden md:flex space-x-3">
           {nav[lang].map(item => (
-            <a
-              href={item.href}
-              class:list={[
-                "px-3 py-2 rounded-md text-sm font-medium",
-                currentPath === item.href || currentPath.startsWith(item.href + '/')
-                  ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
-              ]}
-            >
-              {item.name}
-            </a>
+            item.hasDropdown ? (
+              <div class="relative dropdown-container">
+                <button
+                  class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center gap-1"
+                >
+                  {item.name}
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="dropdown-menu absolute left-0 mt-1 w-auto min-w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 hidden z-50">
+                  {tools.map(tool => (
+                    <a
+                      href={tool.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-md last:rounded-b-md whitespace-nowrap"
+                    >
+                      {tool.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <a
+                href={item.href}
+                class:list={[
+                  "px-3 py-2 rounded-md text-sm font-medium",
+                  currentPath === item.href || currentPath.startsWith(item.href + '/')
+                    ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                ]}
+              >
+                {item.name}
+              </a>
+            )
           ))}
         </div>
       </div>
@@ -121,17 +156,40 @@ const langSwitch = {
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden pb-4">
       {nav[lang].map(item => (
-        <a
-          href={item.href}
-          class:list={[
-            "block px-3 py-2 rounded-md text-base font-medium",
-            currentPath === item.href || currentPath.startsWith(item.href + '/')
-              ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
-              : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
-          ]}
-        >
-          {item.name}
-        </a>
+        item.hasDropdown ? (
+          <div class="mobile-dropdown">
+            <button class="mobile-dropdown-button w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center justify-between">
+              {item.name}
+              <svg class="w-4 h-4 mobile-dropdown-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="mobile-dropdown-content hidden pl-4">
+              {tools.map(tool => (
+                <a
+                  href={tool.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 whitespace-nowrap"
+                >
+                  {tool.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a
+            href={item.href}
+            class:list={[
+              "block px-3 py-2 rounded-md text-base font-medium",
+              currentPath === item.href || currentPath.startsWith(item.href + '/')
+                ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+            ]}
+          >
+            {item.name}
+          </a>
+        )
       ))}
     </div>
   </nav>
@@ -186,5 +244,37 @@ const langSwitch = {
       hamburgerIcon?.classList.remove('hidden');
       closeIcon?.classList.add('hidden');
     }
+  });
+
+  // Desktop dropdown functionality (hover)
+  const dropdownContainers = document.querySelectorAll('.dropdown-container');
+  dropdownContainers.forEach(container => {
+    const menu = container.querySelector('.dropdown-menu');
+
+    container.addEventListener('mouseenter', () => {
+      menu?.classList.remove('hidden');
+    });
+
+    container.addEventListener('mouseleave', () => {
+      menu?.classList.add('hidden');
+    });
+  });
+
+  // Mobile dropdown functionality (click)
+  const mobileDropdownButtons = document.querySelectorAll('.mobile-dropdown-button');
+  mobileDropdownButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const dropdown = button.parentElement;
+      const content = dropdown?.querySelector('.mobile-dropdown-content');
+      const icon = button.querySelector('.mobile-dropdown-icon');
+
+      if (content?.classList.contains('hidden')) {
+        content?.classList.remove('hidden');
+        icon?.classList.add('rotate-180');
+      } else {
+        content?.classList.add('hidden');
+        icon?.classList.remove('rotate-180');
+      }
+    });
   });
 </script>
