@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Music';
+const description = 'My music activities, playlists, and listening history';
+
+// External links
+const externalLinks = [
+  {
+    url: 'https://open.spotify.com/user/m7xsekaw283axq9pte09m9ic5?si=d4930b5f483046ed',
+    title: 'Spotify',
+    description: '自分のアカウント',
+  },
+  {
+    url: 'https://bsky.app/profile/yumizsui.com',
+    title: 'Bluesky',
+    description: '主に音楽の話題、近況に追加した曲を自動ポストするなど',
+  },
+  {
+    url: 'https://rateyourmusic.com/~yumiz',
+    title: 'RateYourMusic',
+    description: 'アルバムの評価してる',
+  },
+  {
+    url: 'https://yumizsui.github.io/spotify_analysis_extended_streaming_history/',
+    title: 'データ的に正しいSpotifyまとめ',
+    description: '自分のSpotifyの長期ストリーミング履歴を解析して作成した真のspotifyまとめ',
+  },
+];
+
+// Playlists
+const playlists = [
+  { id: '6eP071ZUNj4eNxx0NYOiK2', title: '聴く予定の曲', note: '大体いつもここを再生している' },
+  { id: '01sluqvq9mh1Nk1xQyiuPh', title: '1ヶ月以内にお気に入りした曲', note: '自動で更新' },
+  { id: '0cNsOcxzoKgqCzYUE5MhTA', title: '新譜に限定したお気に入り' },
+  { id: '0EbUVMLLyHZbFh9HsMzxp9', title: '10曲限定', note: '何度も聴いた曲、かなりお気に入りの曲' },
+  { id: '3eGzFIt0aoOH5RVDDx6c2z', title: '特に気に入った・布教したい曲100選', note: '近況よりは気軽に更新する' },
+  { id: '2j8HjhqHsIU3pEJrG9iZtX', title: '最近聞いて良かったアルバム最新50件' },
+  { id: '1hMUetpnQT2kfdxEWw6WNa', title: '近況のログ' },
+  { id: '1NknH6bysJrtKCNqc4LtXi', title: '良いユ3のログ' },
+  { id: '5NSji1lXWHk57UaODnU8YG', title: '良かったアルバムのログ' },
+  { id: '6za9l4lIiUrQTSCXaf8LLL', title: '好きなアルバム42枚 (2025/3時点)' },
+  { id: '4RY2WQv5yw1g3LlKussA6j', title: '長めの曲を集めた' },
+  { id: '2vxYVWZOBuVA22w2asMTaL', title: '歌詞が好きな曲とか', note: '好きの意味は色々' },
+  { id: '3wLdqiCKz5Whht1cb0eeT7', title: 'ドラムンベース要素のあるpops' },
+  { id: '123vazYuisH7DTemjisFJN', title: '好きなアニメ楽曲' },
+  { id: '2D5knq3PLLqKxj9lGxHB32', title: '好きな合成音声' },
+  { id: '5D8bpBa7Pmhpd6CYsQ8SIy', title: '修論書いてるときに聴いてた音楽' },
+  { id: '47GL2hZGIulFwSLlLxsccI', title: '曲入れてくれたら聴きます', link: 'https://open.spotify.com/playlist/47GL2hZGIulFwSLlLxsccI?si=38e5e9c679654a8b&pt=a9ed3e9a5ac1c77a58ca9785fcb9a974', linkText: '共同編集' },
+  { id: '5cTT0dhnbhthJe9zy9JvJz', title: 'RYMのレコメンド', note: 'これで見つけたやつも多い。他のレコメンドは使ってない。' },
+];
+---
+
+<BaseLayout title={title} description={description} lang="ja">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold mb-8">Music</h1>
+
+      <section class="mb-12">
+        <p class="text-gray-700 dark:text-gray-300 mb-8">
+          自分の好みの音楽を発見するのが趣味なので、Spotifyなどでいろいろやってます。<br />
+          とくに見なくてもよいのだけど、見えるところには置いてあるので一覧にしておく。
+        </p>
+
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-primary-light dark:border-primary-dark pb-2">Links</h2>
+
+        <ul class="space-y-4 mb-12">
+          {externalLinks.map((link) => (
+            <li>
+              <a href={link.url} target="_blank" rel="noopener noreferrer" class="text-primary-light dark:text-primary-dark hover:underline font-medium">
+                {link.title}
+              </a>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                {link.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-primary-light dark:border-primary-dark pb-2">プレイリスト</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {playlists.map((playlist) => (
+            <div class="playlist-card">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                {playlist.title}
+              </h3>
+              <div class="spotify-embed-container">
+                <iframe
+                  style="border-radius:12px"
+                  src={`https://open.spotify.com/embed/playlist/${playlist.id}?utm_source=generator`}
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy">
+                </iframe>
+              </div>
+              {playlist.note && (
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">
+                  {playlist.note}
+                </p>
+              )}
+              {playlist.link && (
+                <p class="text-sm mt-2">
+                  <a href={playlist.link} target="_blank" rel="noopener noreferrer" class="text-primary-light dark:text-primary-dark hover:underline">
+                    {playlist.linkText}
+                  </a>
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .spotify-embed-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .spotify-embed-container iframe {
+    max-width: 100%;
+  }
+
+  .playlist-card {
+    background: white;
+    dark:background: #1f2937;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  :global(.dark) .playlist-card {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .playlist-card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px);
+  }
+</style>
