@@ -8,6 +8,8 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import expressiveCode from 'astro-expressive-code';
 import sitemap from '@astrojs/sitemap';
+import { remarkCitationSimple } from './src/utils/remark-citation-simple.ts';
+import { remarkRemoveComments } from './src/utils/remark-remove-comments.ts';
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,7 +29,7 @@ export default defineConfig({
   },
 
   markdown: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkRemoveComments, remarkMath, remarkCitationSimple],
     rehypePlugins: [rehypeKatex],
   },
 
@@ -55,7 +57,7 @@ export default defineConfig({
     }),
     react(),
     mdx({
-      remarkPlugins: [remarkMath],
+      remarkPlugins: [remarkRemoveComments, remarkMath, remarkCitationSimple],
       rehypePlugins: [rehypeKatex],
     }),
     sitemap()

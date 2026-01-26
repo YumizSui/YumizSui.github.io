@@ -10,6 +10,16 @@ const blog = defineCollection({
     lang: z.enum(['ja', 'en']),
     tags: z.array(z.string()).optional(),
     image: z.string().optional(),
+    references: z.array(
+      z.object({
+        key: z.string(),
+        url: z.string().optional(),
+        title: z.string().optional()
+      }).refine(
+        (data) => data.url || data.title,
+        { message: "Either 'url' or 'title' must be provided" }
+      )
+    ).optional(),
   }),
 });
 
