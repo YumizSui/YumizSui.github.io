@@ -10,6 +10,15 @@
       "showInEnglish": true
     },
     {
+      "authors": "Masunaga S, Furui K, Kengkanna A, Ohue M.",
+      "title": "GraphBioisostere: general bioisostere prediction model with deep graph neural network",
+      "journal": "J. Supercomput.",
+      "details": "82.3, 132, 2026.",
+      "doi": "10.1007/s11227-026-08232-y",
+      "url": "http://dx.doi.org/10.1007/s11227-026-08232-y",
+      "showInEnglish": true
+    },
+    {
       "authors": "Furui K, and Ohue M.",
       "title": "ALLM-Ab: Active Learning-driven antibody optimization using fine-tuned protein Language Models.",
       "journal": "J. Chem. Inf. Model.",
