@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  locale: 'ja' | 'en';
+  loading?: 'lazy' | 'eager';
+}
+
+const { post, locale, loading = 'lazy' } = Astro.props;
+
+// Get slug and excerpt
+const slug = post.slug.replace(/^(ja|en)\//, '');
+function getExcerpt(post: CollectionEntry<'blog'>) {
+  const content = post.body;
+  const plainText = content
+    .replace(/^---[\s\S]*?---/, '')
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1')
+    .replace(/[#*`]/g, '')
+    .replace(/\n+/g, ' ')
+    .trim();
+  return plainText.substring(0, 150) + (plainText.length > 150 ? '...' : '');
+}
+
+const excerpt = getExcerpt(post);
+
+// Format date
+const formattedDate = post.data.pubDate.toLocaleDateString(locale === 'ja' ? 'ja-JP' : 'en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+// Load image dynamically if it exists
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/blog/**/*.{png,jpg,jpeg,webp}');
+let imageModule = null;
+if (post.data.image) {
+  const imagePath = `/src/assets/blog/${post.data.image}`;
+  if (images[imagePath]) {
+    imageModule = await images[imagePath]();
+  }
+}
+---
+
+<article class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-800 transition">
+  <a href={`/${locale === 'en' ? 'en/' : ''}blog/${slug}`} class="flex flex-col sm:flex-row gap-4 sm:items-center">
+    <!-- Image -->
+    <div class="flex-shrink-0 w-32 h-32 sm:w-40 sm:h-40 flex justify-center items-center">
+      {imageModule ? (
+        <Image
+          src={imageModule.default}
+          alt={post.data.title}
+          width={320}
+          height={320}
+          class="w-full h-full object-contain rounded"
+          loading={loading}
+        />
+      ) : (
+        <img
+          src="/placeholder-blog.svg"
+          alt="No image"
+          class="w-full h-full object-contain rounded"
+        />
+      )}
+    </div>
+
+    <!-- Content -->
+    <div class="flex-1 min-w-0">
+      <h2 class="text-2xl font-bold mb-2 text-gray-900 dark:text-gray-100">{post.data.title}</h2>
+      <time datetime={post.data.pubDate.toISOString()} class="text-gray-600 dark:text-gray-400 text-sm block mb-2">
+        {formattedDate}
+      </time>
+      <p class="text-gray-700 dark:text-gray-300 mb-3">{excerpt}</p>
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2">
+          {post.data.tags.map(tag => (
+            <span class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-sm">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  </a>
+</article>

@@ -17,6 +17,10 @@ export function remarkCitationSimple() {
     // Get references from frontmatter
     const frontmatter = (file.data.astro as any)?.frontmatter;
     const references: Reference[] = frontmatter?.references || [];
+    const lang = frontmatter?.lang || 'ja';
+    const referencesHeading = lang === 'en' ? 'References' : '参考文献';
+
+    console.log('[remarkCitationSimple] lang:', lang, 'referencesHeading:', referencesHeading, 'file:', file.path);
 
     if (references.length === 0) {
       return;
@@ -94,31 +98,26 @@ export function remarkCitationSimple() {
 
     // Third pass: Add references section at the end
     if (citationOrder.length > 0) {
-      // Find and remove existing "参考文献" section
-      let lastHeadingIndex = -1;
+      // Find and remove existing references section
+      let referencesIndex = -1;
       for (let i = tree.children.length - 1; i >= 0; i--) {
         const node = tree.children[i];
         if (node.type === 'heading') {
           if (
             node.children.length > 0 &&
             node.children[0].type === 'text' &&
-            node.children[0].value === '参考文献'
+            (node.children[0].value === '参考文献' || node.children[0].value === 'References')
           ) {
             // Remove everything from this heading to the end
             tree.children.splice(i);
-            lastHeadingIndex = i;
+            referencesIndex = i;
             break;
-          }
-          if (lastHeadingIndex === -1) {
-            lastHeadingIndex = i + 1;
           }
         }
       }
 
-      // If no heading was found, append to the end
-      if (lastHeadingIndex === -1) {
-        lastHeadingIndex = tree.children.length;
-      }
+      // If no references section was found, append to the end
+      const insertIndex = referencesIndex !== -1 ? referencesIndex : tree.children.length;
 
       // Create references section
       const referencesSection: (typeof tree.children[number])[] = [
@@ -128,7 +127,7 @@ export function remarkCitationSimple() {
           children: [
             {
               type: 'text',
-              value: '参考文献',
+              value: referencesHeading,
             },
           ],
         },
@@ -191,7 +190,7 @@ export function remarkCitationSimple() {
       });
 
       // Insert the references section
-      tree.children.splice(lastHeadingIndex, 0, ...referencesSection);
+      tree.children.splice(insertIndex, 0, ...referencesSection);
     }
   };
 }

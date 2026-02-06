@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BlogSidebarEn from '../../../components/BlogSidebarEn.astro';
 import Pagination from '../../../components/Pagination.astro';
+import BlogCard from '../../../components/BlogCard.astro';
 import { getCollection } from 'astro:content';
 import type { Page, GetStaticPaths } from 'astro';
 
@@ -56,37 +57,13 @@ const description = 'Blog';
         <h1 class="text-4xl font-bold mb-8">Blog</h1>
 
         <div class="space-y-6">
-        {page.data.map((post) => {
-          const slug = post.slug.startsWith('en/') ? post.slug.replace('en/', '') : post.slug;
-          return (
-          <article class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg transition">
-            <a href={`/en/blog/${slug}`} class="no-style">
-              <h2 class="text-2xl font-bold mb-2 transition-colors hover:text-[#527784] dark:hover:text-[#8FA4A8]">
-                {post.data.title}
-              </h2>
-              <p class="text-gray-600 dark:text-gray-400 mb-4">
-                {new Date(post.data.pubDate).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
-              </p>
-              <p class="text-gray-700 dark:text-gray-300">
-                {getExcerpt(post)}
-              </p>
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="flex gap-2 mt-4">
-                  {post.data.tags.map((tag) => (
-                    <a href={`/en/blog/tags/${tag}`} class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition">
-                      {tag}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </a>
-          </article>
-          );
-        })}
+        {page.data.map((post, index) => (
+          <BlogCard
+            post={post}
+            locale="en"
+            loading={index < 3 ? 'eager' : 'lazy'}
+          />
+        ))}
       </div>
 
         {page.data.length === 0 && (

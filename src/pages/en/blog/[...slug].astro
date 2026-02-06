@@ -49,7 +49,15 @@ function getExcerpt(post: any): string {
 }
 ---
 
-<BaseLayout title={post.data.title} description={getExcerpt(post)} lang="en" image={post.data.image}>
+<BaseLayout
+  title={post.data.title}
+  description={getExcerpt(post)}
+  lang="en"
+  image={post.data.image}
+  imageWidth={1200}
+  imageHeight={630}
+  imageAlt={post.data.title}
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Main Content -->
