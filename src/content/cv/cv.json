@@ -8,13 +8,13 @@
     {
       "year": "2023",
       "name": "2023年度 バイオ情報学研究会 SIGBIO学生奨励賞",
-      "nameEn": "SIGBIO Student Encouragement Award 2023",
+      "nameEn": "IPSJ SIGBIO Excellent Student Award",
       "showInEnglish": true
     },
     {
       "year": "2023",
       "name": "第74回研究会 バイオ情報学研究会 SIGBIO優秀プレゼンテーション賞",
-      "nameEn": "SIGBIO Best Presentation Award, 74th Meeting",
+      "nameEn": "74th IPSJ SIGBIO Excellent Presentation Award",
       "showInEnglish": true
     },
     {
@@ -26,13 +26,13 @@
     {
       "year": "2022",
       "name": "第70回バイオ情報学研究会 SIGBIO優秀プレゼンテーション賞",
-      "nameEn": "SIGBIO Best Presentation Award, 70th Meeting",
+      "nameEn": "70th IPSJ SIGBIO Excellent Presentation Award",
       "showInEnglish": true
     },
     {
       "year": "2022",
       "name": "情報処理学会第84回全国大会 学生奨励賞",
-      "nameEn": "IPSJ Student Encouragement Award, 84th National Convention",
+      "nameEn": "Student Encouragement Award of 84th IPSJ National Convention",
       "showInEnglish": true
     },
     {
@@ -44,13 +44,13 @@
     {
       "year": "2019",
       "name": "ネットワークソフトウェア研究会 若手研究奨励賞",
-      "nameEn": "Network Software Research Group Young Researcher Award",
+      "nameEn": "IPSJ Steering Committee on Network Software Young Researcher Award",
       "showInEnglish": true
     },
     {
       "year": "2019",
       "name": "情報処理学会第82回全国大会 学生奨励賞",
-      "nameEn": "IPSJ Student Encouragement Award, 82nd National Convention",
+      "nameEn": "Student Encouragement Award of 82nd IPSJ National Convention",
       "showInEnglish": true
     }
   ],
@@ -148,6 +148,7 @@
       "name": "Boltzina",
       "url": "https://github.com/ohuelab/boltzina",
       "year": "(2025)",
+      "description": "Efficient virtual screening software combining Boltz-2 and AutoDock Vina",
       "showInEnglish": true,
       "showInTools": true
     },
@@ -155,6 +156,7 @@
       "name": "ALLM-Ab",
       "url": "https://github.com/ohuelab/ALLM-Ab",
       "year": "(2025)",
+      "description": "Multi-objective antibody optimization using protein language models and active learning",
       "showInEnglish": true,
       "showInTools": true
     },
@@ -162,6 +164,7 @@
       "name": "Anchored Docking Workflow",
       "url": "https://github.com/YumizSui/anchored_docking_workflow",
       "year": "(2024)",
+      "description": "Anchored docking preparation workflow for AutoDock",
       "showInEnglish": true,
       "showInTools": true
     },
@@ -169,6 +172,7 @@
       "name": "PairMap",
       "url": "https://github.com/ohuelab/PairMap",
       "year": "(2024)",
+      "description": "Intermediate compound insertion method for relative free energy perturbation calculations",
       "showInEnglish": true,
       "showInTools": true
     },
@@ -176,6 +180,7 @@
       "name": "FastLomap",
       "url": "https://github.com/ohuelab/FastLomap",
       "year": "(2023)",
+      "description": "Fast perturbation map construction method for large-scale relative free energy perturbation calculations",
       "showInEnglish": true,
       "showInTools": true
     },
@@ -183,6 +188,7 @@
       "name": "PBPredictor",
       "url": "https://pbpredictor.net/",
       "year": "(2021)",
+      "description": "Web tool for predicting blood-placental barrier permeability",
       "showInEnglish": true,
       "showInTools": true
     }
@@ -215,7 +221,7 @@
       "url": "https://www.qsarj.org/forum2023",
       "note": "#LLM創薬チャレンジ上位入賞者として講演",
       "noteEn": "Presented as a top winner of the #LLM Drug Discovery Challenge",
-      "showInEnglish": false
+      "showInEnglish": true
     }
   ],
   "organization": [

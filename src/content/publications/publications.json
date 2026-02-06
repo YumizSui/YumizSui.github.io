@@ -1,15 +1,6 @@
 {
   "internationalJournals": [
     {
-      "authors": "Ohue M, Furui K.",
-      "title": "PBPredictor.net: GBDT-based model and web tool for prediction of blood–placental barrier permeability of small molecules",
-      "journal": "J. Supercomput.",
-      "details": "82.2, 93, 2026.",
-      "doi": "10.1007/s11227-026-08233-x",
-      "url": "http://dx.doi.org/10.1007/s11227-026-08233-x",
-      "showInEnglish": true
-    },
-    {
       "authors": "Masunaga S†, Furui K†, Kengkanna A, Ohue M.",
       "title": "GraphBioisostere: general bioisostere prediction model with deep graph neural network",
       "journal": "J. Supercomput.",
@@ -17,7 +8,20 @@
       "doi": "10.1007/s11227-026-08232-y",
       "url": "http://dx.doi.org/10.1007/s11227-026-08232-y",
       "showInEnglish": true,
-      "note": "†: equally contributed"
+      "note": "†: equally contributed",
+      "year": 2026,
+      "month": 2
+    },
+    {
+      "authors": "Ohue M, Furui K.",
+      "title": "PBPredictor.net: GBDT-based model and web tool for prediction of blood–placental barrier permeability of small molecules",
+      "journal": "J. Supercomput.",
+      "details": "82.2, 93, 2026.",
+      "doi": "10.1007/s11227-026-08233-x",
+      "url": "http://dx.doi.org/10.1007/s11227-026-08233-x",
+      "showInEnglish": true,
+      "year": 2026,
+      "month": 1
     },
     {
       "authors": "Furui K, and Ohue M.",
@@ -25,7 +29,9 @@
       "journal": "J. Chem. Inf. Model.",
       "details": "65.21, 11543-11557, 2025.",
       "doi": "10.1021/acs.jcim.5c01577",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2025,
+      "month": 10
     },
     {
       "authors": "Furui K, Sakano K, Ohue M.",
@@ -33,7 +39,9 @@
       "journal": "Allergol. Int.",
       "details": "74.4, 534-548, 2025.",
       "doi": "10.1016/j.alit.2025.08.004",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2025,
+      "month": 10
     },
     {
       "authors": "Uchikawa K, Furui K, and Ohue M.",
@@ -41,7 +49,9 @@
       "journal": "Biochem. Biophy. Rep.",
       "details": "43, 102110, 2025.",
       "doi": "10.1016/j.bbrep.2025.102110",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2025,
+      "month": 9
     },
     {
       "authors": "Furui K, and Ohue M.",
@@ -49,7 +59,9 @@
       "journal": "ACS Omega.",
       "details": "10.11, 11411-11420, 2025.",
       "doi": "10.1021/acsomega.4c11413",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2025,
+      "month": 3
     },
     {
       "authors": "Furui K, Shimizu T, Akiyama Y, Kimura S R, Terada Y, and Ohue M.",
@@ -57,7 +69,9 @@
       "journal": "J. Chem. Inf. Model.",
       "details": "65.2, 705–721, 2025.",
       "doi": "10.1021/acs.jcim.4c01634",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2025,
+      "month": 1
     },
     {
       "authors": "Sakano K, Furui K, Ohue M.",
@@ -65,7 +79,9 @@
       "journal": "J. Supercomput.",
       "details": "81.1, 1-16, 2025.",
       "doi": "10.1007/s11227-024-06860-w",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2025,
+      "month": 1
     },
     {
       "authors": "Furui K, Ohue M.",
@@ -74,7 +90,9 @@
       "details": "80.10, 14417-14432, 2024.",
       "doi": "10.1007/s11227-024-06006-y",
       "url": "http://dx.doi.org/10.1007/s11227-024-06006-y",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2024,
+      "month": 3
     },
     {
       "authors": "Ochiai T, Inukai T, Akiyama M, Furui K, Ohue M, Matsumori N, Inuki S, Uesugi M, Sunazuka T, Kikuchi K, Kakeya H & Sakakibara Y.",
@@ -82,7 +100,9 @@
       "journal": "Commun. Chem.",
       "details": "6, 249, 2023.",
       "doi": "10.1038/s42004-023-01054-6",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2023,
+      "month": 11
     }
   ],
   "internationalConferences": [
@@ -90,7 +110,8 @@
       "authors": "Furui K, and Ohue M.",
       "title": "Boltzina: Efficient and Accurate Virtual Screening via Docking-Guided Binding Prediction with Boltz-2.",
       "conference": "AI for Accelerated Materials Design Workshop at the 39th Conference on Neural Information Processing Systems (AI4Mat workshop on NeurIPS2025)",
-      "year": "2025",
+      "year": 2025,
+      "month": 12,
       "url": "https://openreview.net/forum?id=OwtEQsd2hN",
       "showInEnglish": true
     },
@@ -98,7 +119,8 @@
       "authors": "Masunaga S†, Furui K†, Kengkanna A, Ohue M.",
       "title": "GraphBioisostere: General Bioisostere Prediction Model with Deep Graph Neural Network.",
       "conference": "In Proc PDPTA'25, IEEE CPS",
-      "year": "2025",
+      "year": 2025,
+      "month": 7,
       "note": "†: equally contributed",
       "showInEnglish": true
     },
@@ -106,14 +128,16 @@
       "authors": "Ohue M, Furui K.",
       "title": "GBDT-based Model and Web Tool for Prediction of Blood-Placental Barrier Permeability of Small Molecules.",
       "conference": "In Proc PDPTA'25, IEEE CPS",
-      "year": "2025",
+      "year": 2025,
+      "month": 7,
       "showInEnglish": true
     },
     {
       "authors": "Furui K, and Ohue M.",
       "title": "Active learning for energy-based antibody optimization and enhanced screening.",
       "conference": "Machine Learning in Structural Biology Workshop at the 38th Conference on Neural Information Processing Systems (MLSB workshop on NeurIPS2024)",
-      "year": "2024",
+      "year": 2024,
+      "month": 12,
       "url": "https://www.mlsb.io/papers_2024/Active_Learning_for_Energy-Based_Antibody_Optimization_and_Enhanced_Screening.pdf",
       "showInEnglish": true
     },
@@ -121,14 +145,16 @@
       "authors": "Sakano K, Furui K, Ohue M.",
       "title": "Natural Product-like Compound Generation with Chemical Language Models.",
       "conference": "In Proc PDPTA'24, IEEE CPS",
-      "year": "2024",
+      "year": 2024,
+      "month": 7,
       "showInEnglish": true
     },
     {
       "authors": "Murakumo K, Yoshikawa N, Kentaro R, Nakamura S, Furui K, Suzuki T Yamasaki H, Nishigaya Y, Takagi Y & Ohue M.",
       "title": "LLM Drug Discovery Challenge: A Contest as a Feasibility Study on the Utilization of Large Language Models in Medicinal Chemistry.",
       "conference": "AI for Accelerated Materials Design-NeurIPS 2023 Workshop",
-      "year": "2023",
+      "year": 2023,
+      "month": 12,
       "url": "https://openreview.net/forum?id=kjUylvko18",
       "showInEnglish": true
     },
@@ -136,14 +162,16 @@
       "authors": "Furui K, and Ohue M.",
       "title": "Faster Lead Optimization Mapper Algorithm for Large-Scale Relative Free Energy Perturbation.",
       "conference": "In Proc PDPTA'23, IEEE CPS",
-      "year": "2023",
+      "year": 2023,
+      "month": 7,
       "showInEnglish": true
     },
     {
       "authors": "Furui K, and Ohue M",
       "title": "Compound Virtual Screening by Learning-to-Rank with Gradient Boosting Decision Tree and Enrichment-based Cumulative Gain.",
       "conference": "2022 IEEE Conference on Computational Intelligence in Bioinformatics and Computational Biology (CIBCB)",
-      "year": "2022",
+      "year": 2022,
+      "month": 8,
       "doi": "10.1109/CIBCB55180.2022.9863032",
       "showInEnglish": true
     }
@@ -155,7 +183,9 @@
       "journal": "電子情報通信学会論文誌 B",
       "details": "104.10 (2021): 761-771.",
       "doi": "10.14923/transcomj.2020NSP0001",
-      "showInEnglish": false
+      "showInEnglish": false,
+      "year": 2021,
+      "month": 10
     }
   ],
   "preprints": [
@@ -164,7 +194,9 @@
       "title": "The Indole Rocaglamide Induces S and G2/M Phase Cell Cycle Arrest in Small Cell Lung Cancer Cells Through ASCL1 Translation Inhibition.",
       "venue": "SSRN preprint 4493242",
       "doi": "10.2139/ssrn.4493242",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "year": 2023,
+      "month": 6
     }
   ]
 }
