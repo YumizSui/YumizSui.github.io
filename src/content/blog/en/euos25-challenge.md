@@ -125,7 +125,7 @@ In other words, we believe the correction didn't work because it was unclear whe
 
 ## Team Composition
 
-Team yumiz consists of three students from Institute of Science Tokyo ([Ohue Laboratory](https://www.li.comp.isct.ac.jp/)), including myself, Apakorn, and ...
+Team yumiz consists of three students from Institute of Science Tokyo ([Ohue Laboratory](https://www.li.comp.isct.ac.jp/)), including myself, Apakorn, and Koh.
 Initially, each of us participated individually, then we formed a team by contacting the organizers. We all built our own prediction model using multiple features with some ensemble methods.
 However, when we do ensembling, our combined three models didn't improve performance. Thus, we decided to use my best emsembled model as the final submission.
 Nevertheless, forming the team was valuable, as the discussions and shared insights helped us better assess the problem and recognize that there was limited scope for further improvement.
