@@ -28,6 +28,11 @@ const organization = cv.organization.filter(item => item.showInEnglish);
           {awards.map((award) => (
             <li class="text-gray-700 dark:text-gray-300">
               <span class="font-semibold">{award.nameEn || award.name}</span> ({award.year})
+              {award.url && (
+                <a href={award.url} target="_blank" rel="noopener noreferrer" class="hover:underline ml-2 text-sm">
+                  [link]
+                </a>
+              )}
             </li>
           ))}
         </ul>

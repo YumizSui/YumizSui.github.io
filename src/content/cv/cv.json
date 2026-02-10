@@ -1,56 +1,71 @@
 {
   "awards": [
     {
+      "year": "2026",
+      "name": "EUOS25 Challenge first prize🏆 (Transmittance Category)",
+      "showInEnglish": true,
+      "url": "https://www.eu-openscreen.eu/newsroom/eu-openscreen-news/ansicht/eu-openscreen-and-slas-announce-winners-of-the-second-joint-machine-learning-challenge-at-slas-2026.html"
+    },
+    {
       "year": "2025",
       "name": "AHeDD2025 Wiley Best Poster Award (2nd Class)",
+      "url": "https://www.ahedd2025.asia/",
       "showInEnglish": true
     },
     {
       "year": "2023",
       "name": "2023年度 バイオ情報学研究会 SIGBIO学生奨励賞",
       "nameEn": "IPSJ SIGBIO Excellent Student Award",
+      "url": "https://www.ipsj.or.jp/award/bio-award1.html",
       "showInEnglish": true
     },
     {
       "year": "2023",
       "name": "第74回研究会 バイオ情報学研究会 SIGBIO優秀プレゼンテーション賞",
       "nameEn": "74th IPSJ SIGBIO Excellent Presentation Award",
+      "url": "https://www.ipsj.or.jp/award/bio-award3.html",
       "showInEnglish": true
     },
     {
       "year": "2023",
       "name": "#LLM創薬チャレンジ ２位🥈",
       "nameEn": "#LLM Drug Discovery Challenge - 2nd Place",
+      "url": "https://github.com/souyakuchan/LLM_DD_Challenge/tree/main/result",
       "showInEnglish": false
     },
     {
       "year": "2022",
       "name": "第70回バイオ情報学研究会 SIGBIO優秀プレゼンテーション賞",
       "nameEn": "70th IPSJ SIGBIO Excellent Presentation Award",
+      "url": "https://www.ipsj.or.jp/award/bio-award3.html",
       "showInEnglish": true
     },
     {
       "year": "2022",
       "name": "情報処理学会第84回全国大会 学生奨励賞",
       "nameEn": "Student Encouragement Award of 84th IPSJ National Convention",
+      "url": "https://www.ipsj.or.jp/award/taikaigakusei.html",
       "showInEnglish": true
     },
     {
       "year": "2020",
       "name": "東京工業大学 教養卒論（2020年度）優秀賞",
       "nameEn": "Tokyo Institute of Technology Outstanding Liberal Arts Thesis Award 2020",
+      "url": "https://educ.titech.ac.jp/ila/news/2021_04/060571.html",
       "showInEnglish": false
     },
     {
       "year": "2019",
       "name": "ネットワークソフトウェア研究会 若手研究奨励賞",
       "nameEn": "IPSJ Steering Committee on Network Software Young Researcher Award",
+      "url": "https://www.ieice.org/cs/ns/nws/award/young_encouragement/",
       "showInEnglish": true
     },
     {
       "year": "2019",
       "name": "情報処理学会第82回全国大会 学生奨励賞",
       "nameEn": "Student Encouragement Award of 82nd IPSJ National Convention",
+      "url": "https://www.ipsj.or.jp/award/taikaigakusei.html",
       "showInEnglish": true
     }
   ],
