@@ -21,7 +21,7 @@ references:
     title: "Ji, Xiaohong, et al. \"Exploring Molecular Pretraining Model at Scale.\" The Thirty-Eighth Annual Conference on Neural Information Processing Systems, 2024"
 ---
 
-EU-OPENSCREENとSLASが主催するEUOS25 Challenge[@euos25]において、我々のチームyumizはTransmittanceカテゴリーのブラインドテストで1位となりました（Fluorescenceカテゴリーでは6位でした）。
+EU-OPENSCREENとSLASが主催するEUOS25 Challenge[@euos25]において、我々のチームyumizは[Transmittanceカテゴリーのブラインドテストで1位となりました](https://www.eu-openscreen.eu/newsroom/eu-openscreen-news/ansicht/eu-openscreen-and-slas-announce-winners-of-the-second-joint-machine-learning-challenge-at-slas-2026.html)（Fluorescenceカテゴリーでは6位でした）。
 
 優勝チームである我々のチームには、ボストンで開催されるSLAS2026 International Conference & Exhibitionにて賞金€1,000が授与されるとのことです。
 また、優勝チームと、性能に有意差のない結果を出したチームは、SLAS journalにて研究またはプロトコルを発表するよう招待されるそうです。
