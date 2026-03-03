@@ -9,9 +9,13 @@ const currentYear = new Date().getFullYear();
 const text = {
   ja: {
     rights: 'All rights reserved',
+    privacy: 'Privacy Policy',
+    privacyHref: '/privacy',
   },
   en: {
     rights: 'All rights reserved',
+    privacy: 'Privacy Policy',
+    privacyHref: '/en/privacy',
   }
 };
 ---
@@ -21,6 +25,8 @@ const text = {
     <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
       <p class="text-sm text-gray-600 dark:text-gray-400">
         © {currentYear} @YumizSui {text[lang].rights}.
+        <span class="mx-2">/</span>
+        <a href={text[lang].privacyHref} class="hover:underline text-gray-600 dark:text-gray-400">{text[lang].privacy}</a>
       </p>
     </div>
   </div>

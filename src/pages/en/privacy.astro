@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Privacy Policy';
+const description = 'Privacy Policy';
+---
+
+<BaseLayout title={title} description={description} lang="en">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-8">Privacy Policy</h1>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary-light dark:border-primary-dark pb-2">Google Analytics</h2>
+        <p class="text-gray-700 dark:text-gray-300">
+          This site uses Google Analytics to analyze site traffic. Google Analytics uses cookies to collect access information, but does not identify individuals. Collected data is used solely to improve this site. For details, please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-primary-light dark:text-primary-dark hover:underline">Google's Privacy Policy</a>. To opt out of data collection, please use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-primary-light dark:text-primary-dark hover:underline">Google Analytics Opt-out Browser Add-on</a>.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <p class="text-sm text-gray-600 dark:text-gray-400">Established: March 3, 2026</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
