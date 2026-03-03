@@ -1,0 +1,78 @@
+---
+interface Props {
+  slug: string;
+  lang: 'ja' | 'en';
+}
+
+const { slug, lang } = Astro.props;
+const isProd = import.meta.env.PROD;
+
+// Obtain these values from https://giscus.app after setting up GitHub Discussions
+const REPO = "YumizSui/YumizSui.github.io";
+const REPO_ID = "R_kgDOLKZ7mw";
+const CATEGORY = "Blog Comments";
+const CATEGORY_ID = "DIC_kwDOLKZ7m84C3mFa";
+---
+
+{isProd ? (
+  <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+    <div class="giscus"></div>
+    <script
+      is:inline
+      define:vars={{ slug, lang, REPO, REPO_ID, CATEGORY, CATEGORY_ID }}
+    >
+      (function () {
+        const isDark = document.documentElement.classList.contains('dark');
+        const theme = isDark ? 'github-dark' : 'github-light';
+
+        const script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.setAttribute('data-repo', REPO);
+        script.setAttribute('data-repo-id', REPO_ID);
+        script.setAttribute('data-category', CATEGORY);
+        script.setAttribute('data-category-id', CATEGORY_ID);
+        script.setAttribute('data-mapping', 'specific');
+        script.setAttribute('data-term', slug);
+        script.setAttribute('data-strict', '0');
+        script.setAttribute('data-reactions-enabled', '1');
+        script.setAttribute('data-emit-metadata', '0');
+        script.setAttribute('data-input-position', 'top');
+        script.setAttribute('data-theme', theme);
+        script.setAttribute('data-lang', lang);
+        script.setAttribute('data-loading', 'lazy');
+        script.crossOrigin = 'anonymous';
+        script.async = true;
+
+        document.querySelector('.giscus').appendChild(script);
+
+        // Sync theme with dark mode toggle
+        const observer = new MutationObserver(function (mutations) {
+          mutations.forEach(function (mutation) {
+            if (mutation.attributeName === 'class') {
+              const newTheme = document.documentElement.classList.contains('dark')
+                ? 'github-dark'
+                : 'github-light';
+              const iframe = document.querySelector('iframe.giscus-frame');
+              if (iframe) {
+                iframe.contentWindow.postMessage(
+                  { giscus: { setConfig: { theme: newTheme } } },
+                  'https://giscus.app'
+                );
+              }
+            }
+          });
+        });
+
+        observer.observe(document.documentElement, { attributes: true });
+      })();
+    </script>
+  </div>
+) : (
+  <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+    <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm text-center">
+      {lang === 'ja'
+        ? 'コメントは本番環境で表示されます。'
+        : 'Comments are displayed in the production environment.'}
+    </div>
+  </div>
+)}

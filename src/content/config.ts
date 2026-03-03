@@ -20,6 +20,7 @@ const blog = defineCollection({
         { message: "Either 'url' or 'title' must be provided" }
       )
     ).optional(),
+    comments: z.boolean().default(true),
   }),
 });
 

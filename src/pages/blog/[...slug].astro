@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
 import BlogSidebar from '../../components/BlogSidebar.astro';
+import Comments from '../../components/Comments.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -96,6 +97,13 @@ function getExcerpt(post: any): string {
           lang="ja"
         />
       </div>
+
+      {post.data.comments !== false && (
+        <Comments
+          slug={post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug}
+          lang="ja"
+        />
+      )}
 
       <footer class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
