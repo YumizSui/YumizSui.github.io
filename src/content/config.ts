@@ -1,5 +1,12 @@
 import { defineCollection, z } from 'astro:content';
 
+const rmSchema = z.object({
+  type: z.string(),
+  id: z.string().optional(),
+  publication_name: z.string().optional(),
+  event: z.string().optional(),
+}).nullable().optional();
+
 const blog = defineCollection({
   type: 'content',
   schema: z.object({
@@ -25,7 +32,7 @@ const blog = defineCollection({
 });
 
 const publicationSchema = z.object({
-  authors: z.string(),
+  authors: z.array(z.string()),
   title: z.string(),
   journal: z.string().optional(),
   conference: z.string().optional(),
@@ -37,6 +44,7 @@ const publicationSchema = z.object({
   url: z.string().optional(),
   note: z.string().optional(),
   showInEnglish: z.boolean(),
+  rm: rmSchema,
 });
 
 const publications = defineCollection({
@@ -50,7 +58,7 @@ const publications = defineCollection({
 });
 
 const nonPeerReviewedSchema = z.object({
-  authors: z.string(),
+  authors: z.array(z.string()),
   title: z.string(),
   conference: z.string(),
   year: z.string(),
@@ -59,6 +67,7 @@ const nonPeerReviewedSchema = z.object({
   url: z.string().optional(),
   note: z.string().optional(),
   showInEnglish: z.boolean(),
+  rm: rmSchema,
 });
 
 const non_peerreviewed = defineCollection({

@@ -1,7 +1,7 @@
 {
   "internationalJournals": [
     {
-      "authors": "Masunaga S†, Furui K†, Kengkanna A, Ohue M.",
+      "authors": ["Sho Masunaga†", "Kairi Furui†", "Apakorn Kengkanna", "Masahito Ohue"],
       "title": "GraphBioisostere: general bioisostere prediction model with deep graph neural network",
       "journal": "J. Supercomput.",
       "details": "82.3, 132, 2026.",
@@ -10,10 +10,11 @@
       "showInEnglish": true,
       "note": "†: equally contributed",
       "year": 2026,
-      "month": 2
+      "month": 2,
+      "rm": { "type": "published_papers", "id": "52177499", "publication_name": "The Journal of Supercomputing" }
     },
     {
-      "authors": "Ohue M, Furui K.",
+      "authors": ["Masahito Ohue", "Kairi Furui"],
       "title": "PBPredictor.net: GBDT-based model and web tool for prediction of blood–placental barrier permeability of small molecules",
       "journal": "J. Supercomput.",
       "details": "82.2, 93, 2026.",
@@ -21,70 +22,77 @@
       "url": "http://dx.doi.org/10.1007/s11227-026-08233-x",
       "showInEnglish": true,
       "year": 2026,
-      "month": 1
+      "month": 1,
+      "rm": { "type": "published_papers", "publication_name": "The Journal of Supercomputing" }
     },
     {
-      "authors": "Furui K, and Ohue M.",
+      "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "ALLM-Ab: Active Learning-driven antibody optimization using fine-tuned protein Language Models.",
       "journal": "J. Chem. Inf. Model.",
       "details": "65.21, 11543-11557, 2025.",
       "doi": "10.1021/acs.jcim.5c01577",
       "showInEnglish": true,
       "year": 2025,
-      "month": 10
+      "month": 10,
+      "rm": { "type": "published_papers", "id": "50835642", "publication_name": "Journal of Chemical Information and Modeling" }
     },
     {
-      "authors": "Furui K, Sakano K, Ohue M.",
+      "authors": ["Kairi Furui", "Koh Sakano", "Masahito Ohue"],
       "title": "Predictive and therapeutic applications of protein language models.",
       "journal": "Allergol. Int.",
       "details": "74.4, 534-548, 2025.",
       "doi": "10.1016/j.alit.2025.08.004",
       "showInEnglish": true,
       "year": 2025,
-      "month": 10
+      "month": 10,
+      "rm": { "type": "published_papers", "id": "51198606", "publication_name": "Allergology International" }
     },
     {
-      "authors": "Uchikawa K, Furui K, and Ohue M.",
+      "authors": ["Keisuke Uchikawa", "Kairi Furui", "Masahito Ohue"],
       "title": "Leveraging AlphaFold2 Structural Space Exploration for Generating Drug Target Structures in Structure-Based Virtual Screening",
       "journal": "Biochem. Biophy. Rep.",
       "details": "43, 102110, 2025.",
       "doi": "10.1016/j.bbrep.2025.102110",
       "showInEnglish": true,
       "year": 2025,
-      "month": 9
+      "month": 9,
+      "rm": { "type": "published_papers", "id": "49227176", "publication_name": "Biochemistry and Biophysics Reports" }
     },
     {
-      "authors": "Furui K, and Ohue M.",
+      "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "Benchmarking HelixFold3-Predicted Holo Structures for Relative Free Energy Perturbation Calculations",
       "journal": "ACS Omega.",
       "details": "10.11, 11411-11420, 2025.",
       "doi": "10.1021/acsomega.4c11413",
       "showInEnglish": true,
       "year": 2025,
-      "month": 3
+      "month": 3,
+      "rm": { "type": "published_papers", "id": "48341042", "publication_name": "ACS Omega" }
     },
     {
-      "authors": "Furui K, Shimizu T, Akiyama Y, Kimura S R, Terada Y, and Ohue M.",
+      "authors": ["Kairi Furui", "Takafumi Shimizu", "Yutaka Akiyama", "S Roy Kimura", "Yoh Terada", "Masahito Ohue"],
       "title": "PairMap: An Intermediate Insertion Approach for Improving the Accuracy of Relative Free Energy Perturbation Calculations for Distant Compound Transformations",
       "journal": "J. Chem. Inf. Model.",
       "details": "65.2, 705–721, 2025.",
       "doi": "10.1021/acs.jcim.4c01634",
       "showInEnglish": true,
       "year": 2025,
-      "month": 1
+      "month": 1,
+      "rm": { "type": "published_papers", "id": "48919205", "publication_name": "Journal of Chemical Information and Modeling" }
     },
     {
-      "authors": "Sakano K, Furui K, Ohue M.",
+      "authors": ["Koh Sakano", "Kairi Furui", "Masahito Ohue"],
       "title": "NPGPT: natural product-like compound generation with GPT-based chemical language models",
       "journal": "J. Supercomput.",
       "details": "81.1, 1-16, 2025.",
       "doi": "10.1007/s11227-024-06860-w",
       "showInEnglish": true,
       "year": 2025,
-      "month": 1
+      "month": 1,
+      "rm": { "type": "published_papers", "id": "48887366", "publication_name": "The Journal of Supercomputing" }
     },
     {
-      "authors": "Furui K, Ohue M.",
+      "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "Fastlomap: faster lead optimization mapper algorithm for large-scale relative free energy perturbation",
       "journal": "J. Supercomput.",
       "details": "80.10, 14417-14432, 2024.",
@@ -92,111 +100,123 @@
       "url": "http://dx.doi.org/10.1007/s11227-024-06006-y",
       "showInEnglish": true,
       "year": 2024,
-      "month": 3
+      "month": 3,
+      "rm": { "type": "published_papers", "id": "46793375", "publication_name": "The Journal of Supercomputing" }
     },
     {
-      "authors": "Ochiai T, Inukai T, Akiyama M, Furui K, Ohue M, Matsumori N, Inuki S, Uesugi M, Sunazuka T, Kikuchi K, Kakeya H & Sakakibara Y.",
+      "authors": ["Toshiki Ochiai", "Tensei Inukai", "Manato Akiyama", "Kairi Furui", "Masahito Ohue", "Nobuaki Matsumori", "Shinsuke Inuki", "Motonari Uesugi", "Toshiaki Sunazuka", "Kazuya Kikuchi", "Hideaki Kakeya", "Yasubumi Sakakibara"],
       "title": "Variational autoencoder-based chemical latent space for large molecular structures with 3D complexity.",
       "journal": "Commun. Chem.",
       "details": "6, 249, 2023.",
       "doi": "10.1038/s42004-023-01054-6",
       "showInEnglish": true,
       "year": 2023,
-      "month": 11
+      "month": 11,
+      "rm": { "type": "published_papers", "id": "46793377", "publication_name": "Communications Chemistry" }
     }
   ],
   "internationalConferences": [
     {
-      "authors": "Furui K, and Ohue M.",
+      "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "Boltzina: Efficient and Accurate Virtual Screening via Docking-Guided Binding Prediction with Boltz-2.",
       "conference": "AI for Accelerated Materials Design Workshop at the 39th Conference on Neural Information Processing Systems (AI4Mat workshop on NeurIPS2025)",
       "year": 2025,
       "month": 12,
       "url": "https://openreview.net/forum?id=OwtEQsd2hN",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "published_papers", "id": "51251300" }
     },
     {
-      "authors": "Masunaga S†, Furui K†, Kengkanna A, Ohue M.",
+      "authors": ["Sho Masunaga†", "Kairi Furui†", "Apakorn Kengkanna", "Masahito Ohue"],
       "title": "GraphBioisostere: General Bioisostere Prediction Model with Deep Graph Neural Network.",
       "conference": "In Proc PDPTA'25, IEEE CPS",
       "year": 2025,
       "month": 7,
       "note": "†: equally contributed",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "presentations", "id": "51251441", "event": "PDPTA'25- The 31th Int'l Conf on Parallel and Distributed Processing Techniques and Applications" }
     },
     {
-      "authors": "Ohue M, Furui K.",
+      "authors": ["Masahito Ohue", "Kairi Furui"],
       "title": "GBDT-based Model and Web Tool for Prediction of Blood-Placental Barrier Permeability of Small Molecules.",
       "conference": "In Proc PDPTA'25, IEEE CPS",
       "year": 2025,
       "month": 7,
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "presentations", "id": "51251414", "event": "PDPTA'25- The 31th Int'l Conf on Parallel and Distributed Processing Techniques and Applications" }
     },
     {
-      "authors": "Furui K, and Ohue M.",
+      "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "Active learning for energy-based antibody optimization and enhanced screening.",
       "conference": "Machine Learning in Structural Biology Workshop at the 38th Conference on Neural Information Processing Systems (MLSB workshop on NeurIPS2024)",
       "year": 2024,
       "month": 12,
       "url": "https://www.mlsb.io/papers_2024/Active_Learning_for_Energy-Based_Antibody_Optimization_and_Enhanced_Screening.pdf",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "published_papers", "id": "49227184" }
     },
     {
-      "authors": "Sakano K, Furui K, Ohue M.",
+      "authors": ["Koh Sakano", "Kairi Furui", "Masahito Ohue"],
       "title": "Natural Product-like Compound Generation with Chemical Language Models.",
       "conference": "In Proc PDPTA'24, IEEE CPS",
       "year": 2024,
       "month": 7,
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "presentations", "id": "51251389", "event": "PDPTA'24- The 30th Int'l Conf on Parallel and Distributed Processing Techniques and Applications" }
     },
     {
-      "authors": "Murakumo K, Yoshikawa N, Kentaro R, Nakamura S, Furui K, Suzuki T Yamasaki H, Nishigaya Y, Takagi Y & Ohue M.",
+      "authors": ["Kusuri Murakumo", "Naruki Yoshikawa", "Kentaro Rikimaru", "Shogo Nakamura", "Kairi Furui", "Takamasa Suzuki", "Hiroyuki Yamasaki", "Yuki Nishigaya", "Yuzo Takagi", "Masahito Ohue"],
       "title": "LLM Drug Discovery Challenge: A Contest as a Feasibility Study on the Utilization of Large Language Models in Medicinal Chemistry.",
       "conference": "AI for Accelerated Materials Design-NeurIPS 2023 Workshop",
       "year": 2023,
       "month": 12,
       "url": "https://openreview.net/forum?id=kjUylvko18",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "published_papers", "id": "46793448" }
     },
     {
-      "authors": "Furui K, and Ohue M.",
+      "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "Faster Lead Optimization Mapper Algorithm for Large-Scale Relative Free Energy Perturbation.",
       "conference": "In Proc PDPTA'23, IEEE CPS",
       "year": 2023,
       "month": 7,
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "presentations", "id": "46793450", "event": "PDPTA'23- The 29th Int'l Conf on Parallel and Distributed Processing Techniques and Applications" }
     },
     {
-      "authors": "Furui K, and Ohue M",
+      "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "Compound Virtual Screening by Learning-to-Rank with Gradient Boosting Decision Tree and Enrichment-based Cumulative Gain.",
       "conference": "2022 IEEE Conference on Computational Intelligence in Bioinformatics and Computational Biology (CIBCB)",
       "year": 2022,
       "month": 8,
       "doi": "10.1109/CIBCB55180.2022.9863032",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "published_papers", "id": "46793376" }
     }
   ],
   "domesticJournals": [
     {
-      "authors": "干川尚人, 古井海里, 白木厚司, 伊藤智義, 干川尚人.",
+      "authors": ["干川尚人", "古井海里", "白木厚司", "伊藤智義"],
       "title": "時刻ドリフトの平均 2 乗誤差分析によるオンライン機器の識別技術.",
       "journal": "電子情報通信学会論文誌 B",
       "details": "104.10 (2021): 761-771.",
       "doi": "10.14923/transcomj.2020NSP0001",
       "showInEnglish": false,
       "year": 2021,
-      "month": 10
+      "month": 10,
+      "rm": { "type": "published_papers", "id": "46793374", "publication_name": "電子情報通信学会論文誌B 通信" }
     }
   ],
   "preprints": [
     {
-      "authors": "Arai M, Makita Y, Saito S, Suzuki S, Narushima Y, Izawa N, Tanaka Y, Furui K, Ohue M, Ishibashi M.",
+      "authors": ["Midori Arai", "Yoshinori Makita", "Shun Saito", "Shiina Suzuki", "Yuki Narushima", "Nanoha Izawa", "Yuki Tanaka", "Kairi Furui", "Masahito Ohue", "Masami Ishibashi"],
       "title": "The Indole Rocaglamide Induces S and G2/M Phase Cell Cycle Arrest in Small Cell Lung Cancer Cells Through ASCL1 Translation Inhibition.",
       "venue": "SSRN preprint 4493242",
       "doi": "10.2139/ssrn.4493242",
       "showInEnglish": true,
       "year": 2023,
-      "month": 6
+      "month": 6,
+      "rm": { "type": "published_papers", "id": "46793378" }
     }
   ]
 }

@@ -3,95 +3,85 @@ export interface TextSegment {
   shouldFormat: boolean;
 }
 
+function isCJK(name: string): boolean {
+  return /[\u3000-\u9fff\uff00-\uffef]/.test(name);
+}
+
 /**
- * Formats author names by identifying "Furui K" and "古井海里" patterns
- * and marking them for bold and underline formatting.
+ * Abbreviates an English full name to "LastName FirstInit [MiddleInit...]" format.
+ * Handles † marker: strips it, abbreviates, re-adds.
+ * Examples:
+ *   "Kairi Furui"   → "Furui K"
+ *   "Kairi Furui†"  → "Furui K†"
+ */
+function abbreviateName(fullName: string): string {
+  const marker = fullName.endsWith('†') ? '†' : '';
+  const name = marker ? fullName.slice(0, -1) : fullName;
+  const parts = name.trim().split(/\s+/);
+  if (parts.length === 1) return fullName;
+  const lastName = parts[parts.length - 1];
+  const firstMiddle = parts.slice(0, -1);
+  const initials = firstMiddle.map(p => p[0]).join(' ');
+  return `${lastName} ${initials}${marker}`;
+}
+
+/**
+ * Formats an array of author full names into display text with formatting metadata.
+ * - CJK names are kept as-is
+ * - English names are abbreviated to "LastName FirstInit [MiddleInit...]" format
+ * - Self-author (Furui K / 古井海里) is highlighted with bold+underline
+ * - Names are joined with ", " and terminated with "."
  *
- * @param authors - The author string to format
+ * @param authors - Array of author full names
  * @returns Array of text segments with formatting metadata
  */
-export function formatAuthors(authors: string): TextSegment[] {
-  const segments: TextSegment[] = [];
+export function formatAuthors(authors: string[]): TextSegment[] {
+  const displayNames = authors.map(name =>
+    isCJK(name) ? name : abbreviateName(name)
+  );
 
-  // Pattern for "Furui K" (with optional space, optional comma/period after K)
-  // Matches: "Furui K", "Furui K,", "Furui K."
-  const furuiPattern = /Furui\s+K[,.]?/g;
+  const joined = displayNames.join(', ') + '.';
 
-  // Pattern for "古井海里" (with optional comma/period)
-  // Matches: "古井海里", "古井海里,", "古井海里."
-  const japanesePattern = /古井海里[,.]?/g;
+  const selfPatterns = ['Furui K', '古井海里'];
+  const matches: Array<{ start: number; end: number }> = [];
 
-  // Find all matches with their positions
-  const matches: Array<{ start: number; end: number; text: string }> = [];
-
-  let match;
-
-  // Find all "Furui K" matches
-  while ((match = furuiPattern.exec(authors)) !== null) {
-    matches.push({
-      start: match.index,
-      end: match.index + match[0].length,
-      text: match[0]
-    });
+  for (const pattern of selfPatterns) {
+    let idx = 0;
+    while (true) {
+      const pos = joined.indexOf(pattern, idx);
+      if (pos === -1) break;
+      matches.push({ start: pos, end: pos + pattern.length });
+      idx = pos + pattern.length;
+    }
   }
 
-  // Find all "古井海里" matches
-  while ((match = japanesePattern.exec(authors)) !== null) {
-    matches.push({
-      start: match.index,
-      end: match.index + match[0].length,
-      text: match[0]
-    });
-  }
-
-  // Sort matches by position
   matches.sort((a, b) => a.start - b.start);
 
-  // Remove overlapping matches (keep the first one)
-  const nonOverlappingMatches: Array<{ start: number; end: number; text: string }> = [];
-  for (const match of matches) {
-    if (nonOverlappingMatches.length === 0 || match.start >= nonOverlappingMatches[nonOverlappingMatches.length - 1].end) {
-      nonOverlappingMatches.push(match);
+  const nonOverlapping: Array<{ start: number; end: number }> = [];
+  for (const m of matches) {
+    if (nonOverlapping.length === 0 || m.start >= nonOverlapping[nonOverlapping.length - 1].end) {
+      nonOverlapping.push(m);
     }
   }
 
-  // Build segments
+  const segments: TextSegment[] = [];
   let currentIndex = 0;
 
-  for (const match of nonOverlappingMatches) {
-    // Add text before the match
-    if (match.start > currentIndex) {
-      segments.push({
-        text: authors.substring(currentIndex, match.start),
-        shouldFormat: false
-      });
+  for (const m of nonOverlapping) {
+    if (m.start > currentIndex) {
+      segments.push({ text: joined.substring(currentIndex, m.start), shouldFormat: false });
     }
-
-    // Add the matched text (to be formatted)
-    segments.push({
-      text: match.text,
-      shouldFormat: true
-    });
-
-    currentIndex = match.end;
+    segments.push({ text: joined.substring(m.start, m.end), shouldFormat: true });
+    currentIndex = m.end;
   }
 
-  // Add remaining text after the last match
-  if (currentIndex < authors.length) {
-    segments.push({
-      text: authors.substring(currentIndex),
-      shouldFormat: false
-    });
+  if (currentIndex < joined.length) {
+    segments.push({ text: joined.substring(currentIndex), shouldFormat: false });
   }
 
-  // If no matches found, return the entire string as one segment
   if (segments.length === 0) {
-    segments.push({
-      text: authors,
-      shouldFormat: false
-    });
+    segments.push({ text: joined, shouldFormat: false });
   }
 
   return segments;
 }
-

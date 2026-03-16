@@ -2,71 +2,81 @@
   "awards": [
     {
       "year": "2026",
-      "name": "EUOS25 Challenge first prize🏆 (Transmittance Category)",
+      "name": "2nd EUOS/SLAS Joint Challenge 1st prize (Transmittance Category)",
       "showInEnglish": true,
-      "url": "https://www.eu-openscreen.eu/newsroom/eu-openscreen-news/ansicht/eu-openscreen-and-slas-announce-winners-of-the-second-joint-machine-learning-challenge-at-slas-2026.html"
+      "url": "https://www.eu-openscreen.eu/newsroom/eu-openscreen-news/ansicht/eu-openscreen-and-slas-announce-winners-of-the-second-joint-machine-learning-challenge-at-slas-2026.html",
+      "rm": { "type": "awards" }
     },
     {
       "year": "2025",
       "name": "AHeDD2025 Wiley Best Poster Award (2nd Class)",
       "url": "https://www.ahedd2025.asia/",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "awards" }
     },
     {
       "year": "2023",
       "name": "2023年度 バイオ情報学研究会 SIGBIO学生奨励賞",
       "nameEn": "IPSJ SIGBIO Excellent Student Award",
       "url": "https://www.ipsj.or.jp/award/bio-award1.html",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "awards", "id": "46793444" }
     },
     {
       "year": "2023",
       "name": "第74回研究会 バイオ情報学研究会 SIGBIO優秀プレゼンテーション賞",
       "nameEn": "74th IPSJ SIGBIO Excellent Presentation Award",
       "url": "https://www.ipsj.or.jp/award/bio-award3.html",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "awards", "id": "46793442" }
     },
     {
       "year": "2023",
       "name": "#LLM創薬チャレンジ ２位🥈",
       "nameEn": "#LLM Drug Discovery Challenge - 2nd Place",
       "url": "https://github.com/souyakuchan/LLM_DD_Challenge/tree/main/result",
-      "showInEnglish": false
+      "showInEnglish": false,
+      "rm": null
     },
     {
       "year": "2022",
       "name": "第70回バイオ情報学研究会 SIGBIO優秀プレゼンテーション賞",
       "nameEn": "70th IPSJ SIGBIO Excellent Presentation Award",
       "url": "https://www.ipsj.or.jp/award/bio-award3.html",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "awards", "id": "46793441" }
     },
     {
       "year": "2022",
       "name": "情報処理学会第84回全国大会 学生奨励賞",
       "nameEn": "Student Encouragement Award of 84th IPSJ National Convention",
       "url": "https://www.ipsj.or.jp/award/taikaigakusei.html",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "awards", "id": "46793440" }
     },
     {
       "year": "2020",
       "name": "東京工業大学 教養卒論（2020年度）優秀賞",
       "nameEn": "Tokyo Institute of Technology Outstanding Liberal Arts Thesis Award 2020",
       "url": "https://educ.titech.ac.jp/ila/news/2021_04/060571.html",
-      "showInEnglish": false
+      "showInEnglish": false,
+      "rm": null
     },
     {
       "year": "2019",
       "name": "ネットワークソフトウェア研究会 若手研究奨励賞",
       "nameEn": "IPSJ Steering Committee on Network Software Young Researcher Award",
       "url": "https://www.ieice.org/cs/ns/nws/award/young_encouragement/",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "awards", "id": "46793439" }
     },
     {
       "year": "2019",
       "name": "情報処理学会第82回全国大会 学生奨励賞",
       "nameEn": "Student Encouragement Award of 82nd IPSJ National Convention",
       "url": "https://www.ipsj.or.jp/award/taikaigakusei.html",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "awards", "id": "46793436" }
     }
   ],
   "grants": [
@@ -80,7 +90,8 @@
       "project": "研究課題「多点変異体タンパク質の高精度な結合自由エネルギー予測技術の開発」",
       "projectEn": "Highly Accurate Free Energy Prediction for Multi-Point Mutation",
       "url": "https://www.jst.go.jp/kisoken/act-x/project/111F009/111F009_2025.html",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "research_projects", "id": "51937934" }
     },
     {
       "period": "2024/4-2027/3",
@@ -92,7 +103,8 @@
       "project": "研究課題「深層学習と自由エネルギー摂動法計算を組合せた創薬リード最適化手法の開発」",
       "projectEn": "Development of Drug Discovery Lead Optimization Methods Combining Deep Learning and Free Energy Perturbation Calculations",
       "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1091/",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "research_projects", "id": "46793433" }
     },
     {
       "period": "2022/4-2024/3",
@@ -100,7 +112,8 @@
       "nameEn": "JASSO Type 1 Scholarship Full Exemption for Outstanding Achievement",
       "organization": "独立行政法人日本学生支援機構（JASSO）",
       "organizationEn": "Japan Student Services Organization (JASSO)",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": null
     }
   ],
   "internships": [
@@ -216,7 +229,8 @@
       "title": "エネルギーベースの抗体最適化と能動学習による抗体スクリーニング",
       "titleEn": "Energy-Based Antibody Optimization and Active Learning for Antibody Screening",
       "url": "https://www.ipsj.or.jp/event/fit/fit2025/abstract/data/html/event/TCS7-3.html",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "presentations", "id": "51251476" }
     },
     {
       "year": "2025",
@@ -225,7 +239,8 @@
       "title": "効率的な抗体最適化のためのタンパク質言語モデルを用いた多目的能動学習",
       "titleEn": "Multi-Objective Active Learning Using Protein Language Models for Efficient Antibody Optimization",
       "url": "https://wakate.cbi-society.info/wakate/2025/07/11/第15回　cbi若手の会講演会-～若手の視点と先駆者の/",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "presentations", "id": "51251467" }
     },
     {
       "year": "2023",
@@ -236,7 +251,8 @@
       "url": "https://www.qsarj.org/forum2023",
       "note": "#LLM創薬チャレンジ上位入賞者として講演",
       "noteEn": "Presented as a top winner of the #LLM Drug Discovery Challenge",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "presentations", "id": "46793498" }
     }
   ],
   "organization": [
@@ -245,7 +261,8 @@
       "event": "生命情報科学若手の会 第16回年会 スタッフ",
       "eventEn": "16th Annual Meeting of Young Researchers in Bioinformatics - Staff",
       "url": "https://www.bioinfowakate.org/activities/meetings/第16回-年会/第16回-スタッフリスト",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "academic_contribution" }
     },
     {
       "year": "2022",
@@ -254,7 +271,8 @@
       "locationEn": "Keio University Yagami Campus",
       "date": "2022.10.15",
       "url": "https://sites.google.com/site/tokyobioinformaticsmeeting/第6回研究会",
-      "showInEnglish": true
+      "showInEnglish": true,
+      "rm": { "type": "academic_contribution" }
     }
   ]
 }
