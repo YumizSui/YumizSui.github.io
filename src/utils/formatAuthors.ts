@@ -37,7 +37,7 @@ function abbreviateName(fullName: string): string {
  */
 export function formatAuthors(authors: string[]): TextSegment[] {
   const displayNames = authors.map(name =>
-    isCJK(name) ? name : abbreviateName(name)
+    isCJK(name) ? name.replace(/\s+/g, '') : abbreviateName(name)
   );
 
   const joined = displayNames.join(', ') + '.';
