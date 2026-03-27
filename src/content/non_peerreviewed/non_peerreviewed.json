@@ -1,5 +1,32 @@
 [
   {
+    "authors": ["増永 翔", "古井 海里", "Apakorn Kengkanna", "大上 雅史"],
+    "title": "グラフニューラルネットワークを用いたターゲットに依らない生物学的等価体予測",
+    "conference": "研究報告バイオ情報学（BIO）2026-BIO-84",
+    "year": "2026",
+    "type": "Oral",
+    "showInEnglish": false,
+    "rm": { "type": "misc" }
+  },
+  {
+    "authors": ["常井 歩希", "古井 海里", "大上 雅史"],
+    "title": "抗体言語モデルによる軽鎖共有型二重特異性抗体の配列評価と立体構造予測を用いた改良",
+    "conference": "研究報告バイオ情報学（BIO）2026-BIO-84",
+    "year": "2026",
+    "type": "Oral",
+    "showInEnglish": false,
+    "rm": { "type": "misc" }
+  },
+  {
+    "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
+    "title": "化学言語モデルに基づく天然物らしさスコアリングCLM-NP scoreの開発",
+    "conference": "研究報告バイオ情報学（BIO）2026-BIO-84",
+    "year": "2026",
+    "type": "Oral",
+    "showInEnglish": false,
+    "rm": { "type": "misc" }
+  },
+  {
     "authors": ["Kairi Furui", "Masahito Ohue"],
     "title": "Active Learning-Driven Antibody Optimization Using Fine-tuned Protein Language Models",
     "conference": "ORG004: Bio-Active Molecular Design Interwoven By AI Technology, Chemical Biology And Organic Synthesis, PacifiChem2025",
@@ -24,6 +51,46 @@
     "year": "2025",
     "type": "Poster",
     "showInEnglish": true,
+    "rm": null
+  },
+  {
+    "authors": ["Kairi Furui", "Masahito Ohue"],
+    "title": "ALLM-Ab: Active Learning-Driven Antibody Optimization Using Fine-tuned Protein Language Models",
+    "conference": "CBI学会2025年大会, Poster session",
+    "year": "2025",
+    "type": "Poster",
+    "note": "P06-03",
+    "showInEnglish": false,
+    "rm": { "type": "presentations" }
+  },
+  {
+    "authors": ["Koh Sakano", "Kairi Furui", "Masahito Ohue"],
+    "title": "Natural Product-likeness Prediction with Chemical Language Models",
+    "conference": "CBI学会2025年大会, Poster session",
+    "year": "2025",
+    "type": "Poster",
+    "note": "P02-02",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
+    "authors": ["Sho Masunaga", "Kairi Furui", "Apakorn Kengkanna", "Masahito Ohue"],
+    "title": "GraphBioisostere: General Bioisostere Prediction Model with Deep Graph Neural Network",
+    "conference": "CBI学会2025年大会, Poster session",
+    "year": "2025",
+    "type": "Poster",
+    "note": "P06-05",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
+    "authors": ["Masahito Ohue", "Shinji Soga", "Rika Yamazaki", "Shigenori Yagi", "Kairi Furui", "Keisuke Uchikawa", "Takatsugu Kosugi", "Takuya Shimomura", "Kana Gondo"],
+    "title": "Computational Design of Monoclonal Antibodies Using Protein Language Models, Structure Prediction, and Physics-Based Evaluation: Application to Human TIGIT Targeting",
+    "conference": "CBI学会2025年大会, Poster session",
+    "year": "2025",
+    "type": "Poster",
+    "note": "P06-17",
+    "showInEnglish": false,
     "rm": null
   },
   {
