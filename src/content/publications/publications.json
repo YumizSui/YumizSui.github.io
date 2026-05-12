@@ -1,6 +1,17 @@
 {
   "internationalJournals": [
     {
+      "authors": ["Koh Sakano", "Kairi Furui", "Apakorn Kengkanna", "Yuta Kikuchi", "Masahito Ohue"],
+      "title": "Chemical language models for natural product discovery",
+      "journal": "Nat. Prod. Rep.",
+      "doi": "10.1039/D6NP00002A",
+      "url": "http://dx.doi.org/10.1039/D6NP00002A",
+      "showInEnglish": true,
+      "year": 2026,
+      "month": 5,
+      "rm": { "type": "published_papers", "publication_name": "Natural Product Reports" }
+    },
+    {
       "authors": ["Sho Masunaga†", "Kairi Furui†", "Apakorn Kengkanna", "Masahito Ohue"],
       "title": "GraphBioisostere: general bioisostere prediction model with deep graph neural network",
       "journal": "J. Supercomput.",
