@@ -67,7 +67,7 @@ const description = `${year}年${month}月のブログ記事一覧`;
 
       <div class="space-y-6">
         {sortedPosts.map((post) => {
-          const slug = post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug;
+          const slug = post.id.startsWith('ja/') ? post.id.replace('ja/', '') : post.id;
           return (
           <article class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg transition">
             <a href={`/blog/${slug}`} class="no-style">

@@ -11,7 +11,7 @@ interface Props {
 const { post, locale, loading = 'lazy' } = Astro.props;
 
 // Get slug and excerpt
-const slug = post.slug.replace(/^(ja|en)\//, '');
+const slug = post.id.replace(/^(ja|en)\//, '');
 function getExcerpt(post: CollectionEntry<'blog'>) {
   const content = post.body;
   const plainText = content

@@ -74,7 +74,7 @@ const monthNames = [
       <h3 class="text-lg font-bold mb-4">Recent Posts</h3>
       <ul class="space-y-3">
         {recentPosts.map((post) => {
-          const slug = post.slug.startsWith('en/') ? post.slug.replace('en/', '') : post.slug;
+          const slug = post.id.startsWith('en/') ? post.id.replace('en/', '') : post.id;
           return (
             <li>
               <a href={`/en/blog/${slug}`} class="text-sm hover:text-[#527784] dark:hover:text-[#8FA4A8] transition">

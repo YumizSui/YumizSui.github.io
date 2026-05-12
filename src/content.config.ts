@@ -1,4 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const rmSchema = z.object({
   type: z.string(),
@@ -8,7 +10,7 @@ const rmSchema = z.object({
 }).nullable().optional();
 
 const blog = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
@@ -48,7 +50,7 @@ const publicationSchema = z.object({
 });
 
 const publications = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.json', base: './src/content/publications' }),
   schema: z.object({
     internationalJournals: z.array(publicationSchema),
     internationalConferences: z.array(publicationSchema),
@@ -71,12 +73,12 @@ const nonPeerReviewedSchema = z.object({
 });
 
 const non_peerreviewed = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.json', base: './src/content/non_peerreviewed' }),
   schema: z.array(nonPeerReviewedSchema),
 });
 
 const cv = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.json', base: './src/content/cv' }),
   schema: z.object({
     awards: z.array(z.any()),
     grants: z.array(z.any()),

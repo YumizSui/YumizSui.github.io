@@ -69,7 +69,7 @@ const topArchives = Array.from(monthlyArchives.values())
       <h3 class="text-lg font-bold mb-4">最新記事</h3>
       <ul class="space-y-3">
         {recentPosts.map((post) => {
-          const slug = post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug;
+          const slug = post.id.startsWith('ja/') ? post.id.replace('ja/', '') : post.id;
           return (
             <li>
               <a href={`/blog/${slug}`} class="text-sm hover:text-[#527784] dark:hover:text-[#8FA4A8] transition">

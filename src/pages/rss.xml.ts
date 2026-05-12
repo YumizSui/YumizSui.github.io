@@ -14,7 +14,7 @@ export async function GET(context: APIContext) {
     description: '@YumizSui',
     site: context.site || 'https://yumizsui.com',
     items: sortedPosts.map((post) => {
-      const slug = post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug;
+      const slug = post.id.startsWith('ja/') ? post.id.replace('ja/', '') : post.id;
       return {
         title: post.data.title,
         description: post.data.description || '',

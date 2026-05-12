@@ -65,7 +65,7 @@ const description = `Posts tagged with ${tag}`;
 
         <div class="space-y-6">
         {sortedPosts.map((post) => {
-          const slug = post.slug.startsWith('en/') ? post.slug.replace('en/', '') : post.slug;
+          const slug = post.id.startsWith('en/') ? post.id.replace('en/', '') : post.id;
           return (
           <article class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:shadow-lg transition">
             <a href={`/en/blog/${slug}`} class="no-style">

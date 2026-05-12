@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
 import BlogSidebar from '../../components/BlogSidebar.astro';
 import Comments from '../../components/Comments.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => {
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
   const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
   return sortedPosts.map((post, index) => {
-    const slug = post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug;
+    const slug = post.id.startsWith('ja/') ? post.id.replace('ja/', '') : post.id;
     const prevPost = index < sortedPosts.length - 1 ? sortedPosts[index + 1] : null;
     const nextPost = index > 0 ? sortedPosts[index - 1] : null;
 
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 const { post, prevPost, nextPost } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 // Extract excerpt from post body if description is not provided
 function getExcerpt(post: any): string {
@@ -92,7 +92,7 @@ function getExcerpt(post: any): string {
 
       <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
         <ShareButtons
-          url={`https://yumizsui.com/blog/${post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug}`}
+          url={`https://yumizsui.com/blog/${post.id.startsWith('ja/') ? post.id.replace('ja/', '') : post.id}`}
           title={post.data.title}
           lang="ja"
         />
@@ -100,7 +100,7 @@ function getExcerpt(post: any): string {
 
       {post.data.comments !== false && (
         <Comments
-          slug={post.slug.startsWith('ja/') ? post.slug.replace('ja/', '') : post.slug}
+          slug={post.id.startsWith('ja/') ? post.id.replace('ja/', '') : post.id}
           lang="ja"
         />
       )}
@@ -109,7 +109,7 @@ function getExcerpt(post: any): string {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {prevPost && (
             <a
-              href={`/blog/${prevPost.slug.startsWith('ja/') ? prevPost.slug.replace('ja/', '') : prevPost.slug}`}
+              href={`/blog/${prevPost.id.startsWith('ja/') ? prevPost.id.replace('ja/', '') : prevPost.id}`}
               class="p-4 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition"
             >
               <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">← 前の記事</div>
@@ -118,7 +118,7 @@ function getExcerpt(post: any): string {
           )}
           {nextPost && (
             <a
-              href={`/blog/${nextPost.slug.startsWith('ja/') ? nextPost.slug.replace('ja/', '') : nextPost.slug}`}
+              href={`/blog/${nextPost.id.startsWith('ja/') ? nextPost.id.replace('ja/', '') : nextPost.id}`}
               class="p-4 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition md:text-right"
             >
               <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">次の記事 →</div>
@@ -139,4 +139,3 @@ function getExcerpt(post: any): string {
     </div>
   </div>
 </BaseLayout>
-
