@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
   pages: write
   id-token: write
 
@@ -35,7 +36,9 @@ jobs:
       - name: Update dependencies within semver range
         run: npm update
 
-      - name: Build verification
+      - id: build
+        name: Build verification
+        continue-on-error: true
         run: npm run build
 
       - id: diff
@@ -49,8 +52,8 @@ jobs:
           fi
 
       - id: commit
-        if: steps.diff.outputs.changed == 'true'
-        name: Commit and push
+        if: steps.diff.outputs.changed == 'true' && steps.build.outcome == 'success'
+        name: Commit and push to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -58,6 +61,35 @@ jobs:
           git commit -m "chore(deps): weekly dependency update"
           echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           git push
+
+      - name: Open PR on build failure
+        if: steps.diff.outputs.changed == 'true' && steps.build.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="deps/auto-update"
+          git checkout -B "$branch"
+          git add package.json package-lock.json
+          git commit -m "chore(deps): weekly dependency update (build failing)"
+          git push -f -u origin "$branch"
+          if ! gh pr view "$branch" --json number >/dev/null 2>&1; then
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title "chore(deps): weekly dependency update (build failing)" \
+              --body "Automated weekly dependency update failed \`npm run build\`. Please investigate.
+
+          Failing run: $RUN_URL"
+          fi
+
+      - name: Fail workflow if build failed
+        if: steps.build.outcome == 'failure'
+        run: |
+          echo "Build verification failed; see Build verification step above."
+          exit 1
 
   deploy:
     needs: update
