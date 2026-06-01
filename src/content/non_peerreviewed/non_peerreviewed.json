@@ -1,5 +1,15 @@
 [
   {
+    "authors": ["古井 海里", "Apakorn Kengkanna", "坂野 晃", "大上 雅史"],
+    "title": "マルチモーダルコンセンサスモデルによる化合物光学特性予測",
+    "conference": "学術変革領域研究(A)「潜在空間分子設計」第４回公開シンポジウム",
+    "year": "2026",
+    "type": "Poster",
+    "note": "P-28",
+    "showInEnglish": false,
+    "rm": { "type": "presentations" }
+  },
+  {
     "authors": ["増永 翔", "古井 海里", "Apakorn Kengkanna", "大上 雅史"],
     "title": "グラフニューラルネットワークを用いたターゲットに依らない生物学的等価体予測",
     "conference": "研究報告バイオ情報学（BIO）2026-BIO-84",
@@ -25,6 +35,33 @@
     "type": "Oral",
     "showInEnglish": false,
     "rm": { "type": "misc" }
+  },
+  {
+    "authors": ["増永 翔", "古井 海里", "Apakorn Kengkanna", "大上 雅史"],
+    "title": "グラフニューラルネットワークを用いたターゲットに依らない一般化生物学的等価体予測",
+    "conference": "情報処理学会第88回全国大会, 7ZB-04",
+    "year": "2026",
+    "type": "Oral",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
+    "authors": ["常井 歩希", "古井 海里", "大上 雅史"],
+    "title": "抗体言語モデルのゼロショット予測を用いた軽鎖共有型二重特異性抗体の配列評価手法",
+    "conference": "情報処理学会第88回全国大会, 5ZF-05",
+    "year": "2026",
+    "type": "Oral",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
+    "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
+    "title": "化学言語モデルに基づく天然物らしさの評価",
+    "conference": "情報処理学会第88回全国大会, 1N-08",
+    "year": "2026",
+    "type": "Oral",
+    "showInEnglish": false,
+    "rm": null
   },
   {
     "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -202,6 +239,33 @@
     "rm": { "type": "misc" }
   },
   {
+    "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
+    "title": "化学言語モデルによる立体化学情報を含む化合物の生成",
+    "conference": "学術変革領域研究(A)「潜在空間分子設計」第３回公開シンポジウム",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
+    "authors": ["古井 海里", "大上 雅史"],
+    "title": "ALLM-Ab: Active Learning-Driven Antibody Optimization Using Fine-tuned Protein Language Models",
+    "conference": "学術変革領域研究(A)「潜在空間分子設計」第３回公開シンポジウム",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false,
+    "rm": { "type": "presentations" }
+  },
+  {
+    "authors": ["増永 翔", "古井 海里", "Apakorn Kengkanna", "大上 雅史"],
+    "title": "グラフニューラルネットワークを用いた分子活性差予測モデルの検討",
+    "conference": "学術変革領域研究(A)「潜在空間分子設計」第３回公開シンポジウム",
+    "year": "2025",
+    "type": "Poster",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
     "authors": ["内河 慶輔", "古井 海里", "大上 雅史"],
     "title": "AlphaFold2のパラメータ探索による低分子ドッキングスクリーニングのためのタンパク質立体構造予測手法",
     "conference": "研究報告バイオ情報学（BIO）2025-BIO-81",
@@ -209,6 +273,33 @@
     "type": "Oral",
     "showInEnglish": false,
     "rm": { "type": "misc" }
+  },
+  {
+    "authors": ["古井 海里", "大上 雅史"],
+    "title": "自由エネルギー摂動計算におけるHelixFold3予測構造の評価",
+    "conference": "学術変革領域研究（A）天然物が織り成す化合物潜在空間が拓く生物活性分子デザイン 第1回リトリート",
+    "year": "2024",
+    "type": "Poster",
+    "showInEnglish": false,
+    "rm": { "type": "presentations" }
+  },
+  {
+    "authors": ["内河 慶輔", "古井 海里", "大上 雅史"],
+    "title": "構造ベーススクリーニングに適したAlphaFoldタンパク質構造生成の最適化",
+    "conference": "学術変革領域研究（A）天然物が織り成す化合物潜在空間が拓く生物活性分子デザイン 第1回リトリート",
+    "year": "2024",
+    "type": "Poster",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
+    "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
+    "title": "Natural product-like compound generation with chemical language models",
+    "conference": "学術変革領域研究（A）天然物が織り成す化合物潜在空間が拓く生物活性分子デザイン 第1回リトリート",
+    "year": "2024",
+    "type": "Poster",
+    "showInEnglish": false,
+    "rm": null
   },
   {
     "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -272,6 +363,15 @@
     "type": "Poster",
     "showInEnglish": false,
     "rm": { "type": "presentations" }
+  },
+  {
+    "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
+    "title": "化学言語モデルに基づく天然物様化合物生成",
+    "conference": "学術変革領域研究(A)「潜在空間分子設計」第２回公開シンポジウム",
+    "year": "2024",
+    "type": "Poster",
+    "showInEnglish": false,
+    "rm": null
   },
   {
     "authors": ["Kairi Furui", "Masahito Ohue"],

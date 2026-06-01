@@ -207,6 +207,18 @@
   ],
   "domesticJournals": [
     {
+      "authors": ["古井 海里", "大上 雅史"],
+      "title": "タンパク質言語モデルの発展と応用.",
+      "journal": "JSBi Bioinformatics Review",
+      "details": "7.1, 15-30, 2026.",
+      "doi": "10.11234/jsbibr.2026.1",
+      "url": "http://dx.doi.org/10.11234/jsbibr.2026.1",
+      "showInEnglish": false,
+      "year": 2026,
+      "month": 6,
+      "rm": { "type": "published_papers" }
+    },
+    {
       "authors": ["干川 尚人", "古井 海里", "白木 厚司", "伊藤 智義"],
       "title": "時刻ドリフトの平均 2 乗誤差分析によるオンライン機器の識別技術.",
       "journal": "電子情報通信学会論文誌 B",
