@@ -5,14 +5,14 @@
       "name": "2nd EUOS/SLAS Joint Challenge 1st prize (Transmittance Category)",
       "showInEnglish": true,
       "url": "https://www.eu-openscreen.eu/newsroom/eu-openscreen-news/ansicht/eu-openscreen-and-slas-announce-winners-of-the-second-joint-machine-learning-challenge-at-slas-2026.html",
-      "rm": { "type": "awards" }
+      "rm": { "type": "awards", "award_date": "2026-02" }
     },
     {
       "year": "2025",
       "name": "AHeDD2025 Wiley Best Poster Award (2nd Class)",
       "url": "https://www.ahedd2025.asia/",
       "showInEnglish": true,
-      "rm": { "type": "awards" }
+      "rm": { "type": "awards", "award_date": "2025-09" }
     },
     {
       "year": "2023",
@@ -20,7 +20,7 @@
       "nameEn": "IPSJ SIGBIO Excellent Student Award",
       "url": "https://www.ipsj.or.jp/award/bio-award1.html",
       "showInEnglish": true,
-      "rm": { "type": "awards", "id": "46793444" }
+      "rm": { "type": "awards", "id": "46793444", "award_date": "2023-06" }
     },
     {
       "year": "2023",
@@ -28,7 +28,7 @@
       "nameEn": "74th IPSJ SIGBIO Excellent Presentation Award",
       "url": "https://www.ipsj.or.jp/award/bio-award3.html",
       "showInEnglish": true,
-      "rm": { "type": "awards", "id": "46793442" }
+      "rm": { "type": "awards", "id": "46793442", "award_date": "2023-06" }
     },
     {
       "year": "2023",
@@ -44,7 +44,7 @@
       "nameEn": "70th IPSJ SIGBIO Excellent Presentation Award",
       "url": "https://www.ipsj.or.jp/award/bio-award3.html",
       "showInEnglish": true,
-      "rm": { "type": "awards", "id": "46793441" }
+      "rm": { "type": "awards", "id": "46793441", "award_date": "2022-06" }
     },
     {
       "year": "2022",
@@ -52,7 +52,7 @@
       "nameEn": "Student Encouragement Award of 84th IPSJ National Convention",
       "url": "https://www.ipsj.or.jp/award/taikaigakusei.html",
       "showInEnglish": true,
-      "rm": { "type": "awards", "id": "46793440" }
+      "rm": { "type": "awards", "id": "46793440", "award_date": "2022-03" }
     },
     {
       "year": "2020",
@@ -76,7 +76,7 @@
       "nameEn": "Student Encouragement Award of 82nd IPSJ National Convention",
       "url": "https://www.ipsj.or.jp/award/taikaigakusei.html",
       "showInEnglish": true,
-      "rm": { "type": "awards", "id": "46793436" }
+      "rm": { "type": "awards", "id": "46793436", "award_date": "2020-03" }
     }
   ],
   "grants": [
@@ -91,7 +91,7 @@
       "projectEn": "Highly Accurate Free Energy Prediction for Multi-Point Mutation",
       "url": "https://www.jst.go.jp/kisoken/act-x/project/111F009/111F009_2025.html",
       "showInEnglish": true,
-      "rm": { "type": "research_projects", "id": "51937934" }
+      "rm": { "type": "research_projects", "id": "51937934", "from_date": "2025-10", "to_date": "2028-03" }
     },
     {
       "period": "2024/4-2027/3",
@@ -104,7 +104,7 @@
       "projectEn": "Development of Drug Discovery Lead Optimization Methods Combining Deep Learning and Free Energy Perturbation Calculations",
       "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1091/",
       "showInEnglish": true,
-      "rm": { "type": "research_projects", "id": "46793433" }
+      "rm": { "type": "research_projects", "id": "46793433", "from_date": "2024-04", "to_date": "2027-03" }
     },
     {
       "period": "2022/4-2024/3",
@@ -230,7 +230,7 @@
       "titleEn": "Energy-Based Antibody Optimization and Active Learning for Antibody Screening",
       "url": "https://www.ipsj.or.jp/event/fit/fit2025/abstract/data/html/event/TCS7-3.html",
       "showInEnglish": true,
-      "rm": { "type": "presentations", "id": "51251476" }
+      "rm": { "type": "presentations", "id": "51251476", "publication_date": "2025-09-05" }
     },
     {
       "year": "2025",
@@ -240,7 +240,7 @@
       "titleEn": "Multi-Objective Active Learning Using Protein Language Models for Efficient Antibody Optimization",
       "url": "https://wakate.cbi-society.info/wakate/2025/07/11/第15回　cbi若手の会講演会-～若手の視点と先駆者の/",
       "showInEnglish": true,
-      "rm": { "type": "presentations", "id": "51251467" }
+      "rm": { "type": "presentations", "id": "51251467", "publication_date": "2025-08-21" }
     },
     {
       "year": "2023",
@@ -252,7 +252,7 @@
       "note": "#LLM創薬チャレンジ上位入賞者として講演",
       "noteEn": "Presented as a top winner of the #LLM Drug Discovery Challenge",
       "showInEnglish": true,
-      "rm": { "type": "presentations", "id": "46793498" }
+      "rm": { "type": "presentations", "id": "46793498", "publication_date": "2023-08-25" }
     }
   ],
   "organization": [
@@ -262,7 +262,7 @@
       "eventEn": "16th Annual Meeting of Young Researchers in Bioinformatics - Staff",
       "url": "https://www.bioinfowakate.org/activities/meetings/第16回-年会/第16回-スタッフリスト",
       "showInEnglish": true,
-      "rm": { "type": "academic_contribution" }
+      "rm": { "type": "academic_contribution", "from_event_date": "2024-09-14" }
     },
     {
       "year": "2022",
@@ -272,7 +272,7 @@
       "date": "2022.10.15",
       "url": "https://sites.google.com/site/tokyobioinformaticsmeeting/第6回研究会",
       "showInEnglish": true,
-      "rm": { "type": "academic_contribution" }
+      "rm": { "type": "academic_contribution", "from_event_date": "2022-10-15" }
     }
   ]
 }

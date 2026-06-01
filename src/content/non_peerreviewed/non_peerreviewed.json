@@ -7,7 +7,7 @@
     "type": "Poster",
     "note": "P-28",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2026-05-28" }
   },
   {
     "authors": ["増永 翔", "古井 海里", "Apakorn Kengkanna", "大上 雅史"],
@@ -16,7 +16,7 @@
     "year": "2026",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2026-03-12" }
   },
   {
     "authors": ["常井 歩希", "古井 海里", "大上 雅史"],
@@ -25,7 +25,7 @@
     "year": "2026",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2026-03-12" }
   },
   {
     "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
@@ -34,7 +34,7 @@
     "year": "2026",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2026-03-13" }
   },
   {
     "authors": ["増永 翔", "古井 海里", "Apakorn Kengkanna", "大上 雅史"],
@@ -70,7 +70,7 @@
     "year": "2025",
     "type": "Oral",
     "showInEnglish": true,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2025-12-15" }
   },
   {
     "authors": ["Sho Masunaga", "Kairi Furui", "Apakorn Kengkanna", "Masahito Ohue"],
@@ -98,7 +98,7 @@
     "type": "Poster",
     "note": "P06-03",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2025-10-27" }
   },
   {
     "authors": ["Koh Sakano", "Kairi Furui", "Masahito Ohue"],
@@ -137,7 +137,7 @@
     "year": "2025",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2025-10-20" }
   },
   {
     "authors": ["坂野 晃", "古井 海里", "Apakorn Kengkanna", "大上 雅史"],
@@ -164,7 +164,7 @@
     "year": "2025",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2025-10-18" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -173,7 +173,7 @@
     "year": "2025",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2025-10-18" }
   },
   {
     "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
@@ -200,7 +200,7 @@
     "year": "2025",
     "type": "Poster",
     "showInEnglish": true,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2025-09-24" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -209,7 +209,7 @@
     "year": "2025",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2025-09" }
   },
   {
     "authors": ["古井 海里"],
@@ -227,7 +227,7 @@
     "year": "2025",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2025-06-22" }
   },
   {
     "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
@@ -236,7 +236,7 @@
     "year": "2025",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2025-06-22" }
   },
   {
     "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
@@ -254,7 +254,7 @@
     "year": "2025",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2025-05-29" }
   },
   {
     "authors": ["増永 翔", "古井 海里", "Apakorn Kengkanna", "大上 雅史"],
@@ -272,7 +272,7 @@
     "year": "2025",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2025-03-07" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -281,7 +281,7 @@
     "year": "2024",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2024-11-17" }
   },
   {
     "authors": ["内河 慶輔", "古井 海里", "大上 雅史"],
@@ -308,7 +308,7 @@
     "year": "2024",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2024-10-28" }
   },
   {
     "authors": ["Keisuke Uchikawa", "Kairi Furui", "Masahito Ohue"],
@@ -335,7 +335,7 @@
     "year": "2024",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2024-10-19" }
   },
   {
     "authors": ["内河 慶輔", "古井 海里", "大上 雅史"],
@@ -344,7 +344,7 @@
     "year": "2024",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2024-06-13" }
   },
   {
     "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
@@ -353,7 +353,7 @@
     "year": "2024",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2024-06-13" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -362,7 +362,7 @@
     "year": "2024",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2024-06-12" }
   },
   {
     "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
@@ -380,7 +380,7 @@
     "year": "2023",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2023-11" }
   },
   {
     "authors": ["Keisuke Uchikawa", "Kairi Furui", "Masahito Ohue"],
@@ -408,7 +408,7 @@
     "year": "2023",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2023-10" }
   },
   {
     "authors": ["Keisuke Uchikawa", "Kairi Furui", "Masahito Ohue"],
@@ -427,7 +427,7 @@
     "year": "2023",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2023-10-14" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -436,7 +436,7 @@
     "year": "2023",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc", "id": "46793457" }
+    "rm": { "type": "misc", "id": "46793457", "publication_date": "2023-07-17" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -445,7 +445,7 @@
     "year": "2023",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc", "id": "46793459" }
+    "rm": { "type": "misc", "id": "46793459", "publication_date": "2023-06-22" }
   },
   {
     "authors": ["内河 慶輔", "古井 海里", "大上 雅史"],
@@ -454,7 +454,7 @@
     "year": "2023",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc", "id": "46793458" }
+    "rm": { "type": "misc", "id": "46793458", "publication_date": "2023-06-22" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -463,7 +463,7 @@
     "year": "2023",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc", "id": "46793460" }
+    "rm": { "type": "misc", "id": "46793460", "publication_date": "2023-03" }
   },
   {
     "authors": ["内河 慶輔", "古井 海里", "大上 雅史"],
@@ -482,7 +482,7 @@
     "year": "2022",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2022-10" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -491,7 +491,7 @@
     "year": "2022",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "presentations", "id": "46793452" }
+    "rm": { "type": "presentations", "id": "46793452", "publication_date": "2022-10-15" }
   },
   {
     "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -500,7 +500,7 @@
     "year": "2022",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2022-09" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -510,7 +510,7 @@
     "type": "Oral",
     "note": "Presentation Award / プレゼンテーション賞 受賞",
     "showInEnglish": false,
-    "rm": { "type": "misc", "id": "46793461" }
+    "rm": { "type": "misc", "id": "46793461", "publication_date": "2022-06-20" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -520,7 +520,7 @@
     "type": "Oral",
     "note": "Student Award / 学生奨励賞 受賞",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2022-03" }
   },
   {
     "authors": ["古井 海里", "大上 雅史"],
@@ -529,7 +529,7 @@
     "year": "2021",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2021-11-13" }
   },
   {
     "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -538,7 +538,7 @@
     "year": "2021",
     "type": "Poster",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2021-09" }
   },
   {
     "authors": ["大上 雅史", "古井 海里"],
@@ -547,7 +547,7 @@
     "year": "2021",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc", "id": "46793462" }
+    "rm": { "type": "misc", "id": "46793462", "publication_date": "2021-03-04" }
   },
   {
     "authors": ["Kairi Furui", "Naoto Hoshikawa", "Katsumi Hirata", "Atsushi Shiraki", "Tomonori Shimobaba", "Tomoyoshi Ito"],
@@ -556,7 +556,7 @@
     "year": "2020",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc", "id": "46793463" }
+    "rm": { "type": "misc", "id": "46793463", "publication_date": "2020-03-16" }
   },
   {
     "authors": ["古井 海里", "干川 尚人", "白木 厚司", "下馬場 朋禄", "伊藤 智義"],
@@ -566,7 +566,7 @@
     "type": "Oral",
     "note": "Student Award / 学生奨励賞 受賞",
     "showInEnglish": false,
-    "rm": { "type": "presentations" }
+    "rm": { "type": "presentations", "publication_date": "2020-03-07" }
   },
   {
     "authors": ["古井 海里", "干川 尚人", "白木 厚司", "下馬場 朋禄", "伊藤 智義"],
@@ -575,7 +575,7 @@
     "year": "2020",
     "type": "Oral",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2020-01-23" }
   },
   {
     "authors": ["古井 海里", "干川 尚人", "下馬場 朋禄", "伊藤 智義"],
@@ -585,6 +585,6 @@
     "type": "Oral",
     "note": "Young Researcher Award / 若手研究奨励賞 受賞",
     "showInEnglish": false,
-    "rm": { "type": "misc" }
+    "rm": { "type": "misc", "publication_date": "2019-06" }
   }
 ]

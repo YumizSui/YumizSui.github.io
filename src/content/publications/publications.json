@@ -9,7 +9,7 @@
       "showInEnglish": true,
       "year": 2026,
       "month": 5,
-      "rm": { "type": "published_papers", "publication_name": "Natural Product Reports" }
+      "rm": { "type": "published_papers", "publication_name": "Natural Product Reports", "publication_date": "2026-05" }
     },
     {
       "authors": ["Sho Masunaga†", "Kairi Furui†", "Apakorn Kengkanna", "Masahito Ohue"],
@@ -22,7 +22,7 @@
       "note": "†: equally contributed",
       "year": 2026,
       "month": 2,
-      "rm": { "type": "published_papers", "id": "52177499", "publication_name": "The Journal of Supercomputing" }
+      "rm": { "type": "published_papers", "id": "52177499", "publication_name": "The Journal of Supercomputing", "publication_date": "2026-02" }
     },
     {
       "authors": ["Masahito Ohue", "Kairi Furui"],
@@ -34,7 +34,7 @@
       "showInEnglish": true,
       "year": 2026,
       "month": 1,
-      "rm": { "type": "published_papers", "publication_name": "The Journal of Supercomputing" }
+      "rm": { "type": "published_papers", "publication_name": "The Journal of Supercomputing", "publication_date": "2026-01-23" }
     },
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -45,7 +45,7 @@
       "showInEnglish": true,
       "year": 2025,
       "month": 10,
-      "rm": { "type": "published_papers", "id": "50835642", "publication_name": "Journal of Chemical Information and Modeling" }
+      "rm": { "type": "published_papers", "id": "50835642", "publication_name": "Journal of Chemical Information and Modeling", "publication_date": "2025-10" }
     },
     {
       "authors": ["Kairi Furui", "Koh Sakano", "Masahito Ohue"],
@@ -56,7 +56,7 @@
       "showInEnglish": true,
       "year": 2025,
       "month": 10,
-      "rm": { "type": "published_papers", "id": "51198606", "publication_name": "Allergology International" }
+      "rm": { "type": "published_papers", "id": "51198606", "publication_name": "Allergology International", "publication_date": "2025-10" }
     },
     {
       "authors": ["Keisuke Uchikawa", "Kairi Furui", "Masahito Ohue"],
@@ -67,7 +67,7 @@
       "showInEnglish": true,
       "year": 2025,
       "month": 9,
-      "rm": { "type": "published_papers", "id": "49227176", "publication_name": "Biochemistry and Biophysics Reports" }
+      "rm": { "type": "published_papers", "id": "49227176", "publication_name": "Biochemistry and Biophysics Reports", "publication_date": "2025-09" }
     },
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -78,7 +78,7 @@
       "showInEnglish": true,
       "year": 2025,
       "month": 3,
-      "rm": { "type": "published_papers", "id": "48341042", "publication_name": "ACS Omega" }
+      "rm": { "type": "published_papers", "id": "48341042", "publication_name": "ACS Omega", "publication_date": "2025-03" }
     },
     {
       "authors": ["Kairi Furui", "Takafumi Shimizu", "Yutaka Akiyama", "S Roy Kimura", "Yoh Terada", "Masahito Ohue"],
@@ -89,7 +89,7 @@
       "showInEnglish": true,
       "year": 2025,
       "month": 1,
-      "rm": { "type": "published_papers", "id": "48919205", "publication_name": "Journal of Chemical Information and Modeling" }
+      "rm": { "type": "published_papers", "id": "48919205", "publication_name": "Journal of Chemical Information and Modeling", "publication_date": "2025-01" }
     },
     {
       "authors": ["Koh Sakano", "Kairi Furui", "Masahito Ohue"],
@@ -100,7 +100,7 @@
       "showInEnglish": true,
       "year": 2025,
       "month": 1,
-      "rm": { "type": "published_papers", "id": "48887366", "publication_name": "The Journal of Supercomputing" }
+      "rm": { "type": "published_papers", "id": "48887366", "publication_name": "The Journal of Supercomputing", "publication_date": "2025-01" }
     },
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -112,7 +112,7 @@
       "showInEnglish": true,
       "year": 2024,
       "month": 3,
-      "rm": { "type": "published_papers", "id": "46793375", "publication_name": "The Journal of Supercomputing" }
+      "rm": { "type": "published_papers", "id": "46793375", "publication_name": "The Journal of Supercomputing", "publication_date": "2024-03" }
     },
     {
       "authors": ["Toshiki Ochiai", "Tensei Inukai", "Manato Akiyama", "Kairi Furui", "Masahito Ohue", "Nobuaki Matsumori", "Shinsuke Inuki", "Motonari Uesugi", "Toshiaki Sunazuka", "Kazuya Kikuchi", "Hideaki Kakeya", "Yasubumi Sakakibara"],
@@ -123,7 +123,7 @@
       "showInEnglish": true,
       "year": 2023,
       "month": 11,
-      "rm": { "type": "published_papers", "id": "46793377", "publication_name": "Communications Chemistry" }
+      "rm": { "type": "published_papers", "id": "46793377", "publication_name": "Communications Chemistry", "publication_date": "2023-11" }
     }
   ],
   "internationalConferences": [
@@ -135,7 +135,7 @@
       "month": 12,
       "url": "https://openreview.net/forum?id=OwtEQsd2hN",
       "showInEnglish": true,
-      "rm": { "type": "published_papers", "id": "51251300" }
+      "rm": { "type": "published_papers", "id": "51251300", "publication_date": "2025-12" }
     },
     {
       "authors": ["Sho Masunaga†", "Kairi Furui†", "Apakorn Kengkanna", "Masahito Ohue"],
@@ -145,7 +145,7 @@
       "month": 7,
       "note": "†: equally contributed",
       "showInEnglish": true,
-      "rm": { "type": "presentations", "id": "51251441", "event": "PDPTA'25- The 31th Int'l Conf on Parallel and Distributed Processing Techniques and Applications" }
+      "rm": { "type": "presentations", "id": "51251441", "event": "PDPTA'25- The 31th Int'l Conf on Parallel and Distributed Processing Techniques and Applications", "publication_date": "2025-07" }
     },
     {
       "authors": ["Masahito Ohue", "Kairi Furui"],
@@ -154,7 +154,7 @@
       "year": 2025,
       "month": 7,
       "showInEnglish": true,
-      "rm": { "type": "presentations", "id": "51251414", "event": "PDPTA'25- The 31th Int'l Conf on Parallel and Distributed Processing Techniques and Applications" }
+      "rm": { "type": "presentations", "id": "51251414", "event": "PDPTA'25- The 31th Int'l Conf on Parallel and Distributed Processing Techniques and Applications", "publication_date": "2025-07" }
     },
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -164,7 +164,7 @@
       "month": 12,
       "url": "https://www.mlsb.io/papers_2024/Active_Learning_for_Energy-Based_Antibody_Optimization_and_Enhanced_Screening.pdf",
       "showInEnglish": true,
-      "rm": { "type": "published_papers", "id": "49227184" }
+      "rm": { "type": "published_papers", "id": "49227184", "publication_date": "2024-12" }
     },
     {
       "authors": ["Koh Sakano", "Kairi Furui", "Masahito Ohue"],
@@ -173,7 +173,7 @@
       "year": 2024,
       "month": 7,
       "showInEnglish": true,
-      "rm": { "type": "presentations", "id": "51251389", "event": "PDPTA'24- The 30th Int'l Conf on Parallel and Distributed Processing Techniques and Applications" }
+      "rm": { "type": "presentations", "id": "51251389", "event": "PDPTA'24- The 30th Int'l Conf on Parallel and Distributed Processing Techniques and Applications", "publication_date": "2024-07" }
     },
     {
       "authors": ["Kusuri Murakumo", "Naruki Yoshikawa", "Kentaro Rikimaru", "Shogo Nakamura", "Kairi Furui", "Takamasa Suzuki", "Hiroyuki Yamasaki", "Yuki Nishigaya", "Yuzo Takagi", "Masahito Ohue"],
@@ -183,7 +183,7 @@
       "month": 12,
       "url": "https://openreview.net/forum?id=kjUylvko18",
       "showInEnglish": true,
-      "rm": { "type": "published_papers", "id": "46793448" }
+      "rm": { "type": "published_papers", "id": "46793448", "publication_date": "2023-12" }
     },
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -192,7 +192,7 @@
       "year": 2023,
       "month": 7,
       "showInEnglish": true,
-      "rm": { "type": "presentations", "id": "46793450", "event": "PDPTA'23- The 29th Int'l Conf on Parallel and Distributed Processing Techniques and Applications" }
+      "rm": { "type": "presentations", "id": "46793450", "event": "PDPTA'23- The 29th Int'l Conf on Parallel and Distributed Processing Techniques and Applications", "publication_date": "2023-07" }
     },
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -202,7 +202,7 @@
       "month": 8,
       "doi": "10.1109/CIBCB55180.2022.9863032",
       "showInEnglish": true,
-      "rm": { "type": "published_papers", "id": "46793376" }
+      "rm": { "type": "published_papers", "id": "46793376", "publication_date": "2022-08" }
     }
   ],
   "domesticJournals": [
@@ -216,7 +216,7 @@
       "showInEnglish": false,
       "year": 2026,
       "month": 6,
-      "rm": { "type": "published_papers" }
+      "rm": { "type": "published_papers", "publication_date": "2026-06" }
     },
     {
       "authors": ["干川 尚人", "古井 海里", "白木 厚司", "伊藤 智義"],
@@ -227,7 +227,7 @@
       "showInEnglish": false,
       "year": 2021,
       "month": 10,
-      "rm": { "type": "published_papers", "id": "46793374", "publication_name": "電子情報通信学会論文誌B 通信" }
+      "rm": { "type": "published_papers", "id": "46793374", "publication_name": "電子情報通信学会論文誌B 通信", "publication_date": "2021-10" }
     }
   ],
   "preprints": [
@@ -239,7 +239,7 @@
       "showInEnglish": true,
       "year": 2023,
       "month": 6,
-      "rm": { "type": "published_papers", "id": "46793378" }
+      "rm": { "type": "published_papers", "id": "46793378", "publication_date": "2023-06" }
     }
   ]
 }

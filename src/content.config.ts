@@ -6,6 +6,12 @@ const rmSchema = z.object({
   type: z.string(),
   id: z.string().optional(),
   publication_name: z.string().optional(),
+  publication_date: z.string().optional(),
+  award_date: z.string().optional(),
+  from_date: z.string().optional(),
+  to_date: z.string().optional(),
+  from_event_date: z.string().optional(),
+  date: z.string().optional(),
   event: z.string().optional(),
 }).nullable().optional();
 
