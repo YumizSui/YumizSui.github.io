@@ -11,6 +11,7 @@ const rmSchema = z.object({
   from_date: z.string().optional(),
   to_date: z.string().optional(),
   from_event_date: z.string().optional(),
+  to_event_date: z.string().optional(),
   date: z.string().optional(),
   event: z.string().optional(),
 }).nullable().optional();

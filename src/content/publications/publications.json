@@ -9,7 +9,7 @@
       "showInEnglish": true,
       "year": 2026,
       "month": 5,
-      "rm": { "type": "published_papers", "publication_name": "Natural Product Reports", "publication_date": "2026-05" }
+      "rm": { "type": "published_papers", "publication_name": "Natural Product Reports", "publication_date": "2026-05", "id": "53651459" }
     },
     {
       "authors": ["Sho Masunaga†", "Kairi Furui†", "Apakorn Kengkanna", "Masahito Ohue"],
@@ -34,7 +34,7 @@
       "showInEnglish": true,
       "year": 2026,
       "month": 1,
-      "rm": { "type": "published_papers", "publication_name": "The Journal of Supercomputing", "publication_date": "2026-01-23" }
+      "rm": { "type": "published_papers", "publication_name": "The Journal of Supercomputing", "publication_date": "2026-01-23", "id": "52950395" }
     },
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
@@ -216,7 +216,7 @@
       "showInEnglish": false,
       "year": 2026,
       "month": 6,
-      "rm": { "type": "published_papers", "publication_date": "2026-06" }
+      "rm": { "type": "published_papers", "publication_date": "2026-06", "id": "53838747" }
     },
     {
       "authors": ["干川 尚人", "古井 海里", "白木 厚司", "伊藤 智義"],

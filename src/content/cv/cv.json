@@ -5,14 +5,14 @@
       "name": "2nd EUOS/SLAS Joint Challenge 1st prize (Transmittance Category)",
       "showInEnglish": true,
       "url": "https://www.eu-openscreen.eu/newsroom/eu-openscreen-news/ansicht/eu-openscreen-and-slas-announce-winners-of-the-second-joint-machine-learning-challenge-at-slas-2026.html",
-      "rm": { "type": "awards", "award_date": "2026-02" }
+      "rm": { "type": "awards", "award_date": "2026-02", "id": "52950396" }
     },
     {
       "year": "2025",
       "name": "AHeDD2025 Wiley Best Poster Award (2nd Class)",
       "url": "https://www.ahedd2025.asia/",
       "showInEnglish": true,
-      "rm": { "type": "awards", "award_date": "2025-09" }
+      "rm": { "type": "awards", "award_date": "2025-09", "id": "52950397" }
     },
     {
       "year": "2023",
@@ -262,7 +262,7 @@
       "eventEn": "16th Annual Meeting of Young Researchers in Bioinformatics - Staff",
       "url": "https://www.bioinfowakate.org/activities/meetings/第16回-年会/第16回-スタッフリスト",
       "showInEnglish": true,
-      "rm": { "type": "academic_contribution", "from_event_date": "2024-09-14" }
+      "rm": { "type": "academic_contribution", "from_event_date": "2024-09-14", "id": "52950398" }
     },
     {
       "year": "2022",
@@ -272,7 +272,7 @@
       "date": "2022.10.15",
       "url": "https://sites.google.com/site/tokyobioinformaticsmeeting/第6回研究会",
       "showInEnglish": true,
-      "rm": { "type": "academic_contribution", "from_event_date": "2022-10-15" }
+      "rm": { "type": "academic_contribution", "from_event_date": "2022-10-15", "id": "52950399" }
     }
   ]
 }
