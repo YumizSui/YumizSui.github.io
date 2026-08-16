@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
@@ -29,8 +30,10 @@ export default defineConfig({
   },
 
   markdown: {
-    remarkPlugins: [remarkRemoveComments, remarkMath, remarkCitationSimple],
-    rehypePlugins: [rehypeKatex],
+    processor: unified({
+      remarkPlugins: [remarkRemoveComments, remarkMath, remarkCitationSimple],
+      rehypePlugins: [rehypeKatex],
+    }),
   },
 
   integrations: [
@@ -56,10 +59,8 @@ export default defineConfig({
       },
     }),
     react(),
-    mdx({
-      remarkPlugins: [remarkRemoveComments, remarkMath, remarkCitationSimple],
-      rehypePlugins: [rehypeKatex],
-    }),
+    // Plugins are inherited from `markdown.processor` above.
+    mdx(),
     sitemap()
   ]
 });
