@@ -73,7 +73,7 @@ const organization = cv.organization.filter(item => item.showInEnglish);
           {internships.map((internship) => (
             <div>
               <p class="font-semibold text-gray-900 dark:text-gray-100">{internship.period}</p>
-              <p class="text-gray-700 dark:text-gray-300">{internship.company} {internship.positionEn || internship.position}</p>
+              <p class="text-gray-700 dark:text-gray-300">{internship.company} - {internship.positionEn || internship.position}</p>
               {internship.url && (
                 <p class="text-sm">
                   <a href={internship.url} target="_blank" rel="noopener noreferrer" class="hover:underline">

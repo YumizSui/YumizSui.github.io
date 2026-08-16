@@ -118,6 +118,13 @@
   ],
   "internships": [
     {
+      "period": "2026/6-2026/9",
+      "company": "Lawrence Livermore National Laboratory",
+      "position": "Data Science Summer Institute Internship",
+      "positionEn": "Data Science Summer Institute Internship",
+      "showInEnglish": true
+    },
+    {
       "period": "2023/8-2023/9",
       "company": "DeNA",
       "position": "サマーインターンシップ 2023 AIスペシャリストコース",
@@ -172,6 +179,14 @@
     }
   ],
   "products": [
+    {
+      "name": "PairMap2",
+      "url": "https://pairmap.yumizsui.com",
+      "year": "(2026)",
+      "description": "Web application for intermediate-molecule insertion in relative binding free energy calculations",
+      "showInEnglish": true,
+      "showInTools": true
+    },
     {
       "name": "Boltzina",
       "url": "https://github.com/ohuelab/boltzina",

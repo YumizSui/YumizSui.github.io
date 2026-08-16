@@ -1,6 +1,18 @@
 {
   "internationalJournals": [
     {
+      "authors": ["Kairi Furui", "Masahito Ohue"],
+      "title": "PairMap2: A web application for intermediate-molecule insertion in relative binding free energy calculations",
+      "journal": "Mol. Inform.",
+      "details": "45.8, e70046, 2026.",
+      "doi": "10.1002/minf.70046",
+      "url": "http://dx.doi.org/10.1002/minf.70046",
+      "showInEnglish": true,
+      "year": 2026,
+      "month": 8,
+      "rm": { "type": "published_papers", "publication_name": "Molecular Informatics", "publication_date": "2026-08" }
+    },
+    {
       "authors": ["Koh Sakano", "Kairi Furui", "Apakorn Kengkanna", "Yuta Kikuchi", "Masahito Ohue"],
       "title": "Chemical language models for natural product discovery",
       "journal": "Nat. Prod. Rep.",
