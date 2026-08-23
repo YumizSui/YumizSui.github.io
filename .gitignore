@@ -31,3 +31,10 @@ Makefile
 
 .claude
 scripts
+
+# CV generator: contains personal details (address, phone, date of birth) and is
+# versioned in its own private repository. Never track it from this public repo.
+cv_generation/
+
+# Maintained as an independent nested Git repository.
+/researchmap/
