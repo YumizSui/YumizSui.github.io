@@ -5,6 +5,9 @@ import { z } from 'astro/zod';
 const rmSchema = z.object({
   type: z.string(),
   id: z.string().optional(),
+  published_paper_owner_roles: z.array(
+    z.enum(['lead', 'last', 'corresponding'])
+  ).optional(),
   publication_name: z.string().optional(),
   publication_date: z.string().optional(),
   award_date: z.string().optional(),
@@ -42,6 +45,7 @@ const blog = defineCollection({
 
 const publicationSchema = z.object({
   authors: z.array(z.string()),
+  correspondingAuthors: z.array(z.string()).optional(),
   title: z.string(),
   journal: z.string().optional(),
   conference: z.string().optional(),

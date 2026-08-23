@@ -2,6 +2,7 @@
   "internationalJournals": [
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
+      "correspondingAuthors": ["Kairi Furui", "Masahito Ohue"],
       "title": "PairMap2: A web application for intermediate-molecule insertion in relative binding free energy calculations",
       "journal": "Mol. Inform.",
       "details": "45.8, e70046, 2026.",
@@ -10,7 +11,7 @@
       "showInEnglish": true,
       "year": 2026,
       "month": 8,
-      "rm": { "type": "published_papers", "publication_name": "Molecular Informatics", "publication_date": "2026-08" }
+      "rm": { "type": "published_papers", "publication_name": "Molecular Informatics", "publication_date": "2026-08", "published_paper_owner_roles": ["lead", "corresponding"] }
     },
     {
       "authors": ["Koh Sakano", "Kairi Furui", "Apakorn Kengkanna", "Yuta Kikuchi", "Masahito Ohue"],
@@ -139,6 +140,16 @@
     }
   ],
   "internationalConferences": [
+    {
+      "authors": ["Ayuki Tokoi", "Kairi Furui", "Yukio Watanabe", "Masahito Ohue"],
+      "correspondingAuthors": ["Kairi Furui", "Masahito Ohue"],
+      "title": "Computational Design of Common-Light-Chain CDR-L3 for HER2/HER3 Bispecific Antibodies.",
+      "conference": "In Proc PDPTA'26",
+      "year": 2026,
+      "month": 7,
+      "showInEnglish": true,
+      "rm": { "type": "presentations", "event": "PDPTA'26- The 32nd Int'l Conf on Parallel and Distributed Processing Techniques and Applications", "publication_date": "2026-07" }
+    },
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "Boltzina: Efficient and Accurate Virtual Screening via Docking-Guided Binding Prediction with Boltz-2.",
