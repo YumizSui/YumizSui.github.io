@@ -1,5 +1,35 @@
 [
   {
+    "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
+    "title": "構造ベースリガンド生成のためのタンパク質-リガンド複合体立体構造のトークナイズ",
+    "conference": "IIBMP2026",
+    "year": "2026",
+    "type": "Oral",
+    "note": "O9-3",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
+    "authors": ["古井 海里", "大上 雅史"],
+    "title": "PATROL: パレート最適性を考慮した強化学習による抗体CDR配列の多目的最適化",
+    "conference": "IIBMP2026, Poster session",
+    "year": "2026",
+    "type": "Poster",
+    "note": "P1-53",
+    "showInEnglish": false,
+    "rm": { "type": "presentations", "publication_date": "2026-08-26" }
+  },
+  {
+    "authors": ["常井 歩希", "古井 海里", "渡邉 幸夫", "大上 雅史"],
+    "title": "二重特異性抗体のための共通軽鎖CDR-L3の計算設計",
+    "conference": "IIBMP2026, Poster session",
+    "year": "2026",
+    "type": "Poster",
+    "note": "P1-52",
+    "showInEnglish": false,
+    "rm": null
+  },
+  {
     "authors": ["古井 海里", "Apakorn Kengkanna", "坂野 晃", "大上 雅史"],
     "title": "マルチモーダルコンセンサスモデルによる化合物光学特性予測",
     "conference": "学術変革領域研究(A)「潜在空間分子設計」第４回公開シンポジウム",
