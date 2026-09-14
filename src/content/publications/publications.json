@@ -1,6 +1,17 @@
 {
   "internationalJournals": [
     {
+      "authors": ["Taichi Okumura", "Kotaro Matsumoto", "Koji Miyamoto", "Takao Nomura", "Kairi Furui", "Takuya Fujie", "Masahito Ohue", "Youming Liu", "Sora Nakamura", "Kota Nakanishi", "Kazunori Okada", "Katsumi Maenaka", "Minoru Ueda"],
+      "title": "A dual-mode molecular glue for precision control of plant hormone co-receptor interactions in rice",
+      "journal": "Cell Rep. Phys. Sci.",
+      "details": "7.10, 103549, 2026.",
+      "doi": "10.1016/j.xcrp.2026.103549",
+      "showInEnglish": true,
+      "year": 2026,
+      "month": 10,
+      "rm": { "type": "published_papers", "publication_name": "Cell Reports Physical Science", "publication_date": "2026-10-21" }
+    },
+    {
       "authors": ["Kairi Furui", "Masahito Ohue"],
       "correspondingAuthors": ["Kairi Furui", "Masahito Ohue"],
       "title": "PairMap2: A web application for intermediate-molecule insertion in relative binding free energy calculations",
