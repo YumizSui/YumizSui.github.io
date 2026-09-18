@@ -1,6 +1,7 @@
 ---
 title: "EUOS25 Challengeにて優勝しました (Transmittanceカテゴリー) "
 pubDate: "2026-02-10"
+updatedDate: "2026-09-18"
 lang: "ja"
 tags: ["tech", "competition", "machine-learning", "cheminformatics"]
 references:
@@ -20,6 +21,8 @@ references:
     url: "https://openreview.net/pdf?id=64V40K2fDv"
     title: "Ji, Xiaohong, et al. \"Exploring Molecular Pretraining Model at Scale.\" The Thirty-Eighth Annual Conference on Neural Information Processing Systems, 2024"
 ---
+
+**追記（2026年9月18日）:** 本記事で紹介した手法の論文がSLAS Technologyに採択されました。詳細は[「Molecular absorption and fluorescence property prediction via a multimodal consensus model: Winning solution for the transmittance category of the 2nd EUOS/SLAS Joint Challenge」](https://doi.org/10.1016/j.slast.2026.100466)をご覧ください。
 
 EU-OPENSCREENとSLASが主催するEUOS25 Challenge[@euos25]において、我々のチームyumizは[Transmittanceカテゴリーのブラインドテストで1位となりました](https://www.eu-openscreen.eu/newsroom/eu-openscreen-news/ansicht/eu-openscreen-and-slas-announce-winners-of-the-second-joint-machine-learning-challenge-at-slas-2026.html)（Fluorescenceカテゴリーでは6位でした）。
 

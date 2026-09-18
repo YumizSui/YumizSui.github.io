@@ -1,6 +1,7 @@
 ---
 title: "Winning solution of the EUOS25 Challenge (Transmittance Category)"
 pubDate: "2026-02-10"
+updatedDate: "2026-09-18"
 lang: "en"
 tags: ["tech", "competition", "machine-learning", "cheminformatics"]
 references:
@@ -20,6 +21,8 @@ references:
     url: "https://openreview.net/pdf?id=64V40K2fDv"
     title: "Ji, Xiaohong, et al. \"Exploring Molecular Pretraining Model at Scale.\" The Thirty-Eighth Annual Conference on Neural Information Processing Systems, 2024"
 ---
+
+**Update (September 18, 2026):** Our paper describing the method presented in this post has been accepted for publication in SLAS Technology: [“Molecular absorption and fluorescence property prediction via a multimodal consensus model: Winning solution for the transmittance category of the 2nd EUOS/SLAS Joint Challenge”](https://doi.org/10.1016/j.slast.2026.100466).
 
 In the EUOS25 Challenge[@euos25] hosted by EU-OPENSCREEN and SLAS, our team yumiz [achieved first place in the blind test of the Transmittance category](https://www.eu-openscreen.eu/newsroom/eu-openscreen-news/ansicht/eu-openscreen-and-slas-announce-winners-of-the-second-joint-machine-learning-challenge-at-slas-2026.html) (we placed 6th in the Fluorescence category).
 As the winning team, we will be awarded a prize of €1,000 at the SLAS2026 International Conference & Exhibition in Boston. Additionally, the winning team, as well as other teams whose models achieved an AUC not significantly different from that of the winning solution, will be invited to publish their studies or protocols in the SLAS journal.
