@@ -278,6 +278,15 @@
   ],
   "preprints": [
     {
+      "authors": ["Kairi Furui", "Masahito Ohue"],
+      "title": "Adapting Boltz-2 with limited experimental activity data improves early enrichment in virtual screening",
+      "venue": "arXiv preprint arXiv:2609.24302",
+      "doi": "10.48550/arXiv.2609.24302",
+      "showInEnglish": true,
+      "year": 2026,
+      "month": 9
+    },
+    {
       "authors": ["Midori Arai", "Yoshinori Makita", "Shun Saito", "Shiina Suzuki", "Yuki Narushima", "Nanoha Izawa", "Yuki Tanaka", "Kairi Furui", "Masahito Ohue", "Masami Ishibashi"],
       "title": "The Indole Rocaglamide Induces S and G2/M Phase Cell Cycle Arrest in Small Cell Lung Cancer Cells Through ASCL1 Translation Inhibition.",
       "venue": "SSRN preprint 4493242",
