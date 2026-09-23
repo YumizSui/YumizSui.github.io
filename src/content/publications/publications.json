@@ -279,6 +279,15 @@
   "preprints": [
     {
       "authors": ["Kairi Furui", "Masahito Ohue"],
+      "title": "ProtMutMap: Predicting protein binding free energy changes using multiple-mutation networks",
+      "venue": "ChemRxiv preprint",
+      "doi": "10.26434/chemrxiv.15009337/v1",
+      "showInEnglish": true,
+      "year": 2026,
+      "month": 9
+    },
+    {
+      "authors": ["Kairi Furui", "Masahito Ohue"],
       "title": "Adapting Boltz-2 with limited experimental activity data improves early enrichment in virtual screening",
       "venue": "arXiv preprint arXiv:2609.24302",
       "doi": "10.48550/arXiv.2609.24302",
