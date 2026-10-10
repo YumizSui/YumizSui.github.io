@@ -1,5 +1,14 @@
 [
   {
+    "authors": ["古井 海里", "大上 雅史"],
+    "title": "PATROL: パレート最適性を考慮した強化学習による抗体CDR配列の多目的最適化",
+    "conference": "生命情報科学若手の会 第18回研究会",
+    "year": "2026",
+    "type": "Poster",
+    "showInEnglish": false,
+    "rm": { "type": "presentations", "publication_date": "2026-10-02" }
+  },
+  {
     "authors": ["坂野 晃", "古井 海里", "大上 雅史"],
     "title": "構造ベースリガンド生成のためのタンパク質-リガンド複合体立体構造のトークナイズ",
     "conference": "IIBMP2026",
