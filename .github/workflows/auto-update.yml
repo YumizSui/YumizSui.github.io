@@ -35,12 +35,17 @@ jobs:
         run: npm ci
 
       - name: Update dependencies within semver range
-        run: npm update
+        run: |
+          npm update
+          # Reconcile optional peer dependencies before validating the lockfile.
+          npm install --package-lock-only
 
       - id: build
         name: Build verification
         continue-on-error: true
-        run: npm run build
+        run: |
+          npm ci
+          npm run build
 
       - id: diff
         name: Detect changes
