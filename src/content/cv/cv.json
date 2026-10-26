@@ -180,6 +180,22 @@
   ],
   "products": [
     {
+      "name": "TeX Review Studio",
+      "url": "https://github.com/YumizSui/tex-review",
+      "year": "(2026)",
+      "description": "VS Code and Cursor extension for LaTeX editing, review comments, and PDF preview",
+      "showInEnglish": true,
+      "showInTools": true
+    },
+    {
+      "name": "ProtMutMap",
+      "url": "https://github.com/ohuelab/ProtMutMap",
+      "year": "(2026)",
+      "description": "Protein binding free energy change prediction using multiple-mutation networks",
+      "showInEnglish": true,
+      "showInTools": true
+    },
+    {
       "name": "PairMap2",
       "url": "https://pairmap.yumizsui.com",
       "year": "(2026)",
