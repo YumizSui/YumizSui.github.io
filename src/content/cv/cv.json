@@ -254,6 +254,19 @@
   ],
   "talks": [
     {
+      "year": "2026",
+      "event": "CBI学会2026年大会 フォーカストセッション FS02",
+      "eventEn": "CBI Annual Meeting 2026, Focused Session FS02",
+      "title": "マルチモーダル分子表現のアンサンブル学習による光学特性予測：第2回EUOS/SLAS Challenge Transmittance部門優勝解法",
+      "titleEn": "Molecular Absorption and Fluorescence Property Prediction via a Multimodal Consensus Model: Winning Solution for the Transmittance Category of the 2nd EUOS/SLAS Joint Challenge",
+      "url": "https://www.cbi-society.org/taikai/taikai26/sessionFS.html#FS02",
+      "note": "FS02-02",
+      "noteEn": "FS02-02",
+      "showInEnglish": true,
+      "invited": false,
+      "rm": { "type": "presentations", "publication_date": "2026-10-27" }
+    },
+    {
       "year": "2025",
       "event": "FIT2025 トップコンファレンスセッション バイオ情報学／福祉情報工学／コンピュータビジョンとイメージメディア",
       "eventEn": "FIT2025 Top Conference Session: Bioinformatics / Welfare Informatics / Computer Vision and Image Media",

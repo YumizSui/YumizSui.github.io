@@ -1,6 +1,18 @@
 {
   "internationalJournals": [
     {
+      "authors": ["Kairi Furui", "Shinji Soga", "Rika Yamazaki", "Shigenori Yagi", "Keisuke Uchikawa", "Takatsugu Kosugi", "Takuya Shimomura", "Kana Gondo", "Masahito Ohue"],
+      "correspondingAuthors": ["Masahito Ohue"],
+      "title": "Integrated AI-Guided de novo CDR-H3 Design and Combinatorial Phage Display for Antibody Discovery",
+      "journal": "Antib. Ther.",
+      "details": "tbag054, 2026.",
+      "doi": "10.1093/abt/tbag054",
+      "showInEnglish": true,
+      "year": 2026,
+      "month": 10,
+      "rm": { "type": "published_papers", "publication_name": "Antibody Therapeutics", "publication_date": "2026-10-27", "published_paper_owner_roles": ["lead"] }
+    },
+    {
       "authors": ["Taichi Okumura", "Kotaro Matsumoto", "Koji Miyamoto", "Takao Nomura", "Kairi Furui", "Takuya Fujie", "Masahito Ohue", "Youming Liu", "Sora Nakamura", "Kota Nakanishi", "Kazunori Okada", "Katsumi Maenaka", "Minoru Ueda"],
       "title": "A dual-mode molecular glue for precision control of plant hormone co-receptor interactions in rice",
       "journal": "Cell Rep. Phys. Sci.",

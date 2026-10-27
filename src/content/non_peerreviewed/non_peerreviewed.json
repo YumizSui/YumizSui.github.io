@@ -1,5 +1,35 @@
 [
   {
+    "authors": ["Kairi Furui", "Masahito Ohue"],
+    "title": "PATROL: Pareto-Aware Reinforcement Learning for Multi-Objective Antibody CDR Optimization with Limited Oracle Calls",
+    "conference": "CBI学会2026年大会, Poster session",
+    "year": "2026",
+    "type": "Poster",
+    "note": "P06-07",
+    "showInEnglish": false,
+    "rm": { "type": "presentations", "publication_date": "2026-10-27" }
+  },
+  {
+    "authors": ["Ayuki Tokoi", "Kairi Furui", "Yukio Watanabe", "Masahito Ohue"],
+    "title": "Computational Design of Common Light Chains for Bispecific Antibodies Based on Structure",
+    "conference": "CBI学会2026年大会, Poster session",
+    "year": "2026",
+    "type": "Poster",
+    "note": "P06-16",
+    "showInEnglish": false,
+    "rm": { "type": "presentations", "publication_date": "2026-10-27" }
+  },
+  {
+    "authors": ["Koh Sakano", "Kairi Furui", "Masahito Ohue"],
+    "title": "ProLIT: A Structural Tokenizer for 3D Protein-Ligand Complexes",
+    "conference": "CBI学会2026年大会, Poster session",
+    "year": "2026",
+    "type": "Poster",
+    "note": "P09-23",
+    "showInEnglish": false,
+    "rm": { "type": "presentations", "publication_date": "2026-10-27" }
+  },
+  {
     "authors": ["古井 海里", "大上 雅史"],
     "title": "PATROL: パレート最適性を考慮した強化学習による抗体CDR配列の多目的最適化",
     "conference": "生命情報科学若手の会 第18回研究会",
